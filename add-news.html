@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quản lý sản phẩm</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <style>
+            .sidebar {
+                height: 100vh;
+                background-color: rgba(246, 238, 237, 0.1);
+                padding: 15px;
+                box-shadow: 0px 0px 6px 0px rgba(29, 29, 30, 0.1), 7px 7px 7px rgba(34, 34, 34, 0.02);
+            }
+            .nav-item {
+                margin-bottom: 5px;
+            }
+            .sidebar a {
+                text-decoration: none;
+                color: #333;
+                transition: all 0.3 ease;
+                border-radius: 5px;
+            }
+
+            .sidebar a.active {
+                background-color: rgba(210, 209, 209, 0.5);
+                color: rgb(241, 80, 80);
+                font-size: 17px;
+                font-weight: bold;
+            }
+
+            .sidebar a:hover {
+                color: #ff0000;
+                background-color: rgba(210, 209, 209, 0.5);
+                /* font-size: 16.5px; */
+                /* transform: translateX(5px); */
+            }
+            .header {
+                background-color: #fff;
+
+                padding: 15px 20px;
+            }
+            .content {
+                padding: 20px;
+            }
+            .product-form input,
+            .product-form textarea,
+            .product-form select {
+                margin-bottom: 15px;
+            }
+            .btn-upload {
+                border: 2px dashed #ddd;
+                padding: 20px;
+                text-align: center;
+                cursor: pointer;
+                color: #aaa;
+            }
+            .btn-upload:hover {
+                background-color: #f1f1f1;
+            }
+            #preview-container-a img {
+                width: 100%;
+                height: 200px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                margin-top: 10px;
+                object-fit: cover;
+            }
+
+            .stats {
+                display: flex;
+                justify-content: space-around;
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                margin-bottom: 50px;
+            }
+
+            .stats div {
+                text-align: center;
+            }
+
+            .stats div h2 {
+                color: #007bff;
+                margin: 0;
+                font-size: 1.5rem;
+            }
+
+            .stats div p {
+                color: #555;
+                margin: 5px 0 0;
+            }
+
+            .chart-container {
+                background-color: #fff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .info-count {
+                border-radius: 100%;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 40px;
+                transition: all 0.3s ease;
+            }
+
+            .info-count:hover {
+                background-color: rgb(255, 219, 0);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid" style="border-bottom: 1px solid #ddd; padding: 0px 30px">
+            <!-- Header -->
+            <div class="header d-flex justify-content-between align-items-center">
+                <img src="./assets/img/Frame 911.png" alt="" style="width: 250px; height: 80px; object-fit: contain" />
+                <div class="text-center">
+                    <h5 style="color: #ff0000; font-size: 30px">NƯỚC HOA CHÍNH HÃNG</h5>
+                    <p class="mb-0" style="font-size: 20px">Chất lượng tạo niềm tin - Uy tín làm thương hiệu</p>
+                </div>
+                <div class="d-flex">
+                    <img
+                        src="https://scontent.fhan15-1.fna.fbcdn.net/v/t51.75761-15/466509278_18340745755177613_2474957748926128500_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=gLOUVWBf6QUQ7kNvgGHBFm_&_nc_zt=23&_nc_ht=scontent.fhan15-1.fna&_nc_gid=Arb90ekThFGovZVkDOnFZXP&oh=00_AYCaRpq_AVJzguaZtlBfhAeq0ttQMWmqhYblvcYvBpASMg&oe=6751F968"
+                        alt=""
+                        style="width: 50px; height: 50px; object-fit: cover; border-radius: 999px"
+                    />
+                    <div class="info ms-3">
+                        <strong style="color: #ff0000">ADMIN</strong>
+                        <p>Đỗ Thị Thu Hằng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-md-2 sidebar">
+                    <h5 class="d-none">Vperfume</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link tab-link" href="#" data-tab="tab1">Thống kê</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tab-link" href="#" data-tab="tab2">Sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tab-link active" href="#" data-tab="tab3">Tin tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tab-link" href="#" data-tab="tab4">Khách hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tab-link" href="#" data-tab="tab5">Đơn hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link tab-link" href="#" data-tab="tab5">Đăng xuất</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Main content -->
+                <div class="col-md-10">
+                    <!-- Content -->
+                    <div class="content">
+                        <div id="tab5" class="tab-content d-none">
+                            <h2 class="mb-4">Danh Sách Đơn Hàng</h2>
+
+                            <!-- Tổng quan về đơn hàng -->
+                            <div class="row mb-4">
+                                <div class="col-md-2">
+                                    <h5>Tổng : <span id="totalOrders">(8386)</span></h5>
+                                </div>
+                                <div class="col-md-2">
+                                    <h5>Chờ xác nhận: <span id="processedOrders_">(99)</span></h5>
+                                </div>
+                                <div class="col-md-2">
+                                    <h5>Đã Xử Lý: <span id="processedOrders">(30)</span></h5>
+                                </div>
+                                <div class="col-md-2">
+                                    <h5>Đã giao: <span id="pendingOrders">(1999)</span></h5>
+                                </div>
+                                <div class="col-md-2">
+                                    <h5>Đã giao: <span id="pendingOrders">(55)</span></h5>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+
+                            <!-- Bảng danh sách đơn hàng -->
+                            <table class="table table-bordered">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Mã Đơn Hàng</th>
+                                        <th scope="col">Tên Khách Hàng</th>
+                                        <th scope="col">Ngày Đặt</th>
+                                        <th scope="col">Tổng Tiền</th>
+                                        <th scope="col">Trạng Thái</th>
+                                        <th scope="col">Hành Động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Dữ liệu đơn hàng (có thể được lặp qua từ cơ sở dữ liệu) -->
+                                    <tr>
+                                        <td>#ORD12345</td>
+                                        <td>Nguyễn Văn A</td>
+                                        <td>01/12/2024</td>
+                                        <td>1,500,000 VND</td>
+                                        <td><span class="badge bg-success">Đã Xử Lý</span></td>
+                                        <td style="text-align: center; vertical-align: middle">
+                                            <a href="./order-success.html" class="btn btn-info btn-sm" target="_blank"
+                                                >Xem</a
+                                            >
+                                            <a href="./edit-product.html" target="_blank" class="btn btn-warning btn-sm"
+                                                >In đơn</a
+                                            >
+                                            <a href="#" class="btn btn-danger btn-sm">Xóa</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD12346</td>
+                                        <td>Trần Thị B</td>
+                                        <td>02/12/2024</td>
+                                        <td>850,000 VND</td>
+                                        <td><span class="badge bg-warning">Đang Xử Lý</span></td>
+                                        <td style="text-align: center; vertical-align: middle">
+                                            <a target="_blank" href="./order-success.html" class="btn btn-info btn-sm"
+                                                >Xem</a
+                                            >
+                                            <a href="./edit-product.html" target="_blank" class="btn btn-warning btn-sm"
+                                                >In đơn</a
+                                            >
+                                            <a href="#" class="btn btn-danger btn-sm">Xóa</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD12347</td>
+                                        <td>Hoàng Minh C</td>
+                                        <td>03/12/2024</td>
+                                        <td>2,000,000 VND</td>
+                                        <td><span class="badge bg-danger">Chưa Xử Lý</span></td>
+                                        <td style="text-align: center; vertical-align: middle">
+                                            <a target="_blank" href="./order-success.html" class="btn btn-info btn-sm"
+                                                >Xem</a
+                                            >
+                                            <a href="" target="_blank" class="btn btn-warning btn-sm">In đơn</a>
+                                            <a href="#" class="btn btn-danger btn-sm">Xóa</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div id="tab2" class="tab-content d-none">
+                            <h4 class="mb-4">Danh Sách Sản Phẩm</h2>
+
+                            <!-- Tổng quan về sản phẩm -->
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <h5>Tổng Số Sản Phẩm: <span id="totalProducts">(99)</span></h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Sản Phẩm Đang Bán: <span id="availableProducts">(1908)</span></h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>Sản Phẩm Hết Hàng: <span id="outOfStockProducts">(30)</span></h5>
+                                </div>
+                            </div>
+                            <a target="_blank" href="./add-product.html">
+                                <button class="btn btn-danger mb-3">Thêm sản phẩm mới</button>
+                            </a>
+
+                            <!-- Bảng danh sách sản phẩm -->
+                            <table class="table table-bordered">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Mã Sản Phẩm</th>
+                                        <th scope="col">Tên Sản Phẩm</th>
+                                        <th scope="col">Danh mục</th>
+                                        <th scope="col">Số lượng</th>
+                                        <th scope="col">Giá</th>
+                                        <th scope="col">Trạng Thái</th>
+                                        <th scope="col">Hành Động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="productTableBody">
+                                    <!-- Dữ liệu sản phẩm sẽ được thêm vào ở đây -->
+                                    <tr>
+                                        <td>#SP12345</td>
+                                        <td>
+                                            <img
+                                                style="width: 50px; height: 50px; object-fit: contain"
+                                                src="https://product.hstatic.net/1000339918/product/amouage-interlude-black-iris-man-edp_8d9767e78c094c5992a1844be73e5148_large.jpg"
+                                                alt=""
+                                            />
+                                            Nước Hoa Amouage Interlude Black Iris Man EDP
+                                        </td>
+                                        <td>Nước hoa nam</td>
+                                        <td>100</td>
+                                        <td>10,000,000 VND</td>
+                                        <td><span class="badge bg-success product-status">Đang Bán</span></td>
+                                        <td style ="text-align: center; vertical-align: middle;">
+                                            <!-- Nút "Chỉnh Sửa" và "Xóa" -->
+                                            <a href="./edit-product.html" target="_blank" class="btn btn-warning btn-sm">Chỉnh Sửa</a>
+                                            <a href="#" class="btn btn-danger btn-sm">Xóa</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#SP12345</td>
+                                        <td>
+                                            <img
+                                                style="width: 50px; height: 50px; object-fit: contain"
+                                                src="https://product.hstatic.net/1000339918/product/amouage-interlude-black-iris-man-edp_8d9767e78c094c5992a1844be73e5148_large.jpg"
+                                                alt=""
+                                            />
+                                            Nước Hoa Amouage Interlude Black Iris Man EDP
+                                        </td>
+                                        <td>Nước hoa nam</td>
+                                        <td>100</td>
+                                        <td>10,000,000 VND</td>
+                                        <td><span class="badge bg-success product-status">Đang Bán</span></td>
+                                        <td style ="text-align: center; vertical-align: middle;">
+                                            <!-- Nút "Chỉnh Sửa" và "Xóa" -->
+                                            <a href="./edit-product.html" target="_blank" class="btn btn-warning btn-sm">Chỉnh Sửa</a>
+                                            <a href="#" class="btn btn-danger btn-sm">Xóa</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#SP12345</td>
+                                        <td>
+                                            <img
+                                                style="width: 50px; height: 50px; object-fit: contain"
+                                                src="https://product.hstatic.net/1000339918/product/amouage-interlude-black-iris-man-edp_8d9767e78c094c5992a1844be73e5148_large.jpg"
+                                                alt=""
+                                            />
+                                            Nước Hoa Amouage Interlude Black Iris Man EDP
+                                        </td>
+                                        <td>Nước hoa nam</td>
+                                        <td>100</td>
+                                        <td>10,000,000 VND</td>
+                                        <td><span class="badge bg-success product-status">Đang Bán</span></td>
+                                        <td style ="text-align: center; vertical-align: middle;">
+                                            <!-- Nút "Chỉnh Sửa" và "Xóa" -->
+                                            <a href="./edit-product.html" target="_blank" class="btn btn-warning btn-sm">Chỉnh Sửa</a>
+                                            <a href="#" class="btn btn-danger btn-sm">Xóa</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#SP12345</td>
+                                        <td>
+                                            <img
+                                                style="width: 50px; height: 50px; object-fit: contain"
+                                                src="https://product.hstatic.net/1000339918/product/amouage-interlude-black-iris-man-edp_8d9767e78c094c5992a1844be73e5148_large.jpg"
+                                                alt=""
+                                            />
+                                            Nước Hoa Amouage Interlude Black Iris Man EDP
+                                        </td>
+                                        <td>Nước hoa nam</td>
+                                        <td>100</td>
+                                        <td>10,000,000 VND</td>
+                                        <td><span class="badge bg-success product-status">Đang Bán</span></td>
+                                        <td style ="text-align: center; vertical-align: middle;">
+                                            <!-- Nút "Chỉnh Sửa" và "Xóa" -->
+                                            <a href="./edit-product.html" target="_blank" class="btn btn-warning btn-sm">Chỉnh Sửa</a>
+                                            <a href="#" class="btn btn-danger btn-sm">Xóa</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#SP12345</td>
+                                        <td>
+                                            <img
+                                                style="width: 50px; height: 50px; object-fit: contain"
+                                                src="https://product.hstatic.net/1000339918/product/amouage-interlude-black-iris-man-edp_8d9767e78c094c5992a1844be73e5148_large.jpg"
+                                                alt=""
+                                            />
+                                            Nước Hoa Amouage Interlude Black Iris Man EDP
+                                        </td>
+                                        <td>Nước hoa nam</td>
+                                        <td>100</td>
+                                        <td>10,000,000 VND</td>
+                                        <td><span class="badge bg-success product-status">Đang Bán</span></td>
+                                        <td style ="text-align: center; vertical-align: middle;">
+                                            <!-- Nút "Chỉnh Sửa" và "Xóa" -->
+                                            <a href="./edit-product.html" target="_blank" class="btn btn-warning btn-sm">Chỉnh Sửa</a>
+                                            <a href="#" class="btn btn-danger btn-sm">Xóa</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#SP12345</td>
+                                        <td>
+                                            <img
+                                                style="width: 50px; height: 50px; object-fit: contain"
+                                                src="https://product.hstatic.net/1000339918/product/amouage-interlude-black-iris-man-edp_8d9767e78c094c5992a1844be73e5148_large.jpg"
+                                                alt=""
+                                            />
+                                            Nước Hoa Amouage Interlude Black Iris Man EDP
+                                        </td>
+                                        <td>Nước hoa nam</td>
+                                        <td>100</td>
+                                        <td>10,000,000 VND</td>
+                                        <td><span class="badge bg-success product-status">Đang Bán</span></td>
+                                        <td style ="text-align: center; vertical-align: middle;">
+                                            <!-- Nút "Chỉnh Sửa" và "Xóa" -->
+                                            <a href="./edit-product.html" target="_blank" class="btn btn-warning btn-sm">Chỉnh Sửa</a>
+                                            <a href="#" class="btn btn-danger btn-sm">Xóa</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#SP12345</td>
+                                        <td>
+                                            <img
+                                                style="width: 50px; height: 50px; object-fit: contain"
+                                                src="https://product.hstatic.net/1000339918/product/amouage-interlude-black-iris-man-edp_8d9767e78c094c5992a1844be73e5148_large.jpg"
+                                                alt=""
+                                            />
+                                            Nước Hoa Amouage Interlude Black Iris Man EDP
+                                        </td>
+                                        <td>Nước hoa nam</td>
+                                        <td>100</td>
+                                        <td>10,000,000 VND</td>
+                                        <td><span class="badge bg-success product-status">Đang Bán</span></td>
+                                        <td style ="text-align: center; vertical-align: middle;">
+                                            <!-- Nút "Chỉnh Sửa" và "Xóa" -->
+                                            <a href="./edit-product.html" target="_blank" class="btn btn-warning btn-sm">Chỉnh Sửa</a>
+                                            <a href="#" class="btn btn-danger btn-sm">Xóa</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="tab3" class="tab-content">
+                            <h4 class="text-danger">THÊM MỚI TIN TỨC</h4>
+                            <form class="product-form">
+                                <div class="row">
+                                    <!-- Upload Images -->
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <div class="btn-upload">Thêm hình ảnh A</div>
+                                            <input type="file" class="file-input d-none" accept="image/*" />
+                                            <div class="preview-container mt-3">
+                                                <!-- Khu vực hiển thị ảnh -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product Details -->
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" placeholder="Nhập mã tin tức" />
+                                        <input type="text" class="form-control" placeholder="Nhập tiêu đề" />
+                                        <textarea class="form-control" rows="4" placeholder="Nhập nội dung"></textarea>
+                                    </div>
+                                </div>
+                                <!-- Buttons -->
+                                <div class="d-flex justify-content-end">
+                                    <a href="./admin.html"
+                                        ><button type="button" class="btn btn-secondary me-2">Trở lại</button></a
+                                    >
+                                    <button type="reset" class="btn btn-secondary me-2">Hủy</button>
+                                    <button type="submit" class="btn btn-primary">Lưu</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="tab4" class="tab-content d-none">
+                            <h3 class="mb-4">Danh sách khách hàng</h3>
+                            <table class="table table-bordered table-striped">
+                                <thead class="table">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Tên khách hàng</th>
+                                        <th>Email</th>
+                                        <th>Số điện thoại</th>
+                                        <th>Địa chỉ</th>
+                                        <th>Trạng thái</th>
+                                        <th>Ngày đăng ký</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Nguyễn Văn A</td>
+                                        <td>nguyenvana@example.com</td>
+                                        <td>0987654321</td>
+                                        <td>123 Nguyễn Trãi, Hà Nội</td>
+                                        <td><span class="badge bg-success">Hoạt động</span></td>
+                                        <td>2024-12-01</td>
+                                        <td>
+                                            <button class="btn btn-info btn-sm">Chi tiết</button>
+                                            <button class="btn btn-warning btn-sm">Chỉnh sửa</button>
+                                            <button class="btn btn-danger btn-sm">Xóa</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Trần Thị B</td>
+                                        <td>tranthib@example.com</td>
+                                        <td>0988888888</td>
+                                        <td>456 Lê Lợi, Đà Nẵng</td>
+                                        <td><span class="badge bg-danger">Bị khóa</span></td>
+                                        <td>2024-12-01</td>
+                                        <td>
+                                            <button class="btn btn-info btn-sm">Chi tiết</button>
+                                            <button class="btn btn-warning btn-sm">Chỉnh sửa</button>
+                                            <button class="btn btn-danger btn-sm">Xóa</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Phạm Minh C</td>
+                                        <td>phamminhc@example.com</td>
+                                        <td>0977777777</td>
+                                        <td>789 Tôn Đức Thắng, Hồ Chí Minh</td>
+                                        <td><span class="badge bg-warning text-dark">Chờ xác minh</span></td>
+                                        <td>2024-12-01</td>
+                                        <td>
+                                            <button class="btn btn-info btn-sm">Chi tiết</button>
+                                            <button class="btn btn-warning btn-sm">Chỉnh sửa</button>
+                                            <button class="btn btn-danger btn-sm">Xóa</button>
+                                        </td>
+                                    </tr>
+                                    <!-- Kết thúc dòng mẫu -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="tab1" class="tab-content d-none">
+                            <div class="row g-5">
+                                <div class="col-md-12">
+                                    <div class="stats">
+                                        <div class="info-count">
+                                            <h2>1,200</h2>
+                                            <div class="mt-2">
+                                                <i class="fa-solid fa-user"></i>
+                                                Người dùng
+                                            </div>
+                                        </div>
+                                        <div class="info-count">
+                                            <h2>850</h2>
+                                            <p>
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                                Đơn hàng
+                                            </p>
+                                        </div>
+                                        <div class="info-count">
+                                            <h2>50M VNĐ</h2>
+                                            <p>
+                                                <i class="fa-solid fa-money-bill"></i>
+                                                Doanh thu
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="chart-container">
+                                        <canvas id="barChart"></canvas>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="chart-container">
+                                        <canvas id="lineChart"></canvas>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="chart-container">
+                                        <canvas id="pieChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab6" class="tab-content d-none">Content 1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS và Popper.js (cần thiết cho Modal) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            // Dữ liệu dùng chung
+            const labels = ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5'];
+            const data = [12, 19, 3, 5, 8];
+
+            // Biểu đồ Cột
+            new Chart(document.getElementById('barChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Doanh thu (triệu VNĐ)',
+                            data: data,
+                            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1,
+                        },
+                    ],
+                },
+                options: {
+                    scales: { y: { beginAtZero: true } },
+                },
+            });
+
+            // Biểu đồ Đường
+            new Chart(document.getElementById('lineChart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Lượng khách truy cập',
+                            data: [20, 25, 18, 15, 22],
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 2,
+                            fill: true,
+                        },
+                    ],
+                },
+                options: {
+                    scales: { y: { beginAtZero: true } },
+                },
+            });
+
+            // Biểu đồ Tròn
+            new Chart(document.getElementById('pieChart').getContext('2d'), {
+                type: 'pie',
+                data: {
+                    labels: ['Sản phẩm A', 'Sản phẩm B', 'Sản phẩm C'],
+                    datasets: [
+                        {
+                            data: [300, 150, 50],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(54, 162, 235, 0.5)',
+                                'rgba(255, 206, 86, 0.5)',
+                            ],
+                            borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)'],
+                            borderWidth: 1,
+                        },
+                    ],
+                },
+            });
+        </script>
+        <script>
+            // Lắng nghe sự kiện khi Modal được hiển thị
+            document.addEventListener('DOMContentLoaded', function () {
+                var orderDetailsModal = document.getElementById('orderDetailsModal');
+                orderDetailsModal.addEventListener('show.bs.modal', function (event) {
+                    // Lấy dữ liệu từ nút "Xem" đã được click
+                    var button = event.relatedTarget;
+                    var orderId = button.getAttribute('data-order-id');
+                    var customer = button.getAttribute('data-customer');
+                    var date = button.getAttribute('data-date');
+                    var total = button.getAttribute('data-total');
+                    var status = button.getAttribute('data-status');
+
+                    // Hiển thị thông tin trong Modal
+                    document.getElementById('modalOrderId').textContent = orderId;
+                    document.getElementById('modalCustomer').textContent = customer;
+                    document.getElementById('modalDate').textContent = date;
+                    document.getElementById('modalTotal').textContent = total;
+                    document.getElementById('modalStatus').textContent = status;
+                });
+            });
+        </script>
+
+        <script>
+            function initializeTabSwitcher(tabLinkSelector, tabContentSelector) {
+                document.addEventListener('DOMContentLoaded', function () {
+                    const tabLinks = document.querySelectorAll(tabLinkSelector);
+                    const tabContents = document.querySelectorAll(tabContentSelector);
+
+                    if (tabLinks.length === 0 || tabContents.length === 0) return;
+
+                    tabLinks.forEach((link) => {
+                        link.addEventListener('click', function (e) {
+                            e.preventDefault();
+
+                            // Xóa trạng thái active của tất cả các tab
+                            tabLinks.forEach((link) => link.classList.remove('active'));
+                            tabContents.forEach((content) => content.classList.add('d-none'));
+
+                            // Kích hoạt tab được nhấp
+                            this.classList.add('active');
+                            const targetTab = document.getElementById(this.dataset.tab);
+                            if (targetTab) {
+                                targetTab.classList.remove('d-none');
+                            }
+                        });
+                    });
+                });
+            }
+
+            initializeTabSwitcher('.tab-link', '.tab-content');
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // Lấy tất cả các nút upload
+                const uploadButtons = document.querySelectorAll('.btn-upload');
+
+                // Lặp qua từng nút
+                uploadButtons.forEach((button) => {
+                    // Lấy phần tử liên quan đến nút hiện tại
+                    const fileInput = button.nextElementSibling; // Tìm input file kế tiếp
+                    const previewContainer = button.nextElementSibling.nextElementSibling; // Tìm container preview kế tiếp
+
+                    // Khi nhấn vào nút "Thêm hình ảnh"
+                    button.addEventListener('click', function () {
+                        fileInput.click(); // Kích hoạt input file ẩn
+                    });
+
+                    // Khi chọn file
+                    fileInput.addEventListener('change', function () {
+                        const file = fileInput.files[0];
+
+                        // Kiểm tra file có phải là ảnh không
+                        if (file && file.type.startsWith('image/')) {
+                            const reader = new FileReader();
+
+                            // Khi file đã được đọc
+                            reader.onload = function (e) {
+                                // Xóa ảnh cũ (nếu có)
+                                previewContainer.innerHTML = '';
+
+                                // Tạo thẻ img để hiển thị ảnh
+                                const img = document.createElement('img');
+                                img.src = e.target.result; // Gắn nội dung ảnh
+                                img.style.maxWidth = '100%'; // Đảm bảo ảnh không vượt quá khung
+                                img.style.objectFit = 'cover'; // Hiển thị ảnh theo tỉ lệ đúng kích thước khung nhìn
+                                img.style.width = '100%';
+                                img.style.height = '200px';
+                                img.style.border = '1px solid #ddd';
+                                img.style.borderRadius = '5px';
+                                previewContainer.appendChild(img);
+                            };
+
+                            // Đọc file ảnh
+                            reader.readAsDataURL(file);
+                        } else {
+                            alert('Vui lòng chọn một tệp hình ảnh hợp lệ!');
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

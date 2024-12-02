@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quản lý</title>
+        <!-- Font-awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <style>
+            .sidebar {
+                height: 100vh;
+                background-color: rgba(246, 238, 237, 0.1);
+                padding: 15px;
+                box-shadow: 0px 0px 6px 0px rgba(29, 29, 30, 0.1), 7px 7px 7px rgba(34, 34, 34, 0.02);
+            }
+            .nav-item {
+                margin-bottom: 5px;
+            }
+            .sidebar a {
+                text-decoration: none;
+                color: #333;
+                transition: all 0.3 ease;
+                border-radius: 5px;
+            }
+
+            .sidebar a.active {
+                background-color: rgba(210, 209, 209, 0.5);
+                color: rgb(241, 80, 80);
+                font-size: 17px;
+                font-weight: bold;
+            }
+
+            .sidebar a:hover {
+                color: #ff0000;
+                background-color: rgba(210, 209, 209, 0.5);
+                /* font-size: 16.5px; */
+                /* transform: translateX(5px); */
+            }
+            .header {
+                background-color: #fff;
+
+                padding: 15px 20px;
+            }
+            .content {
+                padding: 20px;
+            }
+            .product-form input,
+            .product-form textarea,
+            .product-form select {
+                margin-bottom: 15px;
+            }
+            .btn-upload {
+                border: 2px dashed #ddd;
+                padding: 20px;
+                text-align: center;
+                cursor: pointer;
+                color: #aaa;
+            }
+            .btn-upload:hover {
+                background-color: #f1f1f1;
+            }
+            #preview-container-a img {
+                width: 100%;
+                height: 200px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                margin-top: 10px;
+                object-fit: cover;
+            }
+
+            .stats {
+                display: flex;
+                justify-content: space-around;
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                margin-bottom: 50px;
+            }
+
+            .stats div {
+                text-align: center;
+            }
+
+            .stats div h2 {
+                color: #007bff;
+                margin: 0;
+                font-size: 1.5rem;
+            }
+
+            .stats div p {
+                color: #555;
+                margin: 5px 0 0;
+            }
+
+            .chart-container {
+                background-color: #fff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .info-count {
+                border-radius: 100%;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 40px;
+                transition: all 0.3s ease;
+            }
+
+            .info-count:hover {
+                background-color: rgb(255, 219, 0);
+            }
+            body {
+                /* margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                font-family: Arial, sans-serif; */
+            }
+
+            .login-container {
+                display: flex;
+                width: 100%;
+                padding: 50px;
+                margin-bottom: 50px;
+            }
+
+            .login-image img {
+                /* width: 50%;
+                background: url('https://via.placeholder.com/500') no-repeat center center; */
+                background-size: cover;
+                width: 100%;
+                height: 700px;
+                object-fit: cover;
+            }
+
+            .login-form {
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 30px;
+                background-color: #fff;
+            }
+
+            .login-form .form-container {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .login-form h1 {
+                text-align: center;
+                font-size: 1.8rem;
+                color: #e50000;
+                margin-bottom: 20px;
+            }
+
+            .form-floating {
+                margin-bottom: 15px;
+            }
+
+            .form-check-label {
+                font-size: 0.9rem;
+            }
+
+            .btn-login {
+                width: 100%;
+                background-color: #e50000;
+                color: #fff;
+                border: none;
+                padding: 10px;
+                font-size: 1rem;
+                border-radius: 4px;
+            }
+
+            .btn-login:hover {
+                background-color: #cc0000;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid" style="border-bottom: 1px solid #ddd; padding: 0px 30px">
+            <!-- Header -->
+            <div class="header d-flex justify-content-between align-items-center">
+                <img src="./assets/img/Frame 911.png" alt="" style="width: 250px; height: 80px; object-fit: contain" />
+                <div class="text-center">
+                    <h5 style="color: #ff0000; font-size: 30px">NƯỚC HOA CHÍNH HÃNG</h5>
+                    <p class="mb-0" style="font-size: 20px">Chất lượng tạo niềm tin - Uy tín làm thương hiệu</p>
+                </div>
+                <div class="d-flex">
+                    <img
+                        src="https://scontent.fhan15-1.fna.fbcdn.net/v/t51.75761-15/466509278_18340745755177613_2474957748926128500_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=gLOUVWBf6QUQ7kNvgGHBFm_&_nc_zt=23&_nc_ht=scontent.fhan15-1.fna&_nc_gid=Arb90ekThFGovZVkDOnFZXP&oh=00_AYCaRpq_AVJzguaZtlBfhAeq0ttQMWmqhYblvcYvBpASMg&oe=6751F968"
+                        alt=""
+                        style="width: 50px; height: 50px; object-fit: cover; border-radius: 999px"
+                    />
+                    <div class="info ms-3">
+                        <strong style="color: #ff0000">ADMIN</strong>
+                        <p>Đỗ Thị Thu Hằng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="login-container row">
+                    <!-- Hình ảnh -->
+                    <div class="login-image col-md-6">
+                        <img src="./assets/img/img-admin.png" alt="" srcset="" />
+                    </div>
+
+                    <!-- Form đăng nhập -->
+                    <div class="login-form col-md-6">
+                        <div class="form-container">
+                            <h1>ĐĂNG NHẬP</h1>
+                            <form>
+                                <!-- Họ và tên -->
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên" />
+                                    <label for="name">Họ và tên *</label>
+                                </div>
+                                <!-- Mật khẩu -->
+                                <div class="form-floating">
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="password"
+                                        placeholder="Nhập mật khẩu"
+                                    />
+                                    <label for="password">Mật khẩu *</label>
+                                </div>
+                                <!-- Lưu đăng nhập -->
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="remember" />
+                                    <label class="form-check-label" for="remember">Lưu đăng nhập</label>
+                                </div>
+                                <!-- Nút đăng nhập -->
+                                <button type="submit" class="btn btn-login">Đăng nhập</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JS và Popper.js (cần thiết cho Modal) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            // Dữ liệu dùng chung
+            const labels = ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5'];
+            const data = [12, 19, 3, 5, 8];
+
+            // Biểu đồ Cột
+            new Chart(document.getElementById('barChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Doanh thu (triệu VNĐ)',
+                            data: data,
+                            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1,
+                        },
+                    ],
+                },
+                options: {
+                    scales: { y: { beginAtZero: true } },
+                },
+            });
+
+            // Biểu đồ Đường
+            new Chart(document.getElementById('lineChart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Lượng khách truy cập',
+                            data: [20, 25, 18, 15, 22],
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            borderWidth: 2,
+                            fill: true,
+                        },
+                    ],
+                },
+                options: {
+                    scales: { y: { beginAtZero: true } },
+                },
+            });
+
+            // Biểu đồ Tròn
+            new Chart(document.getElementById('pieChart').getContext('2d'), {
+                type: 'pie',
+                data: {
+                    labels: ['Sản phẩm A', 'Sản phẩm B', 'Sản phẩm C'],
+                    datasets: [
+                        {
+                            data: [300, 150, 50],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(54, 162, 235, 0.5)',
+                                'rgba(255, 206, 86, 0.5)',
+                            ],
+                            borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)'],
+                            borderWidth: 1,
+                        },
+                    ],
+                },
+            });
+        </script>
+        <script>
+            // Lắng nghe sự kiện khi Modal được hiển thị
+            document.addEventListener('DOMContentLoaded', function () {
+                var orderDetailsModal = document.getElementById('orderDetailsModal');
+                orderDetailsModal.addEventListener('show.bs.modal', function (event) {
+                    // Lấy dữ liệu từ nút "Xem" đã được click
+                    var button = event.relatedTarget;
+                    var orderId = button.getAttribute('data-order-id');
+                    var customer = button.getAttribute('data-customer');
+                    var date = button.getAttribute('data-date');
+                    var total = button.getAttribute('data-total');
+                    var status = button.getAttribute('data-status');
+
+                    // Hiển thị thông tin trong Modal
+                    document.getElementById('modalOrderId').textContent = orderId;
+                    document.getElementById('modalCustomer').textContent = customer;
+                    document.getElementById('modalDate').textContent = date;
+                    document.getElementById('modalTotal').textContent = total;
+                    document.getElementById('modalStatus').textContent = status;
+                });
+            });
+        </script>
+
+        <script>
+            function initializeTabSwitcher(tabLinkSelector, tabContentSelector) {
+                document.addEventListener('DOMContentLoaded', function () {
+                    const tabLinks = document.querySelectorAll(tabLinkSelector);
+                    const tabContents = document.querySelectorAll(tabContentSelector);
+
+                    if (tabLinks.length === 0 || tabContents.length === 0) return;
+
+                    tabLinks.forEach((link) => {
+                        link.addEventListener('click', function (e) {
+                            e.preventDefault();
+
+                            // Xóa trạng thái active của tất cả các tab
+                            tabLinks.forEach((link) => link.classList.remove('active'));
+                            tabContents.forEach((content) => content.classList.add('d-none'));
+
+                            // Kích hoạt tab được nhấp
+                            this.classList.add('active');
+                            const targetTab = document.getElementById(this.dataset.tab);
+                            if (targetTab) {
+                                targetTab.classList.remove('d-none');
+                            }
+                        });
+                    });
+                });
+            }
+
+            initializeTabSwitcher('.tab-link', '.tab-content');
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // Lấy tất cả các nút upload
+                const uploadButtons = document.querySelectorAll('.btn-upload');
+
+                // Lặp qua từng nút
+                uploadButtons.forEach((button) => {
+                    // Lấy phần tử liên quan đến nút hiện tại
+                    const fileInput = button.nextElementSibling; // Tìm input file kế tiếp
+                    const previewContainer = button.nextElementSibling.nextElementSibling; // Tìm container preview kế tiếp
+
+                    // Khi nhấn vào nút "Thêm hình ảnh"
+                    button.addEventListener('click', function () {
+                        fileInput.click(); // Kích hoạt input file ẩn
+                    });
+
+                    // Khi chọn file
+                    fileInput.addEventListener('change', function () {
+                        const file = fileInput.files[0];
+
+                        // Kiểm tra file có phải là ảnh không
+                        if (file && file.type.startsWith('image/')) {
+                            const reader = new FileReader();
+
+                            // Khi file đã được đọc
+                            reader.onload = function (e) {
+                                // Xóa ảnh cũ (nếu có)
+                                previewContainer.innerHTML = '';
+
+                                // Tạo thẻ img để hiển thị ảnh
+                                const img = document.createElement('img');
+                                img.src = e.target.result; // Gắn nội dung ảnh
+                                img.style.maxWidth = '100%'; // Đảm bảo ảnh không vượt quá khung
+                                img.style.objectFit = 'cover'; // Hiển thị ảnh theo tỉ lệ đúng kích thước khung nhìn
+                                img.style.width = '100%';
+                                img.style.height = '200px';
+                                img.style.border = '1px solid #ddd';
+                                img.style.borderRadius = '5px';
+                                previewContainer.appendChild(img);
+                            };
+
+                            // Đọc file ảnh
+                            reader.readAsDataURL(file);
+                        } else {
+                            alert('Vui lòng chọn một tệp hình ảnh hợp lệ!');
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

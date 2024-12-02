@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            href="https://i.pinimg.com/originals/b2/57/81/b2578191becd55a7ebbc3aa9cfda9a7a.jpg"
+            type="image/x-icon"
+        />
+        <title>Product Page</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <!-- SwiperJS Stylesheet -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <!-- Font-awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- External link css -->
+        <link rel="stylesheet" href="./assets/css/global.css" />
+        <link rel="stylesheet" href="./assets/css/home.css" />
+        <link rel="stylesheet" href="./assets/css/product-collection.css" />
+        <style>
+            .form-control,
+            .btn {
+                border-radius: 5px;
+            }
+            .product-img {
+                /* width: 50px;
+                height: 50px; */
+                object-fit: cover;
+            }
+            .section-title {
+                font-weight: bold;
+                color: red;
+            }
+            .border-bottom-custom {
+                /* border-bottom: 2px solid red;
+                padding-bottom: 5px; */
+            }
+            .total-price {
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: red;
+            }
+
+            .cart-list {
+                padding: 5px 10px;
+            }
+
+            .cart-item {
+                padding: 3px;
+            }
+
+            .cart-item:hover {
+                box-shadow: 0px 0px 6px 0px rgba(50, 50, 93, 0.1), 1px 1px 5px rgba(0, 0, 0, 0.02);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header container-fluid d-flex justify-content-center align-items-center">
+            <div class="container">
+                <div class="header-wrap row">
+                    <div class="header__logo col-xl-3">
+                        <img class="header__logo-img" src="./assets/img/logo_header.png" alt="Logo" />
+                    </div>
+                    <div
+                        class="header__title col-xl-6 text-center d-flex justify-content-center align-items-center flex-column"
+                    >
+                        <h3 class="header__main-title text-danger">NƯỚC HOA CHÍNH HÃNG</h3>
+                        <p class="header__subtitle m-0">Chất lượng tạo niềm tin - Uy tín làm thương hiệu</p>
+                    </div>
+                    <div
+                        class="header__contact col-xl-3 text-center d-flex justify-content-between align-items-center flex-column"
+                    >
+                        <div class="w-100 header__phone d-flex justify-content-evenly align-items-center">
+                            <div class="d-flex justify-content-center align-items-center flex-column d-none">
+                                <span>0965998668</span>
+                                <span>Hotline bán hàng</span>
+                            </div>
+                            <a href="tel:0931012321">
+                                <img class="header__phone-icon" src="./assets/img/icon_phone_header.png" alt="" />
+                            </a>
+
+                            <div class="header__cart-wrapper">
+                                <a href="./cart-index.html">
+                                    <img class="header__cart-icon" src="./assets/img/🦆 icon _cart_.png" alt="" />
+                                    <span class="header__cart-count">3</span>
+                                </a>
+
+                                <!-- Submenu -->
+                                <div class="cart-submenu position-absolute bg-white shadow-sm p-2">
+                                    <ul class="cart-items list-unstyled mb-2">
+                                        <li class="cart-item d-flex align-items-center mb-2">
+                                            <img
+                                                src="https://product.hstatic.net/1000339918/product/armaf-club-de-nuit-white-imperiale-edp_fa0cceaeb2b04ad3ad5d766c4b984050_large.jpg"
+                                                alt="Product"
+                                                class="cart-item-img"
+                                                style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px"
+                                            />
+                                            <div class="cart-item-info ms-3">
+                                                <p class="cart-item-name mb-1">Nước Hoa Alaia Paris EDP</p>
+                                                <p class="cart-item-price mb-0">200.000 VND x 2</p>
+                                            </div>
+                                        </li>
+                                        <li class="cart-item d-flex align-items-center mb-2">
+                                            <img
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_large.jpg"
+                                                alt="Product"
+                                                class="cart-item-img"
+                                                style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px"
+                                            />
+                                            <div class="cart-item-info ms-3">
+                                                <p class="cart-item-name mb-1">Nước Hoa Afnan 9pm EDP</p>
+                                                <p class="cart-item-price mb-0">150.000 VND x 1</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <a href="./cart-index.html" class="btn btn-danger w-100 text-center"
+                                        >Xem giỏ hàng</a
+                                    >
+                                </div>
+                            </div>
+                            <div class="header__account-wrapper">
+                                <a class="d-flex align-items-center">
+                                    <img class="header__account-icon" src="./assets/img/Frame 993.png" alt="" />
+                                </a>
+                                <!-- Submenu -->
+                                <div class="account-submenu position-absolute bg-white shadow-sm">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="submenu-item mb-2">
+                                            <a
+                                                href="./account.html"
+                                                class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                            >
+                                                <i class="fa-solid fa-user me-2"></i> Tài khoản
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item">
+                                            <a
+                                                href="./index.html"
+                                                class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                            >
+                                                <i class="fa-solid fa-sign-out-alt me-2"></i> Đăng xuất
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__search w-100">
+                            <input type="text" placeholder="Tìm kiếm sản phẩm..." class="header__search-input" />
+                            <i class="fa fa-search header__search-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Menu -->
+        <div class="menu-wrap container-fluid">
+            <ul class="menu-list w-100 d-flex justify-content-evenly align-items-center">
+                <li class="menu-item"><a class="menu-item_link" href="/index.html">Trang chủ</a></li>
+                <li class="menu-item menu-item_more position-relative">
+                    <a class="menu-item_link" href="./product-collection.html">
+                        Sản phẩm
+                        <span style="margin-left: 5px">
+                            <i class="fa-solid fa-chevron-down icon-more_menu"></i>
+                        </span>
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item">
+                            <a class="submenu-item_link" href="./product-collection.html">Nước hoa nam</a>
+                        </li>
+                        <li class="submenu-item">
+                            <a class="submenu-item_link" href="./product-collection.html">Nước hoa nữ</a>
+                        </li>
+                        <li class="submenu-item">
+                            <a class="submenu-item_link" href="./product-collection.html">Nước hoa chiết</a>
+                        </li>
+                        <li class="submenu-item">
+                            <a class="submenu-item_link" href="./product-collection.html">Son chanel</a>
+                        </li>
+                        <li class="submenu-item">
+                            <a class="submenu-item_link" href="./product-collection.html">Son Dior</a>
+                        </li>
+                        <li class="submenu-item">
+                            <a class="submenu-item_link" href="./product-collection.html">Lăn khử mùi</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-item"><a class="menu-item_link" href="./blog.html">Tin tức</a></li>
+                <li class="menu-item"><a class="menu-item_link" href="./contact.html">Liên hệ</a></li>
+                <li class="menu-item"><a class="menu-item_link" href="./about-page.html">Giới thiệu</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content container mt-3">
+            <nav style="--bs-breadcrumb-divider: '>>'" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item fw-bold"><a href="#">Trang chủ</a></li>
+                    <li class="breadcrumb-item fw-bold active" style="color: #ff0000" aria-current="page">
+                        Thanh toán
+                    </li>
+                </ol>
+            </nav>
+            <div class="py-5">
+                <div class="row mb-4">
+                    <div class="col-xl-3" style="border-bottom: 2px solid #000000">
+                        <h3 class="text-center text-danger">THANH TOÁN</h3>
+                        <!-- <hr />
+                        <p class="text-center">
+                            <a href="#" class="text-decoration-none text-danger fs-5">Xem thêm sản phẩm khác</a>
+                        </p> -->
+                    </div>
+
+                    <div class="col-xl-9 w-100"></div>
+                </div>
+
+                <!-- Main Row -->
+                <div class="row">
+                    <!-- Left Column: Product Table -->
+                    <div class="col-lg-8">
+                        <div class="border p-3 rounded">
+                            <!-- Section Title -->
+                            <div class="row" style="border-bottom: 2px solid red">
+                                <div class="col-xl-8">
+                                    <h5 class="section-title border-bottom-custom mb-3">Sản phẩm</h5>
+                                </div>
+
+                                <div class="col-xl-2 text-center">Số lượng</div>
+                                <div class="col-xl-2 text-center">Giá</div>
+                            </div>
+                            <div
+                                class="cart-list"
+                                style="max-height: 355px; width: 100%; overflow-x: hidden; overflow-y: scroll"
+                            >
+                                <div class="cart-item row mb-2 mt-2 align-items-center">
+                                    <div class="col-2">
+                                        <img
+                                            src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_large.jpg"
+                                            alt="Product"
+                                            class="product-img rounded w-100"
+                                        />
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-1">Nước Hoa Amouage Lyric Woman EDP</p>
+                                        <small>Phân loại: 10ml</small>
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <input type="number" class="form-control text-center" value="1" min="1" />
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <span>10.550.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="cart-item row mb-2 mt-2 align-items-center">
+                                    <div class="col-2">
+                                        <img
+                                            src="https://product.hstatic.net/1000339918/product/afnan-9am-edp_96178b5ecab0477ca5bb7b9df927f8f8_large.jpg"
+                                            alt="Product"
+                                            class="product-img rounded w-100"
+                                        />
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-1">Nước Hoa Afnan Supremacy In Heaven EDP</p>
+                                        <small>Phân loại: 10ml</small>
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <input type="number" class="form-control text-center" value="1" min="1" />
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <span>7.550.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="cart-item row mb-2 mt-2 align-items-center">
+                                    <div class="col-2">
+                                        <img
+                                            src="https://product.hstatic.net/1000339918/product/armaf-le-parfait-panache-edp_e777908d79544aa892f286f9e48ef73f_large.jpg"
+                                            alt="Product"
+                                            class="product-img rounded w-100"
+                                        />
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-1">Nước Hoa Afnan 9pm EDP</p>
+                                        <small>Phân loại: 10ml</small>
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <input type="number" class="form-control text-center" value="1" min="1" />
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <span>1.550.000₫</span>
+                                    </div>
+                                </div>
+                                <div class="cart-item row mb-2 mt-2 align-items-center">
+                                    <div class="col-2">
+                                        <img
+                                            src="https://product.hstatic.net/1000339918/product/bond-no-9-perfumista-avanue_2ef8a1e3e5f54e168f72419a1c53c264_large.jpg"
+                                            alt="Product"
+                                            class="product-img rounded w-100"
+                                        />
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-1">Nước Hoa Amouage Interlude Black Iris Man EDP</p>
+                                        <small>Phân loại: 10ml</small>
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <input type="number" class="form-control text-center" value="1" min="1" />
+                                    </div>
+                                    <div class="col-2 text-center">
+                                        <span>2.550.000₫</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <!-- Voucher -->
+                            <div class="row mb-3">
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="Voucher" />
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-danger w-100">Áp dụng</button>
+                                </div>
+                            </div>
+                            <!-- Pricing Summary -->
+                            <div class="row mb-2">
+                                <div class="col-8">Tổng tiền (4 sản phẩm):</div>
+                                <div class="col-4 text-end">25.550.000₫</div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-8">Giảm giá:</div>
+                                <div class="col-4 text-end">35.000₫</div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-8">Phí vận chuyển:</div>
+                                <div class="col-4 text-end">15.000₫</div>
+                            </div>
+                            <hr />
+                            <div class="row mb-3">
+                                <div class="col-8">
+                                    <label for="payment-method" class="form-label">Hình thức thanh toán</label>
+                                </div>
+                                <div class="col-4">
+                                    <select class="form-select" id="payment-method">
+                                        <option>Thanh toán khi nhận hàng</option>
+                                        <option>Chuyển khoản ngân hàng</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8 total-price">Tổng thanh toán:</div>
+                                <div class="col-4 total-price text-end">25.500.000₫</div>
+                            </div>
+                            <a href="./checkout-success.html">
+                                <button class="btn btn-danger w-100 mt-3">Hoàn tất thanh toán</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Shipping Info -->
+                    <div class="col-lg-4">
+                        <div class="border p-3 rounded">
+                            <!-- Section Title -->
+                            <h5 class="section-title border-bottom-custom mb-3">Thông tin vận chuyển</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Họ và tên" />
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Số điện thoại" />
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Email" />
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Địa chỉ" />
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Quận/Huyện" />
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Thành phố" />
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="3" placeholder="Ghi chú"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer container-fluid mt-5" style="padding: 50px 50px 0 50px">
+            <div class="container">
+                <div class="row">
+                    <!-- Cột 1: Thông tin doanh nghiệp -->
+                    <div class="footer__column col-md-4 col-xl-4">
+                        <h4>NƯỚC HOA CHÍNH HÃNG - V PERFUME</h4>
+                        <p>Địa chỉ: 299 Đặng Tiến Đông, Đống Đa, Hà Nội</p>
+                        <p>ĐKKD: 01E8029479 / MST: 0109143831</p>
+                        <p>Giờ làm việc: Từ 9h đến 21h tất cả các ngày trong tuần</p>
+                        <p>Điện thoại: 096 599 8668</p>
+                        <div class="d-flex align-items-center">
+                            <img
+                                src="./assets/img/ft1.png"
+                                alt="Đã thông báo"
+                                class="footer__icon"
+                                style="width: 50%"
+                            />
+                            <img
+                                src="./assets/img/ft2.png"
+                                alt="DMCA Protected"
+                                class="footer__icon"
+                                style="width: 50%"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Cột 2: Chăm sóc khách hàng -->
+                    <div class="footer__column col-md-4 col-xl-3">
+                        <h4>CHĂM SÓC KHÁCH HÀNG</h4>
+                        <ul class="footer__links" style="margin-left: 20px">
+                            <li><a href="#">Giới thiệu Vperfume</a></li>
+                            <li><a href="#">Điều khoản & Dịch vụ</a></li>
+                            <li><a href="#">Bảo hành & Đổi trả</a></li>
+                            <li><a href="#">Đặt hàng & Thanh toán</a></li>
+                            <li><a href="#">Bảo mật thông tin</a></li>
+                            <li><a href="#">Vận chuyển & Giao nhận</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Cột 3: Kết nối -->
+                    <div class="footer__column col-md-4 col-xl-5">
+                        <h4>KẾT NỐI</h4>
+                        <div class="d-flex">
+                            <div
+                                class="footer__social-icons d-flex flex-column justify-content-between align-items-center"
+                                style="transform: translateX(10px)"
+                            >
+                                <a href="#"
+                                    ><img
+                                        style="width: 40px; height: 40px; object-fit: contain"
+                                        src="./assets/img/ft3.png"
+                                        alt="Facebook"
+                                /></a>
+                                <a href="#"
+                                    ><img
+                                        style="width: 40px; height: 40px; object-fit: contain"
+                                        src="./assets/img/ft4.png"
+                                        alt="Zalo"
+                                /></a>
+                                <a href="#"
+                                    ><img
+                                        style="width: 40px; height: 40px; object-fit: contain"
+                                        src="./assets/img/ft5.png"
+                                        alt="Instagram"
+                                /></a>
+                                <a href="#"
+                                    ><img
+                                        style="width: 40px; height: 40px; object-fit: contain"
+                                        src="./assets/img/ft6.png"
+                                        alt="Shopee"
+                                /></a>
+                            </div>
+                            <div style="visibility: hidden; width: 70px"></div>
+                            <div class="footer__map w-100">
+                                <!-- Bản đồ Google -->
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.894740180158!2d105.82990340888502!3d21.036897306238167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aba15ec15d17%3A0x620e85c2cfe14d4c!2zTMSDbmcgQ2jhu6cgdOG7i2NoIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1733026635647!5m2!1svi!2s"
+                                    width="100%"
+                                    height="200"
+                                    style="border: 0"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Dòng slogan -->
+            <div class="footer__slogan">
+                <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
+            </div>
+        </footer>
+        <!-- Overlay -->
+        <div class="overlay"></div>
+
+        <!-- Bootstrap JS and dependencies -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Link Jquery -->
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+        <!-- SwiperJS Script -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script>
+            // const comment_swiper = new Swiper('.comment-swiper', {
+            //     slidesPerView: 3,
+            //     spaceBetween: 12,
+            //     loop: true,
+            //     autoplay: {
+            //         delay: 3000,
+            //     },
+            //     // navigation: {
+            //     //     nextEl: '.swiper-button-next', // Nút next
+            //     //     prevEl: '.swiper-button-prev', // Nút prev
+            //     // },
+            //     pagination: {
+            //         el: '.swiper-pagination',
+            //         clickable: true,
+            //     },
+            // });
+        </script>
+        <!-- <script src="./assets/js/global.js"></script> -->
+        <script src="./assets/js/home.js"></script>
+    </body>
+</html>

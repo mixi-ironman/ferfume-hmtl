@@ -1,0 +1,149 @@
+/* box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.3); */
+/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); */
+/* setTimeout(() => {debugger}, 3000) */
+
+/* box-shadow: 0px 0px 6px 0px rgba(50, 50, 93, 0.1), 1px 1px 5px rgba(0, 0, 0, 0.02); */
+
+/* Reset css */
+:root {
+    --color-primary: rgb(108, 176, 149);
+    --color-secondary: rgb(254, 229, 215);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 16px;
+}
+
+/* body {
+    background-color: rgb(243, 244, 246);
+} */
+
+.col-xl-1-5 {
+    width: 20% !important;
+    /* width: 100% !important; */
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.translate--y {
+    transition: all 0.3s;
+}
+
+.translate--y:hover {
+    /* background-color: rgb(226, 203, 166); */
+    transform: translateY(-3px);
+}
+
+.hover--border {
+    transition: all 0.3s;
+}
+
+.hover--border:hover {
+    border: 1px solid red;
+}
+
+.hover--box-shadow {
+    transition: all 0.3s;
+}
+
+.hover--box-shadow:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Thanh cuộn tổng quát */
+::-webkit-scrollbar {
+    width: 10px; /* Chiều rộng thanh cuộn */
+    height: 10px; /* Chiều cao thanh cuộn ngang */
+}
+
+/* Phần nền của thanh cuộn */
+/* Màu nền thanh cuộn */
+::-webkit-scrollbar-track {
+    /* background: #f1f1f1; */
+}
+
+/* Thanh cuộn */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(136, 136, 136); /* Màu của thanh cuộn */
+    border-radius: 10px; /* Bo góc thanh cuộn */
+    border: 2px solid #f1f1f1; /* Viền của thanh cuộn */
+}
+
+/* Khi người dùng rê chuột vào thanh cuộn */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Màu thanh cuộn khi hover */
+}
+
+/* Stick header */
+/* background: linear-gradient(to right, #8ce09d, #fff5c3) !important; */
+/* background: linear-gradient(to right, #deb8e6, #9ce9ad) !important; */
+.sticky {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    z-index: 9995;
+    animation: slideIndown 0.3s linear;
+}
+@keyframes slideIndown {
+    0% {
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translate3d(0, 0%, 0);
+    }
+}
+
+/* customer pagination */
+.page-link {
+    border-radius: 50% !important;
+    margin-left: 5px !important;
+    padding: 1px 8px;
+    color: #888;
+}
+
+.page-link:focus {
+    color: black;
+    background-color: rgb(255, 219, 0);
+}
