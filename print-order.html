@@ -160,19 +160,19 @@
         <div class="container-fluid" style="border-bottom: 1px solid #ddd; padding: 0px 30px">
             <!-- Header -->
             <div class="header d-flex justify-content-between align-items-center">
-                <img src="./assets/img/Frame 911.png" alt="" style="width: 250px; height: 80px; object-fit: contain" />
+                <img src="./assets/img/c77631c9-9a27-4838-876d-8ba101976d74.jpg" alt="" style="width: 250px; height: 80px; object-fit: contain" />
                 <div class="text-center">
-                    <h5 style="color: #ff0000; font-size: 30px">NƯỚC HOA CHÍNH HÃNG</h5>
+                    <h5 style="color: #a71818; font-size: 30px">NƯỚC HOA CHÍNH HÃNG</h5>
                     <p class="mb-0" style="font-size: 20px">Chất lượng tạo niềm tin - Uy tín làm thương hiệu</p>
                 </div>
                 <div class="d-flex">
                     <img
-                        src="https://scontent.fhan15-1.fna.fbcdn.net/v/t51.75761-15/466509278_18340745755177613_2474957748926128500_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=gLOUVWBf6QUQ7kNvgGHBFm_&_nc_zt=23&_nc_ht=scontent.fhan15-1.fna&_nc_gid=Arb90ekThFGovZVkDOnFZXP&oh=00_AYCaRpq_AVJzguaZtlBfhAeq0ttQMWmqhYblvcYvBpASMg&oe=6751F968"
+                        src="https://scontent.fhan15-1.fna.fbcdn.net/v/t39.30808-6/352542734_782626490160148_3770748414681678149_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nrRe4TDBoAwQ7kNvgHKq0Li&_nc_zt=23&_nc_ht=scontent.fhan15-1.fna&_nc_gid=Aoi0i_S87nqkMPt4NT4NsiZ&oh=00_AYC575LTJ91rRJqVRjfekxP2AUNZ9kpEov1sDF4m0xFI4g&oe=6753FBD9"
                         alt=""
                         style="width: 50px; height: 50px; object-fit: cover; border-radius: 999px"
                     />
                     <div class="info ms-3">
-                        <strong style="color: #ff0000">ADMIN</strong>
+                        <strong style="color: #a71818">ADMIN</strong>
                         <p>Đỗ Thị Thu Hằng</p>
                     </div>
                 </div>
@@ -185,22 +185,22 @@
                     <h5 class="d-none">Vperfume</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link tab-link" href="#" data-tab="tab1">Thống kê</a>
+                            <a onclick="setActiveMenu('statistics')" class="nav-link tab-link active" href="#" data-tab="tab1">Thống kê</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tab-link" href="#" data-tab="tab2">Sản phẩm</a>
+                            <a onclick="setActiveMenu('products')" class="nav-link tab-link" href="#" data-tab="tab2">Sản phẩm</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tab-link" href="#" data-tab="tab3">Tin tức</a>
+                            <a onclick="setActiveMenu('news')" class="nav-link tab-link" href="#" data-tab="tab3">Tin tức</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tab-link" href="#" data-tab="tab4">Khách hàng</a>
+                            <a onclick="setActiveMenu('customers')" class="nav-link tab-link" href="#" data-tab="tab4">Khách hàng</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tab-link active" href="#" data-tab="tab5">Đơn hàng</a>
+                            <a onclick="setActiveMenu('orders')" class="nav-link tab-link" href="#" data-tab="tab5">Đơn hàng</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tab-link" href="#" data-tab="tab5">Đăng xuất</a>
+                            <a onclick="setActiveMenu('statistics')" target="_blank" class="nav-link tab-link_" href="./login-admin.html" data-tab="tab6">Đăng xuất</a>
                         </li>
                     </ul>
                 </div>
@@ -723,13 +723,6 @@
                                         <canvas id="lineChart"></canvas>
                                     </div>
                                 </div>
-
-                                <div class="col-md-6">
-                                    <div class="chart-container">
-                                        <canvas id="pieChart"></canvas>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                         <div id="tab6" class="tab-content d-none">Content 1</div>
@@ -740,8 +733,11 @@
 
         <!-- Bootstrap JS và Popper.js (cần thiết cho Modal) -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Link Jquery -->
+        <script src="./assets/libs/jquery/jquery-3.7.0.min.js"></script>
         <!-- chart.js -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="./assets/js/global_admin.js"></script>
         <script>
              // Dữ liệu dùng chung
             const labels = ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5'];
@@ -781,20 +777,6 @@
                 },
                 options: {
                 scales: { y: { beginAtZero: true } },
-                }
-            });
-
-            // Biểu đồ Tròn
-            new Chart(document.getElementById('pieChart').getContext('2d'), {
-                type: 'pie',
-                data: {
-                labels: ['Sản phẩm A', 'Sản phẩm B', 'Sản phẩm C'],
-                datasets: [{
-                    data: [300, 150, 50],
-                    backgroundColor: ['rgba(255, 99, 132, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(255, 206, 86, 0.5)'],
-                    borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)'],
-                    borderWidth: 1
-                }]
                 }
             });
         </script>

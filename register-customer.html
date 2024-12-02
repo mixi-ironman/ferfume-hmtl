@@ -32,7 +32,52 @@
         <link rel="stylesheet" href="./assets/css/global.css" />
         <link rel="stylesheet" href="./assets/css/home.css" />
         <link rel="stylesheet" href="./assets/css/product-collection.css" />
-        <style></style>
+        <style>
+            .register-container {
+                max-width: 1200px;
+                margin: 30px auto;
+                display: flex;
+                align-items: stretch;
+                gap: 20px;
+            }
+            .register-left {
+                flex: 1;
+                border: 1px solid #888;
+                border-radius: 5px;
+                text-align: center;
+                /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+            }
+            .register-left img {
+                max-width: 100%;
+                width: 100%;
+                border-radius: 5px;
+            }
+            .register-right {
+                flex: 1;
+                border-radius: 8px;
+                padding: 20px;
+            }
+            .nav-tabs .nav-link.active {
+                background-color: #ff4d4d;
+                color: #fff;
+            }
+            .btn-register {
+                background-color: #ff4d4d;
+                color: #fff;
+                border: none;
+            }
+            .btn-register:hover {
+                background-color: #cc0000;
+            }
+            .nav-item {
+                width: 50%;
+            }
+
+            .nav-link {
+                width: 100%;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <!-- Header -->
@@ -198,130 +243,139 @@
             <nav style="--bs-breadcrumb-divider: '>>'" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item fw-bold"><a href="#">Trang chủ</a></li>
-                    <li class="breadcrumb-item fw-bold active" style="color: #ff0000" aria-current="page">Liên hệ</li>
+                    <li class="breadcrumb-item fw-bold active" style="color: #ff0000" aria-current="page">Đăng ký</li>
                 </ol>
             </nav>
-            <h3 class="w-100 text-center fw-bold text-danger">LIÊN HỆ</h3>
-            <div class="container py-5">
-                <div class="row">
-                    <!-- Phần bên trái: Thông tin liên hệ -->
-                    <div class="col-md-8" style="padding-right: 40px">
-                        <h2 class="mb-4 fw-bold text-danger">LIÊN HỆ VPERFUME</h2>
-                        <p>
-                            Với mục tiêu tạo ra những trải nghiệm mua sắm trực tuyến tuyệt vời, Vperfume luôn nỗ lực
-                            không ngừng nhằm nâng cao chất lượng dịch vụ Quý khách có nhu cầu liên lạc, trao đổi hoặc
-                            đóng góp ý kiến, vui lòng tham khảo các thông tin sau:
-                        </p>
-                        <ul class="list-unstyled">
-                            <li style="margin-bottom: 20px">
-                                <img
-                                    style="margin-left: 10px; width: 30px; height: 30px; object-fit: contain"
-                                    src="./assets/img/iconloca.png"
-                                    alt=""
-                                    srcset=""
-                                /><span style="display: inline-block; width: 10px"></span><strong> Địa chỉ:</strong>229
-                                Đặng Tiến Nông, Đóng đa, Hà Nội
-                            </li>
-                            <li style="margin-bottom: 20px">
-                                <img
-                                    style="margin-left: 10px; width: 30px; height: 30px; object-fit: contain"
-                                    src="./assets/img/🦆 icon _mail_.png"
-                                    alt=""
-                                    srcset=""
-                                /><span style="display: inline-block; width: 10px"></span
-                                ><strong> Email:</strong>vperfume.vn@gmail.com
-                            </li>
-                            <li style="margin-bottom: 20px">
-                                <img
-                                    style="margin-left: 10px; width: 30px; height: 30px; object-fit: contain"
-                                    src="./assets/img/Vector.png"
-                                    alt=""
-                                    srcset=""
-                                /><span style="display: inline-block; width: 10px"></span
-                                ><strong> Điện thoại:</strong> +84 123 456 789
-                            </li>
-                            <li style="margin-bottom: 20px">
-                                <img
-                                    style="margin-left: 10px; width: 30px; height: 30px; object-fit: contain"
-                                    src="./assets/img/Vector (1).png"
-                                    alt=""
-                                    srcset=""
-                                /><span style="display: inline-block; width: 10px"></span
-                                ><strong> Giờ làm việc:</strong>Từ 9h - 21h tất cả các ngày trong tuần
-                            </li>
-                        </ul>
 
-                        <!-- Bản đồ -->
-                        <div class="mt-4">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.894740180158!2d105.82990340888502!3d21.036897306238167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aba15ec15d17%3A0x620e85c2cfe14d4c!2zTMSDbmcgQ2jhu6cgdOG7i2NoIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1733026635647!5m2!1svi!2s"
-                                width="100%"
-                                height="300"
-                                style="border: 0"
-                                allowfullscreen=""
-                                loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                        </div>
+            <div class="register-container">
+                <!-- Left side -->
+                <div class="register-left">
+                    <img src="./assets/img/register-img.png" alt="Online Shop Image" />
+                    <div class="mt-4 text-start p-2">
+                        <h5>Quyền lợi thành viên:</h5>
+                        <ol class="" style="list-style: disc; padding-left: 40px">
+                            <li>Mua hàng cực dễ dàng, nhanh chóng</li>
+                            <li>Theo dõi chi tiết đơn hàng, địa chỉ thanh toán dễ dàng</li>
+                            <li>Nhận nhiều ưu đãi hấp dẫn, mã giảm giá khủng</li>
+                        </ol>
                     </div>
+                </div>
 
-                    <!-- Phần bên phải: Form liên hệ -->
-                    <div class="col-md-4">
-                        <h2 class="mb-4 text-danger">Gửi phản hồi của bạn</h2>
-                        <form action="#" method="POST">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Họ và Tên</label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="name"
-                                    name="name"
-                                    placeholder="Nhập họ và tên"
-                                    required
-                                />
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input
-                                    type="email"
-                                    class="form-control"
-                                    id="email"
-                                    name="email"
-                                    placeholder="Nhập email của bạn"
-                                    required
-                                />
-                            </div>
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Số Điện Thoại</label>
-                                <input
-                                    type="tel"
-                                    class="form-control"
-                                    id="phone"
-                                    name="phone"
-                                    placeholder="Nhập số điện thoại"
-                                    required
-                                />
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Tin Nhắn</label>
-                                <textarea
-                                    class="form-control"
-                                    id="message"
-                                    name="message"
-                                    rows="5"
-                                    placeholder="Nhập tin nhắn của bạn"
-                                    required
-                                ></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-danger w-100">Gửi Tin Nhắn</button>
-                        </form>
+                <!-- Right side -->
+                <div class="register-right">
+                    <ul class="nav nav-tabs mb-4" role="tablist">
+                        <li class="nav-item">
+                            <button
+                                class="nav-link active"
+                                id="login-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#login"
+                                type="button"
+                                role="tab"
+                            >
+                                Đăng nhập
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button
+                                class="nav-link"
+                                id="register-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#register"
+                                type="button"
+                                role="tab"
+                            >
+                                Đăng ký
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <!-- Register form -->
+                        <div class="tab-pane fade show" id="register" role="tabpanel" aria-labelledby="register-tab">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Họ và tên *</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="name"
+                                        placeholder="Nhập họ và tên"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        placeholder="Nhập email"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Mật khẩu *</label>
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="password"
+                                        placeholder="Nhập mật khẩu"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirm-password" class="form-label">Nhập lại mật khẩu *</label>
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="confirm-password"
+                                        placeholder="Nhập lại mật khẩu"
+                                        required
+                                    />
+                                </div>
+                                <button type="submit" class="btn btn-register w-100">Đăng ký</button>
+                            </form>
+                        </div>
+
+                        <!-- Login form -->
+                        <div
+                            class="tab-pane fade show active"
+                            id="register"
+                            role="tabpanel"
+                            aria-labelledby="register-tab"
+                        >
+                            <form id="login-form">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email_login"
+                                        placeholder="Nhập email"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Mật khẩu *</label>
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="password_login"
+                                        placeholder="Nhập mật khẩu"
+                                        required
+                                    />
+                                </div>
+
+                                <button type="submit" class="btn btn-register w-100">Đăng nhập</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
 
         <!-- Footer -->
-        <footer class="footer container-fluid mt-5" style="padding-top: 50px">
+        <footer class="footer container-fluid mt-5" style="padding: 50px 50px 0 50px">
             <div class="container">
                 <div class="row">
                     <!-- Cột 1: Thông tin doanh nghiệp -->
@@ -410,11 +464,11 @@
                     </div>
                 </div>
             </div>
+            <!-- Dòng slogan -->
+            <div class="footer__slogan">
+                <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
+            </div>
         </footer>
-        <!-- Dòng slogan -->
-        <div class="footer__slogan container-fluid">
-            <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
-        </div>
         <!-- Overlay -->
         <div class="overlay"></div>
 
@@ -452,5 +506,40 @@
         <!-- <script src="./assets/js/global.js"></script> -->
         <script src="./assets/js/home.js"></script>
         <script src="./assets/js/add-cart.js"></script>
+
+        <script>
+            // Khi người dùng đăng nhập thành công
+            function loginUser(email, password) {
+                const validEmail = 'hang@gmail.com';
+                const validPassword = '123456';
+
+                if (email === validEmail && password === validPassword) {
+                    // Nếu thông tin hợp lệ, lưu vào localStorage
+                    localStorage.setItem(
+                        'user',
+                        JSON.stringify({
+                            email: email,
+                            password: password, // Lưu mật khẩu hoặc thông tin nào đó cần thiết
+                        }),
+                    );
+                    alert('Đăng nhập thành công!');
+                    // Chuyển hướng người dùng hoặc cập nhật giao diện sau khi đăng nhập thành công
+                    window.location.href = 'http://127.0.0.1:5500/checkout.html'; // Chuyển hướng đến trang checkout (hoặc trang khác bạn muốn)
+                } else {
+                    alert('Thông tin đăng nhập không chính xác!');
+                    // window.location.href = 'http://127.0.0.1:5500/checkout.html';
+                }
+            }
+
+            // Xử lý sự kiện khi người dùng submit form đăng nhập
+            document.getElementById('login-form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Ngừng reload trang khi submit
+
+                const email = document.getElementById('email_login').value; // Lấy giá trị email
+                const password = document.getElementById('password_login').value; // Lấy giá trị mật khẩu
+
+                loginUser(email, password); // Gọi hàm loginUser để kiểm tra và lưu vào localStorage
+            });
+        </script>
     </body>
 </html>

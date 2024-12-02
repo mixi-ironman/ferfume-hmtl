@@ -38,7 +38,11 @@
             <div class="container">
                 <div class="header-wrap row">
                     <div class="header__logo col-xl-3">
-                        <img class="header__logo-img" src="./assets/img/logo_header.png" alt="Logo" />
+                        <img
+                            class="header__logo-img"
+                            src="./assets/img/c77631c9-9a27-4838-876d-8ba101976d74.jpg"
+                            alt="Logo"
+                        />
                     </div>
                     <div
                         class="header__title col-xl-6 text-center d-flex justify-content-center align-items-center flex-column"
@@ -55,13 +59,13 @@
                                 <span>Hotline bán hàng</span>
                             </div>
                             <a href="tel:0931012321">
-                                <img class="header__phone-icon" src="./assets/img/icon_phone_header.png" alt="" />
+                                <img class="header__phone-icon" src="./assets/img/logo__1.jpg" alt="" />
                             </a>
 
                             <div class="header__cart-wrapper">
                                 <a href="./cart-index.html">
-                                    <img class="header__cart-icon" src="./assets/img/🦆 icon _cart_.png" alt="" />
-                                    <span class="header__cart-count">3</span>
+                                    <img class="header__cart-icon" src="./assets/img/logo__2.jpg" alt="" />
+                                    <span class="header__cart-count">0</span>
                                 </a>
 
                                 <!-- Submenu -->
@@ -69,7 +73,7 @@
                                     <ul class="cart-items list-unstyled mb-2">
                                         <li class="cart-item d-flex align-items-center mb-2">
                                             <img
-                                                src="https://product.hstatic.net/1000339918/product/armaf-club-de-nuit-white-imperiale-edp_fa0cceaeb2b04ad3ad5d766c4b984050_large.jpg"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
                                                 alt="Product"
                                                 class="cart-item-img"
                                                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px"
@@ -79,7 +83,7 @@
                                                 <p class="cart-item-price mb-0">200.000 VND x 2</p>
                                             </div>
                                         </li>
-                                        <li class="cart-item d-flex align-items-center mb-2">
+                                        <li class="cart-item d-flex align-items-center mb-2 d-none">
                                             <img
                                                 src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_large.jpg"
                                                 alt="Product"
@@ -99,12 +103,12 @@
                             </div>
                             <div class="header__account-wrapper">
                                 <a class="d-flex align-items-center">
-                                    <img class="header__account-icon" src="./assets/img/Frame 993.png" alt="" />
+                                    <img class="header__account-icon" src="./assets/img/logo__3.jpg" alt="" />
                                 </a>
                                 <!-- Submenu -->
                                 <div class="account-submenu position-absolute bg-white shadow-sm">
                                     <ul class="list-unstyled mb-0">
-                                        <li class="submenu-item mb-2">
+                                        <li class="submenu-item mb-2" id="account-link">
                                             <a
                                                 href="./account.html"
                                                 class="submenu-link text-decoration-none text-dark d-flex align-items-center"
@@ -112,12 +116,28 @@
                                                 <i class="fa-solid fa-user me-2"></i> Tài khoản
                                             </a>
                                         </li>
-                                        <li class="submenu-item">
+                                        <li class="submenu-item" id="logout-link">
                                             <a
-                                                href="./index.html"
+                                                id="logout-btn"
                                                 class="submenu-link text-decoration-none text-dark d-flex align-items-center"
                                             >
                                                 <i class="fa-solid fa-sign-out-alt me-2"></i> Đăng xuất
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item" id="login-link">
+                                            <a
+                                                href="./register-customer.html"
+                                                class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                            >
+                                                <i class="fa-solid fa-sign-in-alt me-2"></i> Đăng nhập
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item" id="register-link">
+                                            <a
+                                                href=".//register-customer.html"
+                                                class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                            >
+                                                <i class="fa-solid fa-user-plus me-2"></i> Đăng ký
                                             </a>
                                         </li>
                                     </ul>
@@ -135,7 +155,7 @@
         <!-- Menu -->
         <div class="menu-wrap container-fluid">
             <ul class="menu-list w-100 d-flex justify-content-evenly align-items-center">
-                <li class="menu-item"><a class="menu-item_link" href="/index.html">Trang chủ</a></li>
+                <li class="menu-item"><a class="menu-item_link" href="./index.html">Trang chủ</a></li>
                 <li class="menu-item menu-item_more position-relative">
                     <a class="menu-item_link" href="./product-collection.html">
                         Sản phẩm
@@ -219,7 +239,7 @@
             <div class="mt-5">
                 <div class="product-section row">
                     <div class="product-section__heading col-md-12">
-                        <h3 class="product-section__title fw-bold text-custom-heading">KHUYẾN MẠI HẪM DẪN NHẤT</h3>
+                        <h3 class="product-section__title fw-bold text-custom-heading">KHUYẾN MẠI HẪP DẪN NHẤT</h3>
                         <p class="promotion-timer d-none">Kết thúc sau <span class="countdown"></span></p>
                     </div>
 
@@ -233,7 +253,11 @@
                                     <div class="product-item border-custom-primary translate--y">
                                         <div class="product-item__wrap-img">
                                             <a href="./product-detail.html" class="d-block product-item__img-link">
-                                                <img class="product-item__img" src="./assets/img/sp6.png" alt="" />
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                    alt=""
+                                                />
                                                 <img
                                                     class="product-item__img-thumnail d-none"
                                                     src="./assets/img/sp6.png"
@@ -277,9 +301,7 @@
                                         <div class="product-item__info">
                                             <a href="./product-detail.html" class="d-block">
                                                 <p class="product-info__vendor">Naughty</p>
-                                                <p class="product-info__name">
-                                                    Nước Hoa Afnan Supremacy Not Only Intense EDP
-                                                </p>
+                                                <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                             </a>
                                             <div class="product-comment__star-rating">
                                                 <ul
@@ -334,7 +356,11 @@
                                     <div class="product-item border-custom-primary translate--y">
                                         <div class="product-item__wrap-img">
                                             <a href="./product-detail.html" class="d-block product-item__img-link">
-                                                <img class="product-item__img" src="./assets/img/sp7.png" alt="" />
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                    alt=""
+                                                />
                                                 <img
                                                     class="product-item__img-thumnail d-none"
                                                     src="./assets/img/sp7.png"
@@ -387,12 +413,9 @@
                                             </div>
                                         </div>
                                         <div class="product-item__info">
-                                            <a
-                                                href="https://mixibike.ommani.net/product/detail/bo-group-xe-dap-sram-sx-eagle-12sp-ban-2021"
-                                                class="d-block"
-                                            >
+                                            <a href="./product-detail.html" class="d-block">
                                                 <p class="product-info__vendor">Eagle</p>
-                                                <p class="product-info__name">Nước Hoa Burberry Her EDP</p>
+                                                <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                             </a>
                                             <!-- Product Rating -->
                                             <div class="product-comment__star-rating">
@@ -457,7 +480,11 @@
                                     <div class="product-item border-custom-primary translate--y">
                                         <div class="product-item__wrap-img">
                                             <a href="./product-detail.html" class="d-block product-item__img-link">
-                                                <img class="product-item__img" src="./assets/img/sp7.png" alt="" />
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                    alt=""
+                                                />
                                                 <img
                                                     class="product-item__img-thumnail d-none"
                                                     src="./assets/img/sp7.png"
@@ -510,12 +537,9 @@
                                             </div>
                                         </div>
                                         <div class="product-item__info">
-                                            <a
-                                                href="https://mixibike.ommani.net/product/detail/tui-kho-xtouring-xam-sat-to-ong-tui-kho-xtouring"
-                                                class="d-block"
-                                            >
+                                            <a href="./product-detail.html" class="d-block">
                                                 <p class="product-info__vendor">XTOURING</p>
-                                                <p class="product-info__name">Nước Hoa Byredo La Tulipe EDP</p>
+                                                <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                             </a>
                                             <!-- Product Rating -->
                                             <div class="product-comment__star-rating">
@@ -580,7 +604,11 @@
                                     <div class="product-item border-custom-primary translate--y">
                                         <div class="product-item__wrap-img">
                                             <a href="./product-detail.html" class="d-block product-item__img-link">
-                                                <img class="product-item__img" src="./assets/img/sp8.png" alt="" />
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                    alt=""
+                                                />
                                                 <img
                                                     class="product-item__img-thumnail d-none"
                                                     src="./assets/img/sp8.png"
@@ -633,12 +661,9 @@
                                             </div>
                                         </div>
                                         <div class="product-item__info">
-                                            <a
-                                                href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
-                                                class="d-block"
-                                            >
+                                            <a href="./product-detail.html" class="d-block">
                                                 <p class="product-info__vendor">Rondo</p>
-                                                <p class="product-info__name">Nước Hoa Bvlgari Aqva Pour Homme EDT</p>
+                                                <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                             </a>
                                             <!-- Product Rating -->
                                             <div class="product-comment__star-rating">
@@ -703,7 +728,11 @@
                                     <div class="product-item border-custom-primary translate--y">
                                         <div class="product-item__wrap-img">
                                             <a href="./product-detail.html" class="d-block product-item__img-link">
-                                                <img class="product-item__img" src="./assets/img/sp9.png" alt="" />
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                    alt=""
+                                                />
                                                 <img
                                                     class="product-item__img-thumnail d-none"
                                                     src="./assets/img/sp9.png"
@@ -756,12 +785,9 @@
                                             </div>
                                         </div>
                                         <div class="product-item__info">
-                                            <a
-                                                href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
-                                                class="d-block"
-                                            >
+                                            <a href="./product-detail.html" class="d-block">
                                                 <p class="product-info__vendor">Rondo</p>
-                                                <p class="product-info__name">Nước Hoa Creed Aventus EDP</p>
+                                                <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                             </a>
                                             <!-- Product Rating -->
                                             <div class="product-comment__star-rating">
@@ -826,7 +852,11 @@
                                     <div class="product-item border-custom-primary translate--y">
                                         <div class="product-item__wrap-img">
                                             <a href="./product-detail.html" class="d-block product-item__img-link">
-                                                <img class="product-item__img" src="./assets/img/sp6.png" alt="" />
+                                                <img
+                                                    class="product-item__img"
+                                                    src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                    alt=""
+                                                />
                                                 <img
                                                     class="product-item__img-thumnail d-none"
                                                     src="./assets/img/sp6.png"
@@ -870,9 +900,7 @@
                                         <div class="product-item__info">
                                             <a href="./product-detail.html" class="d-block">
                                                 <p class="product-info__vendor">Naughty</p>
-                                                <p class="product-info__name">
-                                                    Nước Hoa Afnan Supremacy Not Only Intense EDP
-                                                </p>
+                                                <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                             </a>
                                             <div class="product-comment__star-rating">
                                                 <ul
@@ -945,7 +973,11 @@
                                 <div class="product-item border-custom-primary translate--y">
                                     <div class="product-item__wrap-img">
                                         <a href="./product-detail.html" class="d-block product-item__img-link">
-                                            <img class="product-item__img" src="./assets/img/sp6.png" alt="" />
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
                                             <img
                                                 class="product-item__img-thumnail d-none"
                                                 src="./assets/img/sp6.png"
@@ -997,9 +1029,7 @@
                                     <div class="product-item__info">
                                         <a href="./product-detail.html" class="d-block">
                                             <p class="product-info__vendor">Naughty</p>
-                                            <p class="product-info__name">
-                                                Nước Hoa Afnan Supremacy Not Only Intense EDP
-                                            </p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                         </a>
                                         <!-- Product Rating -->
                                         <div class="product-comment__star-rating">
@@ -1103,7 +1133,11 @@
                                 <div class="product-item border-custom-primary translate--y">
                                     <div class="product-item__wrap-img">
                                         <a href="./product-detail.html" class="d-block product-item__img-link">
-                                            <img class="product-item__img" src="./assets/img/sp7.png" alt="" />
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
                                             <img
                                                 class="product-item__img-thumnail d-none"
                                                 src="./assets/img/sp7.png"
@@ -1156,12 +1190,9 @@
                                         </div>
                                     </div>
                                     <div class="product-item__info">
-                                        <a
-                                            href="https://mixibike.ommani.net/product/detail/tui-kho-xtouring-xam-sat-to-ong-tui-kho-xtouring"
-                                            class="d-block"
-                                        >
+                                        <a href="./product-detail.html" class="d-block">
                                             <p class="product-info__vendor">XTOURING</p>
-                                            <p class="product-info__name">Nước Hoa Byredo La Tulipe EDP</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                         </a>
                                         <!-- Product Rating -->
                                         <div class="product-comment__star-rating">
@@ -1225,7 +1256,11 @@
                                 <div class="product-item border-custom-primary translate--y">
                                     <div class="product-item__wrap-img">
                                         <a href="./product-detail.html" class="d-block product-item__img-link">
-                                            <img class="product-item__img" src="./assets/img/sp7.png" alt="" />
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
                                             <img
                                                 class="product-item__img-thumnail d-none"
                                                 src="./assets/img/sp7.png"
@@ -1278,12 +1313,9 @@
                                         </div>
                                     </div>
                                     <div class="product-item__info">
-                                        <a
-                                            href="https://mixibike.ommani.net/product/detail/bo-group-xe-dap-sram-sx-eagle-12sp-ban-2021"
-                                            class="d-block"
-                                        >
+                                        <a href="./product-detail.html" class="d-block">
                                             <p class="product-info__vendor">Eagle</p>
-                                            <p class="product-info__name">Nước Hoa Burberry Her EDP</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                         </a>
                                         <!-- Product Rating -->
                                         <div class="product-comment__star-rating">
@@ -1347,7 +1379,11 @@
                                 <div class="product-item border-custom-primary translate--y">
                                     <div class="product-item__wrap-img">
                                         <a href="./product-detail.html" class="d-block product-item__img-link">
-                                            <img class="product-item__img" src="./assets/img/sp8.png" alt="" />
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
                                             <img
                                                 class="product-item__img-thumnail d-none"
                                                 src="./assets/img/sp8.png"
@@ -1400,12 +1436,9 @@
                                         </div>
                                     </div>
                                     <div class="product-item__info">
-                                        <a
-                                            href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
-                                            class="d-block"
-                                        >
+                                        <a href="./product-detail.html" class="d-block">
                                             <p class="product-info__vendor">Rondo</p>
-                                            <p class="product-info__name">Nước Hoa Bvlgari Aqva Pour Homme EDT</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                         </a>
                                         <!-- Product Rating -->
                                         <div class="product-comment__star-rating">
@@ -1469,7 +1502,11 @@
                                 <div class="product-item border-custom-primary translate--y">
                                     <div class="product-item__wrap-img">
                                         <a href="./product-detail.html" class="d-block product-item__img-link">
-                                            <img class="product-item__img" src="./assets/img/sp9.png" alt="" />
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
                                             <img
                                                 class="product-item__img-thumnail d-none"
                                                 src="./assets/img/sp9.png"
@@ -1522,12 +1559,661 @@
                                         </div>
                                     </div>
                                     <div class="product-item__info">
-                                        <a
-                                            href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
-                                            class="d-block"
-                                        >
+                                        <a href="./product-detail.html" class="d-block">
                                             <p class="product-info__vendor">Rondo</p>
-                                            <p class="product-info__name">Nước Hoa Creed Aventus EDP</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
+                                        </a>
+                                        <!-- Product Rating -->
+                                        <div class="product-comment__star-rating">
+                                            <ul
+                                                class="list-line rating"
+                                                title="Average Rating"
+                                                style="
+                                                    display: flex;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    align-items: center;
+                                                    justify-content: left;
+                                                "
+                                            >
+                                                <li
+                                                    title="star_rating"
+                                                    id="16-1"
+                                                    data-index="1"
+                                                    data-product_id="16"
+                                                    data-rating="5"
+                                                    class="rate"
+                                                    style="cursor: pointer; color: #ffcc00; font-size: 25px"
+                                                >
+                                                    ★
+                                                </li>
+                                                <li>5.0</li>
+                                                <li style="margin-left: 3px">(12 đánh giá)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-info__price-box">
+                                            <p class="product-info__price">28.900.000 VND</p>
+                                            <div class="d-flex justify-content-start">
+                                                <p class="product-info__product-origin">29.900.000 VND</p>
+                                                <span
+                                                    style="
+                                                        margin-left: 5px;
+                                                        font-size: 11px;
+                                                        background-color: rgb(235, 48, 48);
+                                                        color: white;
+                                                        padding: 1px 3px;
+                                                        border-radius: 10px;
+                                                        display: inline-block;
+                                                    "
+                                                    >3.34<small style="font-size: 11px">%</small></span
+                                                >
+                                            </div>
+                                        </div>
+
+                                        <div class="d-none product-info__item-color--chosen"></div>
+                                    </div>
+                                    <div class="product-item__sold-info d-none">
+                                        <p class="product-item__sold-title">Vừa mở bán</p>
+                                        <div class="product-item__sold-bar">
+                                            <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                        </div>
+                                        <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-1-5">
+                                <div class="product-item border-custom-primary translate--y">
+                                    <div class="product-item__wrap-img">
+                                        <a href="./product-detail.html" class="d-block product-item__img-link">
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                class="product-item__img-thumnail d-none"
+                                                src="./assets/img/sp6.png"
+                                                alt=""
+                                            />
+                                        </a>
+                                        <div class="action-bar">
+                                            <form
+                                                action="https://mixibike.ommani.net/add-quickly"
+                                                method="post"
+                                                enctype="multipart/form-data"
+                                                class=""
+                                                style="display: flex; align-items: center; justify-content: center"
+                                            >
+                                                <input
+                                                    type="hidden"
+                                                    name="_token"
+                                                    value="sx2d0rYtOR9vWGaRZo4bYPAikOBT8wGH7dtYOcqZ"
+                                                />
+                                                <input
+                                                    type="hidden"
+                                                    name="productAlias"
+                                                    value="pedal-xe-dap-mtb-crankbrothers-stamp"
+                                                />
+                                                <input type="hidden" name="id" value="16" />
+                                                <input
+                                                    type="hidden"
+                                                    name="quantity"
+                                                    value="1"
+                                                    class="form-control prd_quantity border rounded mb-2"
+                                                />
+                                                <a href="./product-detail.html" class="action-bar_icon">
+                                                    <img
+                                                        src="https://omweb-test.s3.ap-southeast-1.amazonaws.com/mixibike/icon-options.webp"
+                                                        alt=""
+                                                    />
+                                                </a>
+
+                                                <a class="action-bar_icon js-addToCart d-none">
+                                                    <i class="fa-solid fa-cart-shopping"></i
+                                                ></a>
+
+                                                <a href="#" class="action-bar_icon d-none">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__info">
+                                        <a href="./product-detail.html" class="d-block">
+                                            <p class="product-info__vendor">Naughty</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
+                                        </a>
+                                        <!-- Product Rating -->
+                                        <div class="product-comment__star-rating">
+                                            <ul
+                                                class="list-line rating"
+                                                title="Average Rating"
+                                                style="
+                                                    display: flex;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    align-items: center;
+                                                    justify-content: left;
+                                                "
+                                            >
+                                                <li
+                                                    title="star_rating"
+                                                    id="16-1"
+                                                    data-index="1"
+                                                    data-product_id="16"
+                                                    data-rating="5"
+                                                    class="rate"
+                                                    style="cursor: pointer; color: #ffcc00; font-size: 25px"
+                                                >
+                                                    ★
+                                                </li>
+                                                <li>5.0</li>
+                                                <li style="margin-left: 3px">(12 đánh giá)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-info__price-box">
+                                            <p class="product-info__price">3.200.000 VND</p>
+                                            <div class="d-flex justify-content-start">
+                                                <p class="product-info__product-origin">4.390.000 VND</p>
+                                                <span
+                                                    style="
+                                                        margin-left: 5px;
+                                                        font-size: 11px;
+                                                        background-color: rgb(235, 48, 48);
+                                                        color: white;
+                                                        padding: 1px 3px;
+                                                        border-radius: 10px;
+                                                        display: inline-block;
+                                                    "
+                                                    >27.11<small style="font-size: 11px">%</small></span
+                                                >
+                                            </div>
+                                        </div>
+
+                                        <div class="d-none product-info__item-color--chosen">
+                                            <img
+                                                src="https://omweb-prod.s3.ap-southeast-1.amazonaws.com/3/mixibike/products/cam.webp"
+                                                alt=""
+                                                class="product-info__item-color-img--alone active"
+                                                data-src="https://omweb-prod.s3.ap-southeast-1.amazonaws.com/3/mixibike/products/cam.webp"
+                                                style="
+                                                    width: 35px;
+                                                    height: 35px;
+                                                    object-fit: contain;
+                                                    margin-right: 5px;
+                                                    border: 1px solid #dfdada;
+                                                "
+                                            />
+                                            <img
+                                                src="https://omweb-prod.s3.ap-southeast-1.amazonaws.com/3/mixibike/products/dđỏ.webp"
+                                                alt=""
+                                                class="product-info__item-color-img--alone"
+                                                data-src="https://omweb-prod.s3.ap-southeast-1.amazonaws.com/3/mixibike/products/dđỏ.webp"
+                                                style="
+                                                    width: 35px;
+                                                    height: 35px;
+                                                    object-fit: contain;
+                                                    margin-right: 5px;
+                                                    border: 1px solid #dfdada;
+                                                "
+                                            />
+                                            <img
+                                                src="https://omweb-prod.s3.ap-southeast-1.amazonaws.com/3/mixibike/products/xanh.webp"
+                                                alt=""
+                                                class="product-info__item-color-img--alone"
+                                                data-src="https://omweb-prod.s3.ap-southeast-1.amazonaws.com/3/mixibike/products/xanh.webp"
+                                                style="
+                                                    width: 35px;
+                                                    height: 35px;
+                                                    object-fit: contain;
+                                                    margin-right: 5px;
+                                                    border: 1px solid #dfdada;
+                                                "
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="product-item__sold-info d-none">
+                                        <p class="product-item__sold-title">Vừa mở bán</p>
+                                        <div class="product-item__sold-bar">
+                                            <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                        </div>
+                                        <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-1-5">
+                                <div class="product-item border-custom-primary translate--y">
+                                    <div class="product-item__wrap-img">
+                                        <a href="./product-detail.html" class="d-block product-item__img-link">
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                class="product-item__img-thumnail d-none"
+                                                src="./assets/img/sp7.png"
+                                                alt=""
+                                            />
+                                        </a>
+                                        <div class="action-bar">
+                                            <form
+                                                action="https://mixibike.ommani.net/add-quickly"
+                                                method="post"
+                                                enctype="multipart/form-data"
+                                                class=""
+                                                style="display: flex; align-items: center; justify-content: center"
+                                            >
+                                                <input
+                                                    type="hidden"
+                                                    name="_token"
+                                                    value="sx2d0rYtOR9vWGaRZo4bYPAikOBT8wGH7dtYOcqZ"
+                                                />
+                                                <input
+                                                    type="hidden"
+                                                    name="productAlias"
+                                                    value="tui-kho-xtouring-xam-sat-to-ong-tui-kho-xtouring"
+                                                />
+                                                <input type="hidden" name="id" value="15" />
+                                                <input
+                                                    type="hidden"
+                                                    name="quantity"
+                                                    value="1"
+                                                    class="form-control prd_quantity border rounded mb-2"
+                                                />
+                                                <a
+                                                    href="https://mixibike.ommani.net/product/detail/tui-kho-xtouring-xam-sat-to-ong-tui-kho-xtouring"
+                                                    class="action-bar_icon"
+                                                >
+                                                    <img
+                                                        src="https://omweb-test.s3.ap-southeast-1.amazonaws.com/mixibike/icon-options.webp"
+                                                        alt=""
+                                                    />
+                                                </a>
+
+                                                <a class="action-bar_icon js-addToCart">
+                                                    <i class="fa-solid fa-cart-shopping"></i
+                                                ></a>
+
+                                                <a href="#" class="action-bar_icon d-none">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__info">
+                                        <a href="./product-detail.html" class="d-block">
+                                            <p class="product-info__vendor">XTOURING</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
+                                        </a>
+                                        <!-- Product Rating -->
+                                        <div class="product-comment__star-rating">
+                                            <ul
+                                                class="list-line rating"
+                                                title="Average Rating"
+                                                style="
+                                                    display: flex;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    align-items: center;
+                                                    justify-content: left;
+                                                "
+                                            >
+                                                <li
+                                                    title="star_rating"
+                                                    id="16-1"
+                                                    data-index="1"
+                                                    data-product_id="16"
+                                                    data-rating="5"
+                                                    class="rate"
+                                                    style="cursor: pointer; color: #ffcc00; font-size: 25px"
+                                                >
+                                                    ★
+                                                </li>
+                                                <li>5.0</li>
+                                                <li style="margin-left: 3px">(12 đánh giá)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-info__price-box">
+                                            <p class="product-info__price">1.420.000 VND</p>
+                                            <div class="d-flex justify-content-start">
+                                                <p class="product-info__product-origin">1.600.000 VND</p>
+                                                <span
+                                                    style="
+                                                        margin-left: 5px;
+                                                        font-size: 11px;
+                                                        background-color: rgb(235, 48, 48);
+                                                        color: white;
+                                                        padding: 1px 3px;
+                                                        border-radius: 10px;
+                                                        display: inline-block;
+                                                    "
+                                                    >11.25<small style="font-size: 11px">%</small></span
+                                                >
+                                            </div>
+                                        </div>
+
+                                        <div class="d-none product-info__item-color--chosen"></div>
+                                    </div>
+                                    <div class="product-item__sold-info d-none">
+                                        <p class="product-item__sold-title">Vừa mở bán</p>
+                                        <div class="product-item__sold-bar">
+                                            <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                        </div>
+                                        <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-1-5">
+                                <div class="product-item border-custom-primary translate--y">
+                                    <div class="product-item__wrap-img">
+                                        <a href="./product-detail.html" class="d-block product-item__img-link">
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                class="product-item__img-thumnail d-none"
+                                                src="./assets/img/sp7.png"
+                                                alt=""
+                                            />
+                                        </a>
+                                        <div class="action-bar">
+                                            <form
+                                                action="https://mixibike.ommani.net/add-quickly"
+                                                method="post"
+                                                enctype="multipart/form-data"
+                                                class=""
+                                                style="display: flex; align-items: center; justify-content: center"
+                                            >
+                                                <input
+                                                    type="hidden"
+                                                    name="_token"
+                                                    value="sx2d0rYtOR9vWGaRZo4bYPAikOBT8wGH7dtYOcqZ"
+                                                />
+                                                <input
+                                                    type="hidden"
+                                                    name="productAlias"
+                                                    value="bo-group-xe-dap-sram-sx-eagle-12sp-ban-2021"
+                                                />
+                                                <input type="hidden" name="id" value="14" />
+                                                <input
+                                                    type="hidden"
+                                                    name="quantity"
+                                                    value="1"
+                                                    class="form-control prd_quantity border rounded mb-2"
+                                                />
+                                                <a
+                                                    href="https://mixibike.ommani.net/product/detail/bo-group-xe-dap-sram-sx-eagle-12sp-ban-2021"
+                                                    class="action-bar_icon"
+                                                >
+                                                    <img
+                                                        src="https://omweb-test.s3.ap-southeast-1.amazonaws.com/mixibike/icon-options.webp"
+                                                        alt=""
+                                                    />
+                                                </a>
+
+                                                <a class="action-bar_icon js-addToCart">
+                                                    <i class="fa-solid fa-cart-shopping"></i
+                                                ></a>
+
+                                                <a href="#" class="action-bar_icon d-none">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__info">
+                                        <a href="./product-detail.html" class="d-block">
+                                            <p class="product-info__vendor">Eagle</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
+                                        </a>
+                                        <!-- Product Rating -->
+                                        <div class="product-comment__star-rating">
+                                            <ul
+                                                class="list-line rating"
+                                                title="Average Rating"
+                                                style="
+                                                    display: flex;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    align-items: center;
+                                                    justify-content: left;
+                                                "
+                                            >
+                                                <li
+                                                    title="star_rating"
+                                                    id="16-1"
+                                                    data-index="1"
+                                                    data-product_id="16"
+                                                    data-rating="5"
+                                                    class="rate"
+                                                    style="cursor: pointer; color: #ffcc00; font-size: 25px"
+                                                >
+                                                    ★
+                                                </li>
+                                                <li>5.0</li>
+                                                <li style="margin-left: 3px">(12 đánh giá)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-info__price-box">
+                                            <p class="product-info__price">6.870.000 VND</p>
+                                            <div class="d-flex justify-content-start">
+                                                <p class="product-info__product-origin">8.390.000 VND</p>
+                                                <span
+                                                    style="
+                                                        margin-left: 5px;
+                                                        font-size: 11px;
+                                                        background-color: rgb(235, 48, 48);
+                                                        color: white;
+                                                        padding: 1px 3px;
+                                                        border-radius: 10px;
+                                                        display: inline-block;
+                                                    "
+                                                    >18.12<small style="font-size: 11px">%</small></span
+                                                >
+                                            </div>
+                                        </div>
+
+                                        <div class="d-none product-info__item-color--chosen"></div>
+                                    </div>
+                                    <div class="product-item__sold-info d-none">
+                                        <p class="product-item__sold-title">Vừa mở bán</p>
+                                        <div class="product-item__sold-bar">
+                                            <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                        </div>
+                                        <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-1-5">
+                                <div class="product-item border-custom-primary translate--y">
+                                    <div class="product-item__wrap-img">
+                                        <a href="./product-detail.html" class="d-block product-item__img-link">
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                class="product-item__img-thumnail d-none"
+                                                src="./assets/img/sp8.png"
+                                                alt=""
+                                            />
+                                        </a>
+                                        <div class="action-bar">
+                                            <form
+                                                action="https://mixibike.ommani.net/add-quickly"
+                                                method="post"
+                                                enctype="multipart/form-data"
+                                                class=""
+                                                style="display: flex; align-items: center; justify-content: center"
+                                            >
+                                                <input
+                                                    type="hidden"
+                                                    name="_token"
+                                                    value="sx2d0rYtOR9vWGaRZo4bYPAikOBT8wGH7dtYOcqZ"
+                                                />
+                                                <input
+                                                    type="hidden"
+                                                    name="productAlias"
+                                                    value="xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                                />
+                                                <input type="hidden" name="id" value="13" />
+                                                <input
+                                                    type="hidden"
+                                                    name="quantity"
+                                                    value="1"
+                                                    class="form-control prd_quantity border rounded mb-2"
+                                                />
+                                                <a
+                                                    href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                                    class="action-bar_icon"
+                                                >
+                                                    <img
+                                                        src="https://omweb-test.s3.ap-southeast-1.amazonaws.com/mixibike/icon-options.webp"
+                                                        alt=""
+                                                    />
+                                                </a>
+
+                                                <a class="action-bar_icon js-addToCart">
+                                                    <i class="fa-solid fa-cart-shopping"></i
+                                                ></a>
+
+                                                <a href="#" class="action-bar_icon d-none">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__info">
+                                        <a href="./product-detail.html" class="d-block">
+                                            <p class="product-info__vendor">Rondo</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
+                                        </a>
+                                        <!-- Product Rating -->
+                                        <div class="product-comment__star-rating">
+                                            <ul
+                                                class="list-line rating"
+                                                title="Average Rating"
+                                                style="
+                                                    display: flex;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    align-items: center;
+                                                    justify-content: left;
+                                                "
+                                            >
+                                                <li
+                                                    title="star_rating"
+                                                    id="16-1"
+                                                    data-index="1"
+                                                    data-product_id="16"
+                                                    data-rating="5"
+                                                    class="rate"
+                                                    style="cursor: pointer; color: #ffcc00; font-size: 25px"
+                                                >
+                                                    ★
+                                                </li>
+                                                <li>5.0</li>
+                                                <li style="margin-left: 3px">(12 đánh giá)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-info__price-box">
+                                            <p class="product-info__price">28.900.000 VND</p>
+                                            <div class="d-flex justify-content-start">
+                                                <p class="product-info__product-origin">29.900.000 VND</p>
+                                                <span
+                                                    style="
+                                                        margin-left: 5px;
+                                                        font-size: 11px;
+                                                        background-color: rgb(235, 48, 48);
+                                                        color: white;
+                                                        padding: 1px 3px;
+                                                        border-radius: 10px;
+                                                        display: inline-block;
+                                                    "
+                                                    >3.34<small style="font-size: 11px">%</small></span
+                                                >
+                                            </div>
+                                        </div>
+
+                                        <div class="d-none product-info__item-color--chosen"></div>
+                                    </div>
+                                    <div class="product-item__sold-info d-none">
+                                        <p class="product-item__sold-title">Vừa mở bán</p>
+                                        <div class="product-item__sold-bar">
+                                            <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                        </div>
+                                        <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-1-5">
+                                <div class="product-item border-custom-primary translate--y">
+                                    <div class="product-item__wrap-img">
+                                        <a href="./product-detail.html" class="d-block product-item__img-link">
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                class="product-item__img-thumnail d-none"
+                                                src="./assets/img/sp9.png"
+                                                alt=""
+                                            />
+                                        </a>
+                                        <div class="action-bar">
+                                            <form
+                                                action="https://mixibike.ommani.net/add-quickly"
+                                                method="post"
+                                                enctype="multipart/form-data"
+                                                class=""
+                                                style="display: flex; align-items: center; justify-content: center"
+                                            >
+                                                <input
+                                                    type="hidden"
+                                                    name="_token"
+                                                    value="sx2d0rYtOR9vWGaRZo4bYPAikOBT8wGH7dtYOcqZ"
+                                                />
+                                                <input
+                                                    type="hidden"
+                                                    name="productAlias"
+                                                    value="xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                                />
+                                                <input type="hidden" name="id" value="13" />
+                                                <input
+                                                    type="hidden"
+                                                    name="quantity"
+                                                    value="1"
+                                                    class="form-control prd_quantity border rounded mb-2"
+                                                />
+                                                <a
+                                                    href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                                    class="action-bar_icon"
+                                                >
+                                                    <img
+                                                        src="https://omweb-test.s3.ap-southeast-1.amazonaws.com/mixibike/icon-options.webp"
+                                                        alt=""
+                                                    />
+                                                </a>
+
+                                                <a class="action-bar_icon js-addToCart">
+                                                    <i class="fa-solid fa-cart-shopping"></i
+                                                ></a>
+
+                                                <a href="#" class="action-bar_icon d-none">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__info">
+                                        <a href="./product-detail.html" class="d-block">
+                                            <p class="product-info__vendor">Rondo</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                         </a>
                                         <!-- Product Rating -->
                                         <div class="product-comment__star-rating">
@@ -1618,7 +2304,11 @@
                                 <div class="product-item border-custom-primary translate--y">
                                     <div class="product-item__wrap-img">
                                         <a href="./product-detail.html" class="d-block product-item__img-link">
-                                            <img class="product-item__img" src="./assets/img/sp6.png" alt="" />
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
                                             <img
                                                 class="product-item__img-thumnail d-none"
                                                 src="./assets/img/sp6.png"
@@ -1670,9 +2360,7 @@
                                     <div class="product-item__info">
                                         <a href="./product-detail.html" class="d-block">
                                             <p class="product-info__vendor">Naughty</p>
-                                            <p class="product-info__name">
-                                                Nước Hoa Afnan Supremacy Not Only Intense EDP
-                                            </p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                         </a>
                                         <!-- Product Rating -->
                                         <div class="product-comment__star-rating">
@@ -1776,7 +2464,11 @@
                                 <div class="product-item border-custom-primary translate--y">
                                     <div class="product-item__wrap-img">
                                         <a href="./product-detail.html" class="d-block product-item__img-link">
-                                            <img class="product-item__img" src="./assets/img/sp7.png" alt="" />
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
                                             <img
                                                 class="product-item__img-thumnail d-none"
                                                 src="./assets/img/sp7.png"
@@ -1829,12 +2521,9 @@
                                         </div>
                                     </div>
                                     <div class="product-item__info">
-                                        <a
-                                            href="https://mixibike.ommani.net/product/detail/tui-kho-xtouring-xam-sat-to-ong-tui-kho-xtouring"
-                                            class="d-block"
-                                        >
+                                        <a href="./product-detail.html" class="d-block">
                                             <p class="product-info__vendor">XTOURING</p>
-                                            <p class="product-info__name">Nước Hoa Byredo La Tulipe EDP</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                         </a>
                                         <!-- Product Rating -->
                                         <div class="product-comment__star-rating">
@@ -1898,7 +2587,11 @@
                                 <div class="product-item border-custom-primary translate--y">
                                     <div class="product-item__wrap-img">
                                         <a href="./product-detail.html" class="d-block product-item__img-link">
-                                            <img class="product-item__img" src="./assets/img/sp7.png" alt="" />
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
                                             <img
                                                 class="product-item__img-thumnail d-none"
                                                 src="./assets/img/sp7.png"
@@ -1951,12 +2644,9 @@
                                         </div>
                                     </div>
                                     <div class="product-item__info">
-                                        <a
-                                            href="https://mixibike.ommani.net/product/detail/bo-group-xe-dap-sram-sx-eagle-12sp-ban-2021"
-                                            class="d-block"
-                                        >
+                                        <a href="./product-detail.html" class="d-block">
                                             <p class="product-info__vendor">Eagle</p>
-                                            <p class="product-info__name">Nước Hoa Burberry Her EDP</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                         </a>
                                         <!-- Product Rating -->
                                         <div class="product-comment__star-rating">
@@ -2020,7 +2710,11 @@
                                 <div class="product-item border-custom-primary translate--y">
                                     <div class="product-item__wrap-img">
                                         <a href="./product-detail.html" class="d-block product-item__img-link">
-                                            <img class="product-item__img" src="./assets/img/sp8.png" alt="" />
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
                                             <img
                                                 class="product-item__img-thumnail d-none"
                                                 src="./assets/img/sp8.png"
@@ -2073,12 +2767,9 @@
                                         </div>
                                     </div>
                                     <div class="product-item__info">
-                                        <a
-                                            href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
-                                            class="d-block"
-                                        >
+                                        <a href="./product-detail.html" class="d-block">
                                             <p class="product-info__vendor">Rondo</p>
-                                            <p class="product-info__name">Nước Hoa Bvlgari Aqva Pour Homme EDT</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                         </a>
                                         <!-- Product Rating -->
                                         <div class="product-comment__star-rating">
@@ -2142,7 +2833,11 @@
                                 <div class="product-item border-custom-primary translate--y">
                                     <div class="product-item__wrap-img">
                                         <a href="./product-detail.html" class="d-block product-item__img-link">
-                                            <img class="product-item__img" src="./assets/img/sp9.png" alt="" />
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
                                             <img
                                                 class="product-item__img-thumnail d-none"
                                                 src="./assets/img/sp9.png"
@@ -2195,12 +2890,661 @@
                                         </div>
                                     </div>
                                     <div class="product-item__info">
-                                        <a
-                                            href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
-                                            class="d-block"
-                                        >
+                                        <a href="./product-detail.html" class="d-block">
                                             <p class="product-info__vendor">Rondo</p>
-                                            <p class="product-info__name">Nước Hoa Creed Aventus EDP</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
+                                        </a>
+                                        <!-- Product Rating -->
+                                        <div class="product-comment__star-rating">
+                                            <ul
+                                                class="list-line rating"
+                                                title="Average Rating"
+                                                style="
+                                                    display: flex;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    align-items: center;
+                                                    justify-content: left;
+                                                "
+                                            >
+                                                <li
+                                                    title="star_rating"
+                                                    id="16-1"
+                                                    data-index="1"
+                                                    data-product_id="16"
+                                                    data-rating="5"
+                                                    class="rate"
+                                                    style="cursor: pointer; color: #ffcc00; font-size: 25px"
+                                                >
+                                                    ★
+                                                </li>
+                                                <li>5.0</li>
+                                                <li style="margin-left: 3px">(12 đánh giá)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-info__price-box">
+                                            <p class="product-info__price">28.900.000 VND</p>
+                                            <div class="d-flex justify-content-start">
+                                                <p class="product-info__product-origin">29.900.000 VND</p>
+                                                <span
+                                                    style="
+                                                        margin-left: 5px;
+                                                        font-size: 11px;
+                                                        background-color: rgb(235, 48, 48);
+                                                        color: white;
+                                                        padding: 1px 3px;
+                                                        border-radius: 10px;
+                                                        display: inline-block;
+                                                    "
+                                                    >3.34<small style="font-size: 11px">%</small></span
+                                                >
+                                            </div>
+                                        </div>
+
+                                        <div class="d-none product-info__item-color--chosen"></div>
+                                    </div>
+                                    <div class="product-item__sold-info d-none">
+                                        <p class="product-item__sold-title">Vừa mở bán</p>
+                                        <div class="product-item__sold-bar">
+                                            <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                        </div>
+                                        <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-1-5">
+                                <div class="product-item border-custom-primary translate--y">
+                                    <div class="product-item__wrap-img">
+                                        <a href="./product-detail.html" class="d-block product-item__img-link">
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                class="product-item__img-thumnail d-none"
+                                                src="./assets/img/sp6.png"
+                                                alt=""
+                                            />
+                                        </a>
+                                        <div class="action-bar">
+                                            <form
+                                                action="https://mixibike.ommani.net/add-quickly"
+                                                method="post"
+                                                enctype="multipart/form-data"
+                                                class=""
+                                                style="display: flex; align-items: center; justify-content: center"
+                                            >
+                                                <input
+                                                    type="hidden"
+                                                    name="_token"
+                                                    value="sx2d0rYtOR9vWGaRZo4bYPAikOBT8wGH7dtYOcqZ"
+                                                />
+                                                <input
+                                                    type="hidden"
+                                                    name="productAlias"
+                                                    value="pedal-xe-dap-mtb-crankbrothers-stamp"
+                                                />
+                                                <input type="hidden" name="id" value="16" />
+                                                <input
+                                                    type="hidden"
+                                                    name="quantity"
+                                                    value="1"
+                                                    class="form-control prd_quantity border rounded mb-2"
+                                                />
+                                                <a href="./product-detail.html" class="action-bar_icon">
+                                                    <img
+                                                        src="https://omweb-test.s3.ap-southeast-1.amazonaws.com/mixibike/icon-options.webp"
+                                                        alt=""
+                                                    />
+                                                </a>
+
+                                                <a class="action-bar_icon js-addToCart d-none">
+                                                    <i class="fa-solid fa-cart-shopping"></i
+                                                ></a>
+
+                                                <a href="#" class="action-bar_icon d-none">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__info">
+                                        <a href="./product-detail.html" class="d-block">
+                                            <p class="product-info__vendor">Naughty</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
+                                        </a>
+                                        <!-- Product Rating -->
+                                        <div class="product-comment__star-rating">
+                                            <ul
+                                                class="list-line rating"
+                                                title="Average Rating"
+                                                style="
+                                                    display: flex;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    align-items: center;
+                                                    justify-content: left;
+                                                "
+                                            >
+                                                <li
+                                                    title="star_rating"
+                                                    id="16-1"
+                                                    data-index="1"
+                                                    data-product_id="16"
+                                                    data-rating="5"
+                                                    class="rate"
+                                                    style="cursor: pointer; color: #ffcc00; font-size: 25px"
+                                                >
+                                                    ★
+                                                </li>
+                                                <li>5.0</li>
+                                                <li style="margin-left: 3px">(12 đánh giá)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-info__price-box">
+                                            <p class="product-info__price">3.200.000 VND</p>
+                                            <div class="d-flex justify-content-start">
+                                                <p class="product-info__product-origin">4.390.000 VND</p>
+                                                <span
+                                                    style="
+                                                        margin-left: 5px;
+                                                        font-size: 11px;
+                                                        background-color: rgb(235, 48, 48);
+                                                        color: white;
+                                                        padding: 1px 3px;
+                                                        border-radius: 10px;
+                                                        display: inline-block;
+                                                    "
+                                                    >27.11<small style="font-size: 11px">%</small></span
+                                                >
+                                            </div>
+                                        </div>
+
+                                        <div class="d-none product-info__item-color--chosen">
+                                            <img
+                                                src="https://omweb-prod.s3.ap-southeast-1.amazonaws.com/3/mixibike/products/cam.webp"
+                                                alt=""
+                                                class="product-info__item-color-img--alone active"
+                                                data-src="https://omweb-prod.s3.ap-southeast-1.amazonaws.com/3/mixibike/products/cam.webp"
+                                                style="
+                                                    width: 35px;
+                                                    height: 35px;
+                                                    object-fit: contain;
+                                                    margin-right: 5px;
+                                                    border: 1px solid #dfdada;
+                                                "
+                                            />
+                                            <img
+                                                src="https://omweb-prod.s3.ap-southeast-1.amazonaws.com/3/mixibike/products/dđỏ.webp"
+                                                alt=""
+                                                class="product-info__item-color-img--alone"
+                                                data-src="https://omweb-prod.s3.ap-southeast-1.amazonaws.com/3/mixibike/products/dđỏ.webp"
+                                                style="
+                                                    width: 35px;
+                                                    height: 35px;
+                                                    object-fit: contain;
+                                                    margin-right: 5px;
+                                                    border: 1px solid #dfdada;
+                                                "
+                                            />
+                                            <img
+                                                src="https://omweb-prod.s3.ap-southeast-1.amazonaws.com/3/mixibike/products/xanh.webp"
+                                                alt=""
+                                                class="product-info__item-color-img--alone"
+                                                data-src="https://omweb-prod.s3.ap-southeast-1.amazonaws.com/3/mixibike/products/xanh.webp"
+                                                style="
+                                                    width: 35px;
+                                                    height: 35px;
+                                                    object-fit: contain;
+                                                    margin-right: 5px;
+                                                    border: 1px solid #dfdada;
+                                                "
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="product-item__sold-info d-none">
+                                        <p class="product-item__sold-title">Vừa mở bán</p>
+                                        <div class="product-item__sold-bar">
+                                            <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                        </div>
+                                        <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-1-5">
+                                <div class="product-item border-custom-primary translate--y">
+                                    <div class="product-item__wrap-img">
+                                        <a href="./product-detail.html" class="d-block product-item__img-link">
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                class="product-item__img-thumnail d-none"
+                                                src="./assets/img/sp7.png"
+                                                alt=""
+                                            />
+                                        </a>
+                                        <div class="action-bar">
+                                            <form
+                                                action="https://mixibike.ommani.net/add-quickly"
+                                                method="post"
+                                                enctype="multipart/form-data"
+                                                class=""
+                                                style="display: flex; align-items: center; justify-content: center"
+                                            >
+                                                <input
+                                                    type="hidden"
+                                                    name="_token"
+                                                    value="sx2d0rYtOR9vWGaRZo4bYPAikOBT8wGH7dtYOcqZ"
+                                                />
+                                                <input
+                                                    type="hidden"
+                                                    name="productAlias"
+                                                    value="tui-kho-xtouring-xam-sat-to-ong-tui-kho-xtouring"
+                                                />
+                                                <input type="hidden" name="id" value="15" />
+                                                <input
+                                                    type="hidden"
+                                                    name="quantity"
+                                                    value="1"
+                                                    class="form-control prd_quantity border rounded mb-2"
+                                                />
+                                                <a
+                                                    href="https://mixibike.ommani.net/product/detail/tui-kho-xtouring-xam-sat-to-ong-tui-kho-xtouring"
+                                                    class="action-bar_icon"
+                                                >
+                                                    <img
+                                                        src="https://omweb-test.s3.ap-southeast-1.amazonaws.com/mixibike/icon-options.webp"
+                                                        alt=""
+                                                    />
+                                                </a>
+
+                                                <a class="action-bar_icon js-addToCart">
+                                                    <i class="fa-solid fa-cart-shopping"></i
+                                                ></a>
+
+                                                <a href="#" class="action-bar_icon d-none">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__info">
+                                        <a href="./product-detail.html" class="d-block">
+                                            <p class="product-info__vendor">XTOURING</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
+                                        </a>
+                                        <!-- Product Rating -->
+                                        <div class="product-comment__star-rating">
+                                            <ul
+                                                class="list-line rating"
+                                                title="Average Rating"
+                                                style="
+                                                    display: flex;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    align-items: center;
+                                                    justify-content: left;
+                                                "
+                                            >
+                                                <li
+                                                    title="star_rating"
+                                                    id="16-1"
+                                                    data-index="1"
+                                                    data-product_id="16"
+                                                    data-rating="5"
+                                                    class="rate"
+                                                    style="cursor: pointer; color: #ffcc00; font-size: 25px"
+                                                >
+                                                    ★
+                                                </li>
+                                                <li>5.0</li>
+                                                <li style="margin-left: 3px">(12 đánh giá)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-info__price-box">
+                                            <p class="product-info__price">1.420.000 VND</p>
+                                            <div class="d-flex justify-content-start">
+                                                <p class="product-info__product-origin">1.600.000 VND</p>
+                                                <span
+                                                    style="
+                                                        margin-left: 5px;
+                                                        font-size: 11px;
+                                                        background-color: rgb(235, 48, 48);
+                                                        color: white;
+                                                        padding: 1px 3px;
+                                                        border-radius: 10px;
+                                                        display: inline-block;
+                                                    "
+                                                    >11.25<small style="font-size: 11px">%</small></span
+                                                >
+                                            </div>
+                                        </div>
+
+                                        <div class="d-none product-info__item-color--chosen"></div>
+                                    </div>
+                                    <div class="product-item__sold-info d-none">
+                                        <p class="product-item__sold-title">Vừa mở bán</p>
+                                        <div class="product-item__sold-bar">
+                                            <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                        </div>
+                                        <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-1-5">
+                                <div class="product-item border-custom-primary translate--y">
+                                    <div class="product-item__wrap-img">
+                                        <a href="./product-detail.html" class="d-block product-item__img-link">
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                class="product-item__img-thumnail d-none"
+                                                src="./assets/img/sp7.png"
+                                                alt=""
+                                            />
+                                        </a>
+                                        <div class="action-bar">
+                                            <form
+                                                action="https://mixibike.ommani.net/add-quickly"
+                                                method="post"
+                                                enctype="multipart/form-data"
+                                                class=""
+                                                style="display: flex; align-items: center; justify-content: center"
+                                            >
+                                                <input
+                                                    type="hidden"
+                                                    name="_token"
+                                                    value="sx2d0rYtOR9vWGaRZo4bYPAikOBT8wGH7dtYOcqZ"
+                                                />
+                                                <input
+                                                    type="hidden"
+                                                    name="productAlias"
+                                                    value="bo-group-xe-dap-sram-sx-eagle-12sp-ban-2021"
+                                                />
+                                                <input type="hidden" name="id" value="14" />
+                                                <input
+                                                    type="hidden"
+                                                    name="quantity"
+                                                    value="1"
+                                                    class="form-control prd_quantity border rounded mb-2"
+                                                />
+                                                <a
+                                                    href="https://mixibike.ommani.net/product/detail/bo-group-xe-dap-sram-sx-eagle-12sp-ban-2021"
+                                                    class="action-bar_icon"
+                                                >
+                                                    <img
+                                                        src="https://omweb-test.s3.ap-southeast-1.amazonaws.com/mixibike/icon-options.webp"
+                                                        alt=""
+                                                    />
+                                                </a>
+
+                                                <a class="action-bar_icon js-addToCart">
+                                                    <i class="fa-solid fa-cart-shopping"></i
+                                                ></a>
+
+                                                <a href="#" class="action-bar_icon d-none">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__info">
+                                        <a href="./product-detail.html" class="d-block">
+                                            <p class="product-info__vendor">Eagle</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
+                                        </a>
+                                        <!-- Product Rating -->
+                                        <div class="product-comment__star-rating">
+                                            <ul
+                                                class="list-line rating"
+                                                title="Average Rating"
+                                                style="
+                                                    display: flex;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    align-items: center;
+                                                    justify-content: left;
+                                                "
+                                            >
+                                                <li
+                                                    title="star_rating"
+                                                    id="16-1"
+                                                    data-index="1"
+                                                    data-product_id="16"
+                                                    data-rating="5"
+                                                    class="rate"
+                                                    style="cursor: pointer; color: #ffcc00; font-size: 25px"
+                                                >
+                                                    ★
+                                                </li>
+                                                <li>5.0</li>
+                                                <li style="margin-left: 3px">(12 đánh giá)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-info__price-box">
+                                            <p class="product-info__price">6.870.000 VND</p>
+                                            <div class="d-flex justify-content-start">
+                                                <p class="product-info__product-origin">8.390.000 VND</p>
+                                                <span
+                                                    style="
+                                                        margin-left: 5px;
+                                                        font-size: 11px;
+                                                        background-color: rgb(235, 48, 48);
+                                                        color: white;
+                                                        padding: 1px 3px;
+                                                        border-radius: 10px;
+                                                        display: inline-block;
+                                                    "
+                                                    >18.12<small style="font-size: 11px">%</small></span
+                                                >
+                                            </div>
+                                        </div>
+
+                                        <div class="d-none product-info__item-color--chosen"></div>
+                                    </div>
+                                    <div class="product-item__sold-info d-none">
+                                        <p class="product-item__sold-title">Vừa mở bán</p>
+                                        <div class="product-item__sold-bar">
+                                            <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                        </div>
+                                        <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-1-5">
+                                <div class="product-item border-custom-primary translate--y">
+                                    <div class="product-item__wrap-img">
+                                        <a href="./product-detail.html" class="d-block product-item__img-link">
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                class="product-item__img-thumnail d-none"
+                                                src="./assets/img/sp8.png"
+                                                alt=""
+                                            />
+                                        </a>
+                                        <div class="action-bar">
+                                            <form
+                                                action="https://mixibike.ommani.net/add-quickly"
+                                                method="post"
+                                                enctype="multipart/form-data"
+                                                class=""
+                                                style="display: flex; align-items: center; justify-content: center"
+                                            >
+                                                <input
+                                                    type="hidden"
+                                                    name="_token"
+                                                    value="sx2d0rYtOR9vWGaRZo4bYPAikOBT8wGH7dtYOcqZ"
+                                                />
+                                                <input
+                                                    type="hidden"
+                                                    name="productAlias"
+                                                    value="xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                                />
+                                                <input type="hidden" name="id" value="13" />
+                                                <input
+                                                    type="hidden"
+                                                    name="quantity"
+                                                    value="1"
+                                                    class="form-control prd_quantity border rounded mb-2"
+                                                />
+                                                <a
+                                                    href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                                    class="action-bar_icon"
+                                                >
+                                                    <img
+                                                        src="https://omweb-test.s3.ap-southeast-1.amazonaws.com/mixibike/icon-options.webp"
+                                                        alt=""
+                                                    />
+                                                </a>
+
+                                                <a class="action-bar_icon js-addToCart">
+                                                    <i class="fa-solid fa-cart-shopping"></i
+                                                ></a>
+
+                                                <a href="#" class="action-bar_icon d-none">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__info">
+                                        <a href="./product-detail.html" class="d-block">
+                                            <p class="product-info__vendor">Rondo</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
+                                        </a>
+                                        <!-- Product Rating -->
+                                        <div class="product-comment__star-rating">
+                                            <ul
+                                                class="list-line rating"
+                                                title="Average Rating"
+                                                style="
+                                                    display: flex;
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    align-items: center;
+                                                    justify-content: left;
+                                                "
+                                            >
+                                                <li
+                                                    title="star_rating"
+                                                    id="16-1"
+                                                    data-index="1"
+                                                    data-product_id="16"
+                                                    data-rating="5"
+                                                    class="rate"
+                                                    style="cursor: pointer; color: #ffcc00; font-size: 25px"
+                                                >
+                                                    ★
+                                                </li>
+                                                <li>5.0</li>
+                                                <li style="margin-left: 3px">(12 đánh giá)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-info__price-box">
+                                            <p class="product-info__price">28.900.000 VND</p>
+                                            <div class="d-flex justify-content-start">
+                                                <p class="product-info__product-origin">29.900.000 VND</p>
+                                                <span
+                                                    style="
+                                                        margin-left: 5px;
+                                                        font-size: 11px;
+                                                        background-color: rgb(235, 48, 48);
+                                                        color: white;
+                                                        padding: 1px 3px;
+                                                        border-radius: 10px;
+                                                        display: inline-block;
+                                                    "
+                                                    >3.34<small style="font-size: 11px">%</small></span
+                                                >
+                                            </div>
+                                        </div>
+
+                                        <div class="d-none product-info__item-color--chosen"></div>
+                                    </div>
+                                    <div class="product-item__sold-info d-none">
+                                        <p class="product-item__sold-title">Vừa mở bán</p>
+                                        <div class="product-item__sold-bar">
+                                            <div class="product-item__sold-bar-fill" style="width: 10%"></div>
+                                        </div>
+                                        <p class="product-item__sold--count d-none">100 / 300 sản phẩm đã bán</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-xl-1-5">
+                                <div class="product-item border-custom-primary translate--y">
+                                    <div class="product-item__wrap-img">
+                                        <a href="./product-detail.html" class="d-block product-item__img-link">
+                                            <img
+                                                class="product-item__img"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                class="product-item__img-thumnail d-none"
+                                                src="./assets/img/sp9.png"
+                                                alt=""
+                                            />
+                                        </a>
+                                        <div class="action-bar">
+                                            <form
+                                                action="https://mixibike.ommani.net/add-quickly"
+                                                method="post"
+                                                enctype="multipart/form-data"
+                                                class=""
+                                                style="display: flex; align-items: center; justify-content: center"
+                                            >
+                                                <input
+                                                    type="hidden"
+                                                    name="_token"
+                                                    value="sx2d0rYtOR9vWGaRZo4bYPAikOBT8wGH7dtYOcqZ"
+                                                />
+                                                <input
+                                                    type="hidden"
+                                                    name="productAlias"
+                                                    value="xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                                />
+                                                <input type="hidden" name="id" value="13" />
+                                                <input
+                                                    type="hidden"
+                                                    name="quantity"
+                                                    value="1"
+                                                    class="form-control prd_quantity border rounded mb-2"
+                                                />
+                                                <a
+                                                    href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                                    class="action-bar_icon"
+                                                >
+                                                    <img
+                                                        src="https://omweb-test.s3.ap-southeast-1.amazonaws.com/mixibike/icon-options.webp"
+                                                        alt=""
+                                                    />
+                                                </a>
+
+                                                <a class="action-bar_icon js-addToCart">
+                                                    <i class="fa-solid fa-cart-shopping"></i
+                                                ></a>
+
+                                                <a href="#" class="action-bar_icon d-none">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="product-item__info">
+                                        <a href="./product-detail.html" class="d-block">
+                                            <p class="product-info__vendor">Rondo</p>
+                                            <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                         </a>
                                         <!-- Product Rating -->
                                         <div class="product-comment__star-rating">
@@ -2498,7 +3842,7 @@
         </main>
 
         <!-- Footer -->
-        <footer class="footer container-fluid mt-5" style="padding: 50px 50px 0 50px">
+        <footer class="footer container-fluid mt-5" style="padding-top: 50px">
             <div class="container">
                 <div class="row">
                     <!-- Cột 1: Thông tin doanh nghiệp -->
@@ -2587,11 +3931,11 @@
                     </div>
                 </div>
             </div>
-            <!-- Dòng slogan -->
-            <div class="footer__slogan">
-                <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
-            </div>
         </footer>
+        <!-- Dòng slogan -->
+        <div class="footer__slogan container-fluid">
+            <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
+        </div>
 
         <!-- Overlay -->
         <div class="overlay"></div>
@@ -2608,8 +3952,9 @@
 
         <!-- SwiperJS Script -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <!-- <script src="./assets/js/global.js"></script> -->
+        <script src="./assets/js/global.js"></script>
         <script src="./assets/js/home.js"></script>
+        <script src="./assets/js/add-cart.js"></script>
         <script>
             let brand_swiper = new Swiper('.brand-swiper', {
                 slidesPerView: 5,

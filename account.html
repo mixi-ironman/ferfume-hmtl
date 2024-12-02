@@ -142,7 +142,11 @@
             <div class="container">
                 <div class="header-wrap row">
                     <div class="header__logo col-xl-3">
-                        <img class="header__logo-img" src="./assets/img/logo_header.png" alt="Logo" />
+                        <img
+                            class="header__logo-img"
+                            src="./assets/img/c77631c9-9a27-4838-876d-8ba101976d74.jpg"
+                            alt="Logo"
+                        />
                     </div>
                     <div
                         class="header__title col-xl-6 text-center d-flex justify-content-center align-items-center flex-column"
@@ -159,13 +163,13 @@
                                 <span>Hotline bán hàng</span>
                             </div>
                             <a href="tel:0931012321">
-                                <img class="header__phone-icon" src="./assets/img/icon_phone_header.png" alt="" />
+                                <img class="header__phone-icon" src="./assets/img/logo__1.jpg" alt="" />
                             </a>
 
                             <div class="header__cart-wrapper">
                                 <a href="./cart-index.html">
-                                    <img class="header__cart-icon" src="./assets/img/🦆 icon _cart_.png" alt="" />
-                                    <span class="header__cart-count">3</span>
+                                    <img class="header__cart-icon" src="./assets/img/logo__2.jpg" alt="" />
+                                    <span class="header__cart-count">0</span>
                                 </a>
 
                                 <!-- Submenu -->
@@ -173,7 +177,7 @@
                                     <ul class="cart-items list-unstyled mb-2">
                                         <li class="cart-item d-flex align-items-center mb-2">
                                             <img
-                                                src="https://product.hstatic.net/1000339918/product/armaf-club-de-nuit-white-imperiale-edp_fa0cceaeb2b04ad3ad5d766c4b984050_large.jpg"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
                                                 alt="Product"
                                                 class="cart-item-img"
                                                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px"
@@ -183,7 +187,7 @@
                                                 <p class="cart-item-price mb-0">200.000 VND x 2</p>
                                             </div>
                                         </li>
-                                        <li class="cart-item d-flex align-items-center mb-2">
+                                        <li class="cart-item d-flex align-items-center mb-2 d-none">
                                             <img
                                                 src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_large.jpg"
                                                 alt="Product"
@@ -203,12 +207,12 @@
                             </div>
                             <div class="header__account-wrapper">
                                 <a class="d-flex align-items-center">
-                                    <img class="header__account-icon" src="./assets/img/Frame 993.png" alt="" />
+                                    <img class="header__account-icon" src="./assets/img/logo__3.jpg" alt="" />
                                 </a>
                                 <!-- Submenu -->
                                 <div class="account-submenu position-absolute bg-white shadow-sm">
                                     <ul class="list-unstyled mb-0">
-                                        <li class="submenu-item mb-2">
+                                        <li class="submenu-item mb-2" id="account-link">
                                             <a
                                                 href="./account.html"
                                                 class="submenu-link text-decoration-none text-dark d-flex align-items-center"
@@ -216,12 +220,28 @@
                                                 <i class="fa-solid fa-user me-2"></i> Tài khoản
                                             </a>
                                         </li>
-                                        <li class="submenu-item">
+                                        <li class="submenu-item" id="logout-link">
                                             <a
-                                                href="./index.html"
+                                                id="logout-btn"
                                                 class="submenu-link text-decoration-none text-dark d-flex align-items-center"
                                             >
                                                 <i class="fa-solid fa-sign-out-alt me-2"></i> Đăng xuất
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item" id="login-link">
+                                            <a
+                                                href="./register-customer.html"
+                                                class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                            >
+                                                <i class="fa-solid fa-sign-in-alt me-2"></i> Đăng nhập
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item" id="register-link">
+                                            <a
+                                                href=".//register-customer.html"
+                                                class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                            >
+                                                <i class="fa-solid fa-user-plus me-2"></i> Đăng ký
                                             </a>
                                         </li>
                                     </ul>
@@ -239,7 +259,7 @@
         <!-- Menu -->
         <div class="menu-wrap container-fluid">
             <ul class="menu-list w-100 d-flex justify-content-evenly align-items-center">
-                <li class="menu-item"><a class="menu-item_link" href="/index.html">Trang chủ</a></li>
+                <li class="menu-item"><a class="menu-item_link" href="./index.html">Trang chủ</a></li>
                 <li class="menu-item menu-item_more position-relative">
                     <a class="menu-item_link" href="./product-collection.html">
                         Sản phẩm
@@ -281,11 +301,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item fw-bold"><a href="#">Trang chủ</a></li>
                     <li class="breadcrumb-item fw-bold" aria-current="page">Tài khoản</li>
-                    <li
-                        class="breadcrumb-item breadcrumb-item_display fw-bold active"
-                        style="color: #ff0000"
-                        aria-current="page"
-                    >
+                    <li class="breadcrumb-item breadcrumb-item_display fw-bold active text-danger" aria-current="page">
                         Thông tin tài khoản
                     </li>
                 </ol>
@@ -297,7 +313,7 @@
                     <div class="col-md-3 col-xl-3 sidebar">
                         <div class="mb-3 d-flex align-items-center">
                             <img
-                                src="https://scontent.fhan15-1.fna.fbcdn.net/v/t51.75761-15/466509278_18340745755177613_2474957748926128500_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=gLOUVWBf6QUQ7kNvgGHBFm_&_nc_zt=23&_nc_ht=scontent.fhan15-1.fna&_nc_gid=Arb90ekThFGovZVkDOnFZXP&oh=00_AYCaRpq_AVJzguaZtlBfhAeq0ttQMWmqhYblvcYvBpASMg&oe=6751F968"
+                                src="https://scontent.fhan15-1.fna.fbcdn.net/v/t39.30808-6/412834476_887178609704935_2588578516586930910_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=JKEESVQe9ggQ7kNvgFQQcJf&_nc_zt=23&_nc_ht=scontent.fhan15-1.fna&_nc_gid=AvAPvvwgNRYi_Oci2s1tKWs&oh=00_AYAeUemstWZa5j6ylUP0hccif2wFDGJIX_9UD80zo9MxIg&oe=675B9CA8"
                                 alt="User Avatar"
                                 class="rounded-circle"
                                 width="60"
@@ -305,7 +321,7 @@
                                 style="object-fit: cover; border-radius: 999px"
                             />
                             <div class="ms-3">
-                                <p class="mb-0">Hảo vy vy</p>
+                                <p class="mb-0">Đỗ Thị Thu Hằng</p>
                             </div>
                         </div>
                         <a href="#" class="tab-link active" data-tab="account-info">Thông tin tài khoản</a>
@@ -318,7 +334,7 @@
                     <div class="col-md-9 col-xl-9">
                         <div class="tab-content" id="account-info">
                             <!-- Title -->
-                            <h3 class="text-center mb-4" style="color: #ff0000">Thông tin tài khoản</h3>
+                            <h3 class="text-center mb-4 text-danger">Thông tin tài khoản</h3>
 
                             <div class="row">
                                 <div class="col-md-9">
@@ -406,14 +422,14 @@
 
                                         <!-- Nút lưu -->
                                         <div class="text-center w-100">
-                                            <button type="submit" class="btn btn-primary w-100">Lưu dữ liệu</button>
+                                            <button type="submit" class="btn btn-danger w-100">Lưu dữ liệu</button>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="d-flex flex-column align-items-center justify-content-center">
                                         <img
-                                            src="https://scontent.fhan15-1.fna.fbcdn.net/v/t51.75761-15/466509278_18340745755177613_2474957748926128500_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=gLOUVWBf6QUQ7kNvgGHBFm_&_nc_zt=23&_nc_ht=scontent.fhan15-1.fna&_nc_gid=Arb90ekThFGovZVkDOnFZXP&oh=00_AYCaRpq_AVJzguaZtlBfhAeq0ttQMWmqhYblvcYvBpASMg&oe=6751F968"
+                                            src="https://scontent.fhan15-1.fna.fbcdn.net/v/t39.30808-6/412834476_887178609704935_2588578516586930910_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=JKEESVQe9ggQ7kNvgFQQcJf&_nc_zt=23&_nc_ht=scontent.fhan15-1.fna&_nc_gid=AvAPvvwgNRYi_Oci2s1tKWs&oh=00_AYAeUemstWZa5j6ylUP0hccif2wFDGJIX_9UD80zo9MxIg&oe=675B9CA8"
                                             alt="User Avatar"
                                             class="rounded-circle mb-3"
                                             width="100"
@@ -424,13 +440,8 @@
                                         <div>
                                             <label
                                                 for="uploadImage"
-                                                class="form-label"
-                                                style="
-                                                    background-color: #ff0000;
-                                                    padding: 5px 10px;
-                                                    border-radius: 10px;
-                                                    color: white;
-                                                "
+                                                class="form-label btn btn-danger"
+                                                style="padding: 5px 10px; border-radius: 10px; color: white"
                                                 >Chọn ảnh</label
                                             >
                                             <input
@@ -735,7 +746,7 @@
         </main>
 
         <!-- Footer -->
-        <footer class="footer container-fluid mt-5" style="padding: 50px 50px 0 50px">
+        <footer class="footer container-fluid mt-5" style="padding-top: 50px">
             <div class="container">
                 <div class="row">
                     <!-- Cột 1: Thông tin doanh nghiệp -->
@@ -824,11 +835,11 @@
                     </div>
                 </div>
             </div>
-            <!-- Dòng slogan -->
-            <div class="footer__slogan">
-                <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
-            </div>
         </footer>
+        <!-- Dòng slogan -->
+        <div class="footer__slogan container-fluid">
+            <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
+        </div>
         <!-- Overlay -->
         <div class="overlay"></div>
 
@@ -846,6 +857,7 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <!-- <script src="./assets/js/global.js"></script> -->
         <script src="./assets/js/home.js"></script>
+        <script src="./assets/js/add-cart.js"></script>
 
         <script>
             // const comment_swiper = new Swiper('.comment-swiper', {

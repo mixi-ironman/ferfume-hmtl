@@ -39,7 +39,11 @@
             <div class="container">
                 <div class="header-wrap row">
                     <div class="header__logo col-xl-3">
-                        <img class="header__logo-img" src="./assets/img/logo_header.png" alt="Logo" />
+                        <img
+                            class="header__logo-img"
+                            src="./assets/img/c77631c9-9a27-4838-876d-8ba101976d74.jpg"
+                            alt="Logo"
+                        />
                     </div>
                     <div
                         class="header__title col-xl-6 text-center d-flex justify-content-center align-items-center flex-column"
@@ -56,13 +60,13 @@
                                 <span>Hotline bán hàng</span>
                             </div>
                             <a href="tel:0931012321">
-                                <img class="header__phone-icon" src="./assets/img/icon_phone_header.png" alt="" />
+                                <img class="header__phone-icon" src="./assets/img/logo__1.jpg" alt="" />
                             </a>
 
                             <div class="header__cart-wrapper">
                                 <a href="./cart-index.html">
-                                    <img class="header__cart-icon" src="./assets/img/🦆 icon _cart_.png" alt="" />
-                                    <span class="header__cart-count">3</span>
+                                    <img class="header__cart-icon" src="./assets/img/logo__2.jpg" alt="" />
+                                    <span class="header__cart-count">0</span>
                                 </a>
 
                                 <!-- Submenu -->
@@ -70,7 +74,7 @@
                                     <ul class="cart-items list-unstyled mb-2">
                                         <li class="cart-item d-flex align-items-center mb-2">
                                             <img
-                                                src="https://product.hstatic.net/1000339918/product/armaf-club-de-nuit-white-imperiale-edp_fa0cceaeb2b04ad3ad5d766c4b984050_large.jpg"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
                                                 alt="Product"
                                                 class="cart-item-img"
                                                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px"
@@ -80,7 +84,7 @@
                                                 <p class="cart-item-price mb-0">200.000 VND x 2</p>
                                             </div>
                                         </li>
-                                        <li class="cart-item d-flex align-items-center mb-2">
+                                        <li class="cart-item d-flex align-items-center mb-2 d-none">
                                             <img
                                                 src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_large.jpg"
                                                 alt="Product"
@@ -100,12 +104,12 @@
                             </div>
                             <div class="header__account-wrapper">
                                 <a class="d-flex align-items-center">
-                                    <img class="header__account-icon" src="./assets/img/Frame 993.png" alt="" />
+                                    <img class="header__account-icon" src="./assets/img/logo__3.jpg" alt="" />
                                 </a>
                                 <!-- Submenu -->
                                 <div class="account-submenu position-absolute bg-white shadow-sm">
                                     <ul class="list-unstyled mb-0">
-                                        <li class="submenu-item mb-2">
+                                        <li class="submenu-item mb-2" id="account-link">
                                             <a
                                                 href="./account.html"
                                                 class="submenu-link text-decoration-none text-dark d-flex align-items-center"
@@ -113,12 +117,28 @@
                                                 <i class="fa-solid fa-user me-2"></i> Tài khoản
                                             </a>
                                         </li>
-                                        <li class="submenu-item">
+                                        <li class="submenu-item" id="logout-link">
                                             <a
-                                                href="./index.html"
+                                                id="logout-btn"
                                                 class="submenu-link text-decoration-none text-dark d-flex align-items-center"
                                             >
                                                 <i class="fa-solid fa-sign-out-alt me-2"></i> Đăng xuất
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item" id="login-link">
+                                            <a
+                                                href="./register-customer.html"
+                                                class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                            >
+                                                <i class="fa-solid fa-sign-in-alt me-2"></i> Đăng nhập
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item" id="register-link">
+                                            <a
+                                                href=".//register-customer.html"
+                                                class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                            >
+                                                <i class="fa-solid fa-user-plus me-2"></i> Đăng ký
                                             </a>
                                         </li>
                                     </ul>
@@ -136,7 +156,7 @@
         <!-- Menu -->
         <div class="menu-wrap container-fluid">
             <ul class="menu-list w-100 d-flex justify-content-evenly align-items-center">
-                <li class="menu-item"><a class="menu-item_link" href="/index.html">Trang chủ</a></li>
+                <li class="menu-item"><a class="menu-item_link" href="./index.html">Trang chủ</a></li>
                 <li class="menu-item menu-item_more position-relative">
                     <a class="menu-item_link" href="./product-collection.html">
                         Sản phẩm
@@ -634,12 +654,12 @@
                                         <div class="product-item border-custom-primary translate--y">
                                             <div class="product-item__wrap-img">
                                                 <a
-                                                    href="https://mixibike.ommani.net/product/detail/pedal-xe-dap-mtb-crankbrothers-stamp"
+                                                href="./product-detail.html"
                                                     class="d-block product-item__img-link"
                                                 >
                                                     <img
                                                         class="product-item__img"
-                                                        src="./assets/img/sanpham1.png"
+                                                        src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
                                                         alt=""
                                                     />
                                                     <img
@@ -678,7 +698,7 @@
                                                             class="form-control prd_quantity border rounded mb-2"
                                                         />
                                                         <a
-                                                            href="https://mixibike.ommani.net/product/detail/pedal-xe-dap-mtb-crankbrothers-stamp"
+                                                        href="./product-detail.html"
                                                             class="action-bar_icon"
                                                         >
                                                             <img
@@ -687,7 +707,7 @@
                                                             />
                                                         </a>
 
-                                                        <a class="action-bar_icon js-addToCart d-none">
+                                                        <a href="./product-detail.html" class="action-bar_icon js-addToCart d-none">
                                                             <i class="fa-solid fa-cart-shopping"></i
                                                         ></a>
 
@@ -699,11 +719,11 @@
                                             </div>
                                             <div class="product-item__info">
                                                 <a
-                                                    href="https://mixibike.ommani.net/product/detail/pedal-xe-dap-mtb-crankbrothers-stamp"
+                                                href="./product-detail.html"
                                                     class="d-block"
                                                 >
                                                     <p class="product-info__vendor">Naughty</p>
-                                                    <p class="product-info__name">Nước Hoa Amouage Lyric Woman EDP</p>
+                                                    <p class="product-info__name">Nước Hoa Afnan 9pm EDP</p>
                                                 </a>
                                                 <!-- Product Rating -->
                                                 <div class="product-comment__star-rating">
@@ -808,10 +828,10 @@
                                     <div class="col-6 col-xl-3">
                                         <div class="product-item border-custom-primary translate--y">
                                             <div class="product-item__wrap-img">
-                                                <a class="d-block product-item__img-link">
+                                                <a href="./product-detail.html" class="d-block product-item__img-link">
                                                     <img
                                                         class="product-item__img"
-                                                        src="./assets/img/sanpham2.png"
+                                                        src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
                                                         alt=""
                                                     />
                                                     <img
@@ -850,7 +870,7 @@
                                                             class="form-control prd_quantity border rounded mb-2"
                                                         />
                                                         <a
-                                                            href="https://mixibike.ommani.net/product/detail/tui-kho-xtouring-xam-sat-to-ong-tui-kho-xtouring"
+                                                        href="./product-detail.html"
                                                             class="action-bar_icon"
                                                         >
                                                             <img
@@ -859,7 +879,7 @@
                                                             />
                                                         </a>
 
-                                                        <a class="action-bar_icon js-addToCart">
+                                                        <a href="./product-detail.html" class="action-bar_icon js-addToCart">
                                                             <i class="fa-solid fa-cart-shopping"></i
                                                         ></a>
 
@@ -871,12 +891,12 @@
                                             </div>
                                             <div class="product-item__info">
                                                 <a
-                                                    href="https://mixibike.ommani.net/product/detail/tui-kho-xtouring-xam-sat-to-ong-tui-kho-xtouring"
+                                                href="./product-detail.html"
                                                     class="d-block"
                                                 >
                                                     <p class="product-info__vendor">XTOURING</p>
                                                     <p class="product-info__name">
-                                                        Nước Hoa Afnan Supremacy In Heaven EDP
+                                                        Nước Hoa Afnan 9pm EDP
                                                     </p>
                                                 </a>
                                                 <!-- Product Rating -->
@@ -942,8 +962,8 @@
                                     <div class="col-6 col-xl-3">
                                         <div class="product-item border-custom-primary translate--y">
                                             <div class="product-item__wrap-img">
-                                                <a class="d-block product-item__img-link">
-                                                    <img class="product-item__img" src="./assets/img/sp3.png" alt="" />
+                                                <a href="./product-detail.html" class="d-block product-item__img-link">
+                                                    <img class="product-item__img" src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="" />
                                                     <img
                                                         class="product-item__img-thumnail d-none"
                                                         src="./assets/img/sp3.png"
@@ -980,7 +1000,7 @@
                                                             class="form-control prd_quantity border rounded mb-2"
                                                         />
                                                         <a
-                                                            href="https://mixibike.ommani.net/product/detail/bo-group-xe-dap-sram-sx-eagle-12sp-ban-2021"
+                                                        href="./product-detail.html"
                                                             class="action-bar_icon"
                                                         >
                                                             <img
@@ -989,7 +1009,7 @@
                                                             />
                                                         </a>
 
-                                                        <a class="action-bar_icon js-addToCart">
+                                                        <a href="./product-detail.html" class="action-bar_icon js-addToCart">
                                                             <i class="fa-solid fa-cart-shopping"></i
                                                         ></a>
 
@@ -1001,12 +1021,12 @@
                                             </div>
                                             <div class="product-item__info">
                                                 <a
-                                                    href="https://mixibike.ommani.net/product/detail/bo-group-xe-dap-sram-sx-eagle-12sp-ban-2021"
+                                                href="./product-detail.html"
                                                     class="d-block"
                                                 >
                                                     <p class="product-info__vendor">Eagle</p>
                                                     <p class="product-info__name">
-                                                        Nước Hoa Clive Christian 1872 Masculine EDP
+                                                        Nước Hoa Afnan 9pm EDP
                                                     </p>
                                                 </a>
                                                 <!-- Product Rating -->
@@ -1072,8 +1092,8 @@
                                     <div class="col-6 col-xl-3">
                                         <div class="product-item border-custom-primary translate--y">
                                             <div class="product-item__wrap-img">
-                                                <a class="d-block product-item__img-link">
-                                                    <img class="product-item__img" src="./assets/img/sp4.png" alt="" />
+                                                <a href="./product-detail.html" class="d-block product-item__img-link">
+                                                    <img class="product-item__img" src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="" />
                                                     <img
                                                         class="product-item__img-thumnail d-none"
                                                         src="./assets/img/sp4.png"
@@ -1110,7 +1130,7 @@
                                                             class="form-control prd_quantity border rounded mb-2"
                                                         />
                                                         <a
-                                                            href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                                        href="./product-detail.html"
                                                             class="action-bar_icon"
                                                         >
                                                             <img
@@ -1119,7 +1139,7 @@
                                                             />
                                                         </a>
 
-                                                        <a class="action-bar_icon js-addToCart">
+                                                        <a href="./product-detail.html" class="action-bar_icon js-addToCart">
                                                             <i class="fa-solid fa-cart-shopping"></i
                                                         ></a>
 
@@ -1131,7 +1151,7 @@
                                             </div>
                                             <div class="product-item__info">
                                                 <a
-                                                    href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                                href="./product-detail.html"
                                                     class="d-block"
                                                 >
                                                     <p class="product-info__vendor">Rondo</p>
@@ -1200,8 +1220,8 @@
                                     <div class="col-6 col-xl-3">
                                         <div class="product-item border-custom-primary translate--y">
                                             <div class="product-item__wrap-img">
-                                                <a class="d-block product-item__img-link">
-                                                    <img class="product-item__img" src="./assets/img/sp5.png" alt="" />
+                                                <a href="./product-detail.html" class="d-block product-item__img-link">
+                                                    <img class="product-item__img" src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="" />
                                                     <img
                                                         class="product-item__img-thumnail d-none"
                                                         src="./assets/img/sp5.png"
@@ -1238,7 +1258,7 @@
                                                             class="form-control prd_quantity border rounded mb-2"
                                                         />
                                                         <a
-                                                            href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                                        href="./product-detail.html"
                                                             class="action-bar_icon"
                                                         >
                                                             <img
@@ -1247,7 +1267,7 @@
                                                             />
                                                         </a>
 
-                                                        <a class="action-bar_icon js-addToCart">
+                                                        <a href="./product-detail.html" class="action-bar_icon js-addToCart">
                                                             <i class="fa-solid fa-cart-shopping"></i
                                                         ></a>
 
@@ -1259,12 +1279,12 @@
                                             </div>
                                             <div class="product-item__info">
                                                 <a
-                                                    href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                                href="./product-detail.html"
                                                     class="d-block"
                                                 >
                                                     <p class="product-info__vendor">Rondo</p>
                                                     <p class="product-info__name">
-                                                        Nước Hoa Britney Spears Fantasy Midnight EDP
+                                                        Nước Hoa Afnan 9pm EDP
                                                     </p>
                                                 </a>
                                                 <!-- Product Rating -->
@@ -1358,7 +1378,7 @@
         </main>
 
         <!-- Footer -->
-        <footer class="footer container-fluid mt-5" style="padding: 50px 50px 0 50px">
+        <footer class="footer container-fluid mt-5" style="padding-top: 50px">
             <div class="container">
                 <div class="row">
                     <!-- Cột 1: Thông tin doanh nghiệp -->
@@ -1447,11 +1467,11 @@
                     </div>
                 </div>
             </div>
-            <!-- Dòng slogan -->
-            <div class="footer__slogan">
-                <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
-            </div>
         </footer>
+        <!-- Dòng slogan -->
+        <div class="footer__slogan container-fluid">
+            <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
+        </div>
         <!-- Overlay -->
         <div class="overlay"></div>
 
@@ -1523,5 +1543,6 @@
         </script>
         <!-- <script src="./assets/js/global.js"></script> -->
         <script src="./assets/js/home.js"></script>
+        <script src="./assets/js/add-cart.js"></script>
     </body>
 </html>

@@ -39,7 +39,7 @@
     font-size: 25px;
     color: #ffffff;
     cursor: pointer;
-    background-color: #ff0000;
+    background-color: #a71818;
     width: 50px;
     height: 50px;
     line-height: 50px;
@@ -53,6 +53,7 @@
     line-height: 42.19px;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    color: #a71818 !important;
 }
 
 .header__subtitle {
@@ -77,7 +78,7 @@
     top: -5px; /* Điều chỉnh vị trí theo ý muốn */
     right: -5px;
     background-color: rgb(255, 255, 255);
-    color: rgb(231, 44, 44);
+    color: #a71818;
     font-size: 14px;
     font-weight: bold;
     width: 20px;
@@ -86,7 +87,7 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgb(255, 0, 0);
+    border: 1px solid #a71818;
     border-radius: 999px;
 }
 
@@ -202,7 +203,7 @@
 }
 
 .menu-wrap {
-    background-color: #ff0000;
+    background-color: rgb(167, 24, 24);
     height: 67px;
     top: 126px;
     padding: 20px 190px 20px 190px;
@@ -265,7 +266,7 @@
     text-align: left;
 }
 .submenu-item:hover .submenu-item_link {
-    color: #ff0000;
+    color: #a71818;
     transform: translateX(8px);
     font-size: 16.5px;
 }
@@ -320,7 +321,7 @@
 
 .product-section__heading h3 {
     font-size: 20px;
-    background-color: #ff0000;
+    background-color: rgb(167, 24, 24, 0.9);
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -644,7 +645,7 @@
 
 .perfume-knowledge__title {
     font-size: 20px;
-    background-color: #ff0000;
+    background-color: rgb(167, 24, 24, 0.9);
     color: white;
     padding: 10px 20px;
     width: max-content;
@@ -787,6 +788,11 @@
     height: 30px;
 }
 
+.cart-item-quantity,
+.cart-item-quantity_ {
+    font-size: 12px !important;
+}
+
 /* Bản đồ */
 /* .footer__map iframe {
     border: none;
@@ -798,7 +804,7 @@
 /* Slogan */
 .footer__slogan {
     text-align: center;
-    background-color: #e60000;
+    background-color: #a71818;
     color: #fff;
     padding: 10px 0;
     font-weight: bold;

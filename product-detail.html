@@ -34,6 +34,11 @@
         <link rel="stylesheet" href="./assets/css/global.css" />
         <link rel="stylesheet" href="./assets/css/home.css" />
         <link rel="stylesheet" href="./assets/css/product-detail.css" />
+        <style>
+            .cart-item-quantity,.cart-item-quantity_ {
+                font-size: 12px !important;
+            }
+        </style>
     </head>
     <body>
         <!-- Header -->
@@ -41,7 +46,11 @@
             <div class="container">
                 <div class="header-wrap row">
                     <div class="header__logo col-xl-3">
-                        <img class="header__logo-img" src="./assets/img/logo_header.png" alt="Logo" />
+                        <img
+                            class="header__logo-img"
+                            src="./assets/img/c77631c9-9a27-4838-876d-8ba101976d74.jpg"
+                            alt="Logo"
+                        />
                     </div>
                     <div
                         class="header__title col-xl-6 text-center d-flex justify-content-center align-items-center flex-column"
@@ -58,13 +67,13 @@
                                 <span>Hotline bán hàng</span>
                             </div>
                             <a href="tel:0931012321">
-                                <img class="header__phone-icon" src="./assets/img/icon_phone_header.png" alt="" />
+                                <img class="header__phone-icon" src="./assets/img/logo__1.jpg" alt="" />
                             </a>
 
                             <div class="header__cart-wrapper">
                                 <a href="./cart-index.html">
-                                    <img class="header__cart-icon" src="./assets/img/🦆 icon _cart_.png" alt="" />
-                                    <span class="header__cart-count">3</span>
+                                    <img class="header__cart-icon" src="./assets/img/logo__2.jpg" alt="" />
+                                    <span class="header__cart-count">0</span>
                                 </a>
 
                                 <!-- Submenu -->
@@ -72,7 +81,7 @@
                                     <ul class="cart-items list-unstyled mb-2">
                                         <li class="cart-item d-flex align-items-center mb-2">
                                             <img
-                                                src="https://product.hstatic.net/1000339918/product/armaf-club-de-nuit-white-imperiale-edp_fa0cceaeb2b04ad3ad5d766c4b984050_large.jpg"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
                                                 alt="Product"
                                                 class="cart-item-img"
                                                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px"
@@ -82,7 +91,7 @@
                                                 <p class="cart-item-price mb-0">200.000 VND x 2</p>
                                             </div>
                                         </li>
-                                        <li class="cart-item d-flex align-items-center mb-2">
+                                        <li class="cart-item d-flex align-items-center mb-2 d-none">
                                             <img
                                                 src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_large.jpg"
                                                 alt="Product"
@@ -102,12 +111,12 @@
                             </div>
                             <div class="header__account-wrapper">
                                 <a class="d-flex align-items-center">
-                                    <img class="header__account-icon" src="./assets/img/Frame 993.png" alt="" />
+                                    <img class="header__account-icon" src="./assets/img/logo__3.jpg" alt="" />
                                 </a>
                                 <!-- Submenu -->
                                 <div class="account-submenu position-absolute bg-white shadow-sm">
                                     <ul class="list-unstyled mb-0">
-                                        <li class="submenu-item mb-2">
+                                        <li class="submenu-item mb-2" id="account-link">
                                             <a
                                                 href="./account.html"
                                                 class="submenu-link text-decoration-none text-dark d-flex align-items-center"
@@ -115,12 +124,28 @@
                                                 <i class="fa-solid fa-user me-2"></i> Tài khoản
                                             </a>
                                         </li>
-                                        <li class="submenu-item">
+                                        <li class="submenu-item" id="logout-link">
                                             <a
-                                                href="./index.html"
+                                                id="logout-btn"
                                                 class="submenu-link text-decoration-none text-dark d-flex align-items-center"
                                             >
                                                 <i class="fa-solid fa-sign-out-alt me-2"></i> Đăng xuất
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item" id="login-link">
+                                            <a
+                                                href="./register-customer.html"
+                                                class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                            >
+                                                <i class="fa-solid fa-sign-in-alt me-2"></i> Đăng nhập
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item" id="register-link">
+                                            <a
+                                                href=".//register-customer.html"
+                                                class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                            >
+                                                <i class="fa-solid fa-user-plus me-2"></i> Đăng ký
                                             </a>
                                         </li>
                                     </ul>
@@ -138,7 +163,7 @@
         <!-- Menu -->
         <div class="menu-wrap container-fluid">
             <ul class="menu-list w-100 d-flex justify-content-evenly align-items-center">
-                <li class="menu-item"><a class="menu-item_link" href="/index.html">Trang chủ</a></li>
+                <li class="menu-item"><a class="menu-item_link" href="./index.html">Trang chủ</a></li>
                 <li class="menu-item menu-item_more position-relative">
                     <a class="menu-item_link" href="./product-collection.html">
                         Sản phẩm
@@ -188,8 +213,8 @@
                     <!-- <img id="mainImage" src="https://product.hstatic.net/1000339918/product/bond-no-9-perfumista-avanue_2ef8a1e3e5f54e168f72419a1c53c264_master.jpg" alt="" class="product-detail_img w-100"  style ="object-fit: cover;"/> -->
                      <!-- Hình ảnh -->
                     <div id="imageGallery" class="lightgallery">
-                        <a href="https://product.hstatic.net/1000339918/product/bond-no-9-perfumista-avanue_2ef8a1e3e5f54e168f72419a1c53c264_master.jpg">
-                            <img id="mainImage" src="https://product.hstatic.net/1000339918/product/bond-no-9-perfumista-avanue_2ef8a1e3e5f54e168f72419a1c53c264_master.jpg" alt="" class="product-detail_img w-100" style="object-fit: cover;" />
+                        <a href="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg">
+                            <img id="mainImage" src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="" class="product-detail_img w-100" style="object-fit: cover;" />
                         </a>
                     </div>
                     <hr>
@@ -197,22 +222,19 @@
                         <!-- Wrapper chứa các slide -->
                         <div class="swiper-wrapper text-center">
                             <div class="product-detail_img-thumb-item swiper-slide">
-                                <img src="https://product.hstatic.net/1000339918/product/bond-no-9-perfumista-avanue__5__ceecbaf3724144fdad5b85de5bd28505_master.jpg" alt="Thumbnail 1">
+                                <img src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="Thumbnail 1">
                             </div>
                             <div class="product-detail_img-thumb-item swiper-slide">
-                                <img src="https://product.hstatic.net/1000339918/product/bond-no-9-perfumista-avanue__3__4ad8c956e18548f28dce7ecabb8a0c5c_master.jpg" alt="Thumbnail 2">
+                                <img src="https://product.hstatic.net/1000339918/product/afnan-9pm-10ml_a7af934145ab43e2824e8d0cfc791e38_master.jpg" alt="Thumbnail 2">
                             </div>
                             <div class="product-detail_img-thumb-item swiper-slide">
-                                <img src="https://product.hstatic.net/1000339918/product/bond-no-9-perfumista-avanue__5__ceecbaf3724144fdad5b85de5bd28505_master.jpg" alt="Thumbnail 3">
+                                <img src="https://product.hstatic.net/1000339918/product/afnan-9pm-10ml_a7af934145ab43e2824e8d0cfc791e38_master.jpg" alt="Thumbnail 3">
                             </div>
                             <div class="product-detail_img-thumb-item swiper-slide">
-                                <img src="https://product.hstatic.net/1000339918/product/bond-no-9-perfumista-avanue__6__c6908c4ca93d4d1f8d6a0cc8a82683c9_master.jpg" alt="Thumbnail 4">
+                                <img src="https://product.hstatic.net/1000339918/product/afnan-9pm-edp-100ml__2__367442449ca74573a42f75715719372e_master.jpg" alt="Thumbnail 4">
                             </div>
                             <div class="product-detail_img-thumb-item swiper-slide">
-                                <img src="https://product.hstatic.net/1000339918/product/bond-no-9-perfumista-avanue__5__ceecbaf3724144fdad5b85de5bd28505_master.jpg" alt="Thumbnail 4">
-                            </div>
-                            <div class="product-detail_img-thumb-item swiper-slide">
-                                <img src="https://product.hstatic.net/1000339918/product/bond-no-9-perfumista-avanue__5__ceecbaf3724144fdad5b85de5bd28505_master.jpg" alt="Thumbnail 4">
+                                <img src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="Thumbnail 4">
                             </div>
                         </div>
                     
@@ -225,7 +247,7 @@
                 </div>
                 <div class="product-detail_info col-12 col-md-6 col-xl-6">
                     <div class="product-detail_info__top">
-                        <h3 class="product-detail_title fw-bold" style ="margin-bottom: 5px; font-size: 30px;">Nước hoa Amouage Lyric Woman EDP</h2>
+                        <h3 class="product-detail_title fw-bold" style ="margin-bottom: 5px; font-size: 30px;">Nước Hoa Afnan 9pm EDP</h2>
                         <div class="product-detail_info__top-description d-flex align-items-center">
                             <p class="product-detail_info-vendor m-0 " style="margin-right: 30px !important">
                                 Thương hiệu: Amounage
@@ -343,17 +365,40 @@
                                     <button class="btn-decrease w-100">
                                         <ion-icon style="font-size: 20px; transform: translateY(2px)" name="remove-outline" role="img" class="md hydrated"></ion-icon>
                                     </button>
-                                    <input type="text" class="input-quantity w-100 prd_quantity prd_quantity_" value="1" min="1">
+                                    <input id ="quantity-input" type="text" class="input-quantity w-100 prd_quantity prd_quantity_" value="1" min="1">
                                     <button class="btn-increase w-100">
                                         <ion-icon style="font-size: 20px; transform: translateY(2px)" name="add-outline" role="img" class="md hydrated"></ion-icon>
                                     </button>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center" style ="width: 60%;">
-                                <button class="d-flex align-items-center" type="button" style ="padding:0 10px;height:40px; flex: 1;background: none; margin-right: 5px; border: 2px solid #FF0000; border-radius:5px;">
-                                    <img src="./assets/img/🦆 icon _cart_.png" style ="width: 25px;height:25px; margin-right: 10px;">
-                                    Thêm vào giỏ hàng</button>
-                                <button type="button" style ="height:40px; flex: 1;background-color: #FF0000; color: white; border-radius: 5px;">Mua ngay</button>
+                                <button 
+                                    class="d-flex align-items-center btn-add-to-cart" 
+                                    type="button" 
+                                    style ="
+                                            padding:0 10px;
+                                            height:40px; 
+                                            flex: 1;
+                                            background: none; 
+                                            margin-right: 5px; 
+                                            border: 2px solid #A71818; 
+                                            border-radius:5px;
+                                        "
+                                    data-product-id="1" 
+                                    data-product-name="Nước Hoa Afnan 9pm EDP" 
+                                    data-product-price="550.000"
+                                    data-product-image = "https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                >
+                                    <img 
+                                        src="./assets/img/🦆 icon _cart_.png" 
+                                        style ="width: 25px;height:25px; margin-right: 10px;filter: brightness(90%) sepia(1) hue-rotate(-10deg) saturate(3);"
+                                        
+                                    >
+                                    Thêm vào giỏ hàng
+                                </button>
+                                <button type="button" style ="height:40px; flex: 1;background-color: rgb(167, 24, 24, 0.9); color: white; border-radius: 5px;">
+                                    <a href="./checkout.html">Mua ngay</a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -361,7 +406,7 @@
 
                 <div class="product-detail_info-description mt-5 row">
                     <div class="product-detail_info-description__left col-xl-8 ">
-                        <h3 style ="text-align: left; padding: 10px 20px; font-size: 20px;width: max-content; border-radius: 5px; margin-bottom: 30px;color: white; background-color: #FF0000;">MÔ TẢ SẢN PHẨM</h3>
+                        <h3 style ="text-align: left; padding: 10px 20px; font-size: 20px;width: max-content; border-radius: 5px; margin-bottom: 30px;color: white; background-color: #A71818;">MÔ TẢ SẢN PHẨM</h3>
                         <h4>Giới thiệu chai nước hoa nữ Lyric Woman
                             <div style ="text-align: justify;">
                                <p> Nước hoa nữ Lyric Woman EDP của thương hiệu Amouage được ra mắt năm 2008 mang đến một mùi hương của những cánh hoa đang nở với sắc thái màu đỏ. Với Lyric Woman, Amouage đã nghiên cứu và sáng tạo làm sao hương hoa hồng tỏa ra một các độc đáo và nổi bật. Với nhóm hương cay và nhựa thơm, Lyric Woman được ví như hoa hồng phương Đông, có hương thơm phong phú và phức tạp. </p>
@@ -413,7 +458,7 @@
                         </h4>
                     </div>
                     <div class="product-detail_info-description__right col-xl-4">
-                        <h3 style ="text-align: left; padding: 10px 20px; font-size: 20px;width: max-content; border-radius: 5px; margin-bottom: 30px;color: white; background-color: #FF0000;">THÔNG TIN SẢN PHẨM</h3>
+                        <h3 style ="text-align: left; padding: 10px 20px; font-size: 20px;width: max-content; border-radius: 5px; margin-bottom: 30px;color: white; background-color: #A71818;">THÔNG TIN SẢN PHẨM</h3>
                         <div class ="info-product">
                             <p>Thương hiệu  :  Amouage</p>  	
                             <p>Giới tính  :  Nước hoa Nữ</p>	
@@ -440,7 +485,7 @@
                 <div class="row">
                     <!-- Cột danh sách đánh giá -->
                     <div class="col-md-8">
-                        <h4 class="text-danger">ĐÁNH GIÁ TỪ KHÁCH HÀNG</h4>
+                        <h4 class="text-danger mb-2">ĐÁNH GIÁ TỪ KHÁCH HÀNG</h4>
                         <p><strong>(12 đánh giá)</strong> <i class="fas fa-star text-warning"></i></p>
                         <div class="review-item">
                             <div class="d-flex align-items-center">
@@ -505,7 +550,7 @@
         
                     <!-- Cột form đánh giá -->
                     <div class="col-md-4">
-                        <h5 class="text-danger">Đánh giá của bạn</h5>
+                        <h4 class="text-danger mb-2">Đánh giá của bạn</h4>
                         <form class="review-form">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Tên của bạn:</label>
@@ -519,7 +564,7 @@
                                 <label for="review" class="form-label">Đánh giá:</label>
                                 <textarea class="form-control" id="review" rows="4" placeholder="Đánh giá"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-danger w-100">Gửi</button>
+                            <button type="submit" class="btn w-100 btn-danger" >Gửi</button>
                         </form>
                     </div>
                 </div>
@@ -528,7 +573,7 @@
                 <div class="mt-5">
                     <div class="product-section row">
                         <div class="product-section__heading col-md-12 text-center">
-                            <h4 class="text-center w-100 fw-bold" style ="font-size: 30px; color: #FF0000">SẢN PHẨM LIÊN QUAN</h3>
+                            <h4 class="text-center w-100 fw-bold text-danger" style ="font-size: 30px;">SẢN PHẨM LIÊN QUAN</h3>
                         </div>
     
                         <div class="col-xl-12">
@@ -543,7 +588,7 @@
                                       <a class="d-block product-item__img-link">
                                         <img
                                           class="product-item__img"
-                                          src="./assets/img/sp6.png"
+                                          src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
                                           alt=""
                                         />
                                         <img
@@ -652,7 +697,7 @@
                                     <div class="product-item border-custom-primary translate--y">
                                         <div class="product-item__wrap-img">
                                             <a class="d-block product-item__img-link">
-                                                <img class="product-item__img" src="./assets/img/sp7.png" alt="" />
+                                                <img class="product-item__img" src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="" />
                                                 <img
                                                     class="product-item__img-thumnail d-none"
                                                     src="./assets/img/sp7.png"
@@ -775,7 +820,7 @@
                                     <div class="product-item border-custom-primary translate--y">
                                         <div class="product-item__wrap-img">
                                             <a class="d-block product-item__img-link">
-                                                <img class="product-item__img" src="./assets/img/sp7.png" alt="" />
+                                                <img class="product-item__img" src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="" />
                                                 <img
                                                     class="product-item__img-thumnail d-none"
                                                     src="./assets/img/sp7.png"
@@ -898,7 +943,7 @@
                                     <div class="product-item border-custom-primary translate--y">
                                         <div class="product-item__wrap-img">
                                             <a class="d-block product-item__img-link">
-                                                <img class="product-item__img" src="./assets/img/sp8.png" alt="" />
+                                                <img class="product-item__img" src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="" />
                                                 <img
                                                     class="product-item__img-thumnail d-none"
                                                     src="./assets/img/sp8.png"
@@ -1021,7 +1066,7 @@
                                     <div class="product-item border-custom-primary translate--y">
                                         <div class="product-item__wrap-img">
                                             <a class="d-block product-item__img-link">
-                                                <img class="product-item__img" src="./assets/img/sp9.png" alt="" />
+                                                <img class="product-item__img" src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="" />
                                                 <img
                                                     class="product-item__img-thumnail d-none"
                                                     src="./assets/img/sp9.png"
@@ -1146,7 +1191,7 @@
                                         <a class="d-block product-item__img-link">
                                           <img
                                             class="product-item__img"
-                                            src="./assets/img/sp6.png"
+                                            src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
                                             alt=""
                                           />
                                           <img
@@ -1264,7 +1309,7 @@
         </main>
 
         <!-- Footer -->
-        <footer class="footer container-fluid mt-5" style="padding: 50px 50px 0 50px">
+        <footer class="footer container-fluid mt-5" style="padding-top: 50px">
             <div class="container">
                 <div class="row">
                     <!-- Cột 1: Thông tin doanh nghiệp -->
@@ -1353,11 +1398,11 @@
                     </div>
                 </div>
             </div>
-            <!-- Dòng slogan -->
-            <div class="footer__slogan">
-                <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
-            </div>
         </footer>
+        <!-- Dòng slogan -->
+        <div class="footer__slogan container-fluid">
+            <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
+        </div>
         <!-- Overlay -->
         <div class="overlay"></div>
 
@@ -1384,6 +1429,7 @@
        
         <!-- <script src="./assets/js/global.js"></script> -->
         <script src="./assets/js/home.js"></script>
+        <script src="./assets/js/add-cart.js"></script>
         <script>
             // const comment_swiper = new Swiper('.comment-swiper', {
             //     slidesPerView: 3,
@@ -1488,6 +1534,88 @@
                 },
               });
             });
-          </script>
+            // $(document).ready(function () {
+            //    // Xử lý khi nhấn nút "Thêm vào giỏ hàng"
+            //     $('.btn-add-to-cart').on('click', function () {
+            //         let productId = $(this).data('product-id'); // Lấy ID sản phẩm
+            //         let productName = $(this).data('product-name'); // Lấy tên sản phẩm
+            //         let productPrice = $(this).data('product-price'); // Lấy giá sản phẩm
+            //         let productImage = $(this).data('product-image'); // Lấy hình ảnh sản phẩm
+                    
+            //         // Lấy số lượng từ input, nếu không hợp lệ thì gán mặc định = 1
+            //         let productQuantity = parseInt($('#quantity-input').val()) || 1;
+
+            //         // Lấy giỏ hàng từ localStorage (nếu có) hoặc tạo mảng rỗng
+            //         let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            //         // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+            //         let existingItem = cart.find(item => item.id === productId);
+
+            //         if (existingItem) {
+            //             // Sản phẩm đã tồn tại -> Cộng dồn số lượng
+            //             existingItem.quantity += productQuantity;
+            //         } else {
+            //             // Sản phẩm chưa tồn tại -> Thêm sản phẩm mới vào giỏ hàng
+            //             cart.push({
+            //                 id: productId,
+            //                 name: productName,
+            //                 price: productPrice,
+            //                 image: productImage,
+            //                 quantity: productQuantity
+            //             });
+            //         }
+
+            //         // Lưu lại giỏ hàng vào localStorage
+            //         localStorage.setItem('cart', JSON.stringify(cart));
+
+            //         // Cập nhật giao diện giỏ hàng
+            //         renderCartItems();
+            //         updateCartCount();
+            //     });
+
+            //     // Hàm render lại danh sách sản phẩm trong giỏ hàng từ localStorage
+            //     function renderCartItems() {
+            //         let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            //         let cartItemsContainer = $('.cart-items');
+            //         cartItemsContainer.empty(); // Xóa toàn bộ sản phẩm hiện tại
+
+            //         cart.forEach(item => {
+            //             let newItem = `
+            //                 <li id="cart-item-${item.id}" class="cart-item d-flex align-items-center mb-2">
+            //                     <img
+            //                         src="${item.image}"
+            //                         alt="${item.name}"
+            //                         class="cart-item-img"
+            //                         style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px"
+            //                     />
+            //                     <div class="cart-item-info ms-3">
+            //                         <p class="cart-item-name mb-1">${item.name}</p>
+            //                         <div class="d-flex align-items-center">
+            //                             <p class="cart-item-price mb-0">${item.price} VND </p>
+            //                             <p class="cart-item-quantity_ mb-0 ms-1"> x </p>
+            //                             <p class="cart-item-quantity mb-0 ms-1">${item.quantity}</p>
+            //                         </div>
+            //                     </div>
+            //                 </li>
+            //             `;
+            //             cartItemsContainer.append(newItem); // Thêm sản phẩm vào danh sách giỏ hàng
+            //         });
+            //     }
+
+            //     // Hàm cập nhật tổng số lượng hiển thị trên biểu tượng giỏ hàng
+            //     function updateCartCount() {
+            //         let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            //         let totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+            //         $('.header__cart-count').text(totalQuantity); // Gán số lượng vào biểu tượng giỏ hàng
+            //     }
+
+            //     // Gọi renderCartItems khi tải trang để hiển thị giỏ hàng từ localStorage
+            //     $(document).ready(function () {
+            //         renderCartItems();
+            //         updateCartCount();
+            //     });
+
+            // });
+        </script>
     </body>
 </html>
