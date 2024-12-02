@@ -75,7 +75,11 @@
             <div class="container">
                 <div class="header-wrap row">
                     <div class="header__logo col-xl-3">
-                        <img class="header__logo-img" src="./assets/img/logo_header.png" alt="Logo" />
+                        <img
+                            class="header__logo-img"
+                            src="./assets/img/c77631c9-9a27-4838-876d-8ba101976d74.jpg"
+                            alt="Logo"
+                        />
                     </div>
                     <div
                         class="header__title col-xl-6 text-center d-flex justify-content-center align-items-center flex-column"
@@ -92,13 +96,13 @@
                                 <span>Hotline bán hàng</span>
                             </div>
                             <a href="tel:0931012321">
-                                <img class="header__phone-icon" src="./assets/img/icon_phone_header.png" alt="" />
+                                <img class="header__phone-icon" src="./assets/img/logo__1.jpg" alt="" />
                             </a>
 
                             <div class="header__cart-wrapper">
                                 <a href="./cart-index.html">
-                                    <img class="header__cart-icon" src="./assets/img/🦆 icon _cart_.png" alt="" />
-                                    <span class="header__cart-count">3</span>
+                                    <img class="header__cart-icon" src="./assets/img/logo__2.jpg" alt="" />
+                                    <span class="header__cart-count">0</span>
                                 </a>
 
                                 <!-- Submenu -->
@@ -106,7 +110,7 @@
                                     <ul class="cart-items list-unstyled mb-2">
                                         <li class="cart-item d-flex align-items-center mb-2">
                                             <img
-                                                src="https://product.hstatic.net/1000339918/product/armaf-club-de-nuit-white-imperiale-edp_fa0cceaeb2b04ad3ad5d766c4b984050_large.jpg"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
                                                 alt="Product"
                                                 class="cart-item-img"
                                                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px"
@@ -116,7 +120,7 @@
                                                 <p class="cart-item-price mb-0">200.000 VND x 2</p>
                                             </div>
                                         </li>
-                                        <li class="cart-item d-flex align-items-center mb-2">
+                                        <li class="cart-item d-flex align-items-center mb-2 d-none">
                                             <img
                                                 src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_large.jpg"
                                                 alt="Product"
@@ -136,12 +140,12 @@
                             </div>
                             <div class="header__account-wrapper">
                                 <a class="d-flex align-items-center">
-                                    <img class="header__account-icon" src="./assets/img/Frame 993.png" alt="" />
+                                    <img class="header__account-icon" src="./assets/img/logo__3.jpg" alt="" />
                                 </a>
                                 <!-- Submenu -->
                                 <div class="account-submenu position-absolute bg-white shadow-sm">
                                     <ul class="list-unstyled mb-0">
-                                        <li class="submenu-item mb-2">
+                                        <li class="submenu-item mb-2" id="account-link">
                                             <a
                                                 href="./account.html"
                                                 class="submenu-link text-decoration-none text-dark d-flex align-items-center"
@@ -149,12 +153,28 @@
                                                 <i class="fa-solid fa-user me-2"></i> Tài khoản
                                             </a>
                                         </li>
-                                        <li class="submenu-item">
+                                        <li class="submenu-item" id="logout-link">
                                             <a
-                                                href="./index.html"
+                                                id="logout-btn"
                                                 class="submenu-link text-decoration-none text-dark d-flex align-items-center"
                                             >
                                                 <i class="fa-solid fa-sign-out-alt me-2"></i> Đăng xuất
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item" id="login-link">
+                                            <a
+                                                href="./register-customer.html"
+                                                class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                            >
+                                                <i class="fa-solid fa-sign-in-alt me-2"></i> Đăng nhập
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item" id="register-link">
+                                            <a
+                                                href=".//register-customer.html"
+                                                class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                            >
+                                                <i class="fa-solid fa-user-plus me-2"></i> Đăng ký
                                             </a>
                                         </li>
                                     </ul>
@@ -172,7 +192,7 @@
         <!-- Menu -->
         <div class="menu-wrap container-fluid">
             <ul class="menu-list w-100 d-flex justify-content-evenly align-items-center">
-                <li class="menu-item"><a class="menu-item_link" href="/index.html">Trang chủ</a></li>
+                <li class="menu-item"><a class="menu-item_link" href="./index.html">Trang chủ</a></li>
                 <li class="menu-item menu-item_more position-relative">
                     <a class="menu-item_link" href="./product-collection.html">
                         Sản phẩm
@@ -246,85 +266,10 @@
                                 <div class="col-xl-2 text-center">Giá</div>
                             </div>
                             <div
-                                class="cart-list"
+                                class="cart-list cart-list-checkout"
                                 style="max-height: 355px; width: 100%; overflow-x: hidden; overflow-y: scroll"
                             >
-                                <div class="cart-item row mb-2 mt-2 align-items-center">
-                                    <div class="col-2">
-                                        <img
-                                            src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_large.jpg"
-                                            alt="Product"
-                                            class="product-img rounded w-100"
-                                        />
-                                    </div>
-                                    <div class="col-6">
-                                        <p class="mb-1">Nước Hoa Amouage Lyric Woman EDP</p>
-                                        <small>Phân loại: 10ml</small>
-                                    </div>
-                                    <div class="col-2 text-center">
-                                        <input type="number" class="form-control text-center" value="1" min="1" />
-                                    </div>
-                                    <div class="col-2 text-center">
-                                        <span>10.550.000₫</span>
-                                    </div>
-                                </div>
-                                <div class="cart-item row mb-2 mt-2 align-items-center">
-                                    <div class="col-2">
-                                        <img
-                                            src="https://product.hstatic.net/1000339918/product/afnan-9am-edp_96178b5ecab0477ca5bb7b9df927f8f8_large.jpg"
-                                            alt="Product"
-                                            class="product-img rounded w-100"
-                                        />
-                                    </div>
-                                    <div class="col-6">
-                                        <p class="mb-1">Nước Hoa Afnan Supremacy In Heaven EDP</p>
-                                        <small>Phân loại: 10ml</small>
-                                    </div>
-                                    <div class="col-2 text-center">
-                                        <input type="number" class="form-control text-center" value="1" min="1" />
-                                    </div>
-                                    <div class="col-2 text-center">
-                                        <span>7.550.000₫</span>
-                                    </div>
-                                </div>
-                                <div class="cart-item row mb-2 mt-2 align-items-center">
-                                    <div class="col-2">
-                                        <img
-                                            src="https://product.hstatic.net/1000339918/product/armaf-le-parfait-panache-edp_e777908d79544aa892f286f9e48ef73f_large.jpg"
-                                            alt="Product"
-                                            class="product-img rounded w-100"
-                                        />
-                                    </div>
-                                    <div class="col-6">
-                                        <p class="mb-1">Nước Hoa Afnan 9pm EDP</p>
-                                        <small>Phân loại: 10ml</small>
-                                    </div>
-                                    <div class="col-2 text-center">
-                                        <input type="number" class="form-control text-center" value="1" min="1" />
-                                    </div>
-                                    <div class="col-2 text-center">
-                                        <span>1.550.000₫</span>
-                                    </div>
-                                </div>
-                                <div class="cart-item row mb-2 mt-2 align-items-center">
-                                    <div class="col-2">
-                                        <img
-                                            src="https://product.hstatic.net/1000339918/product/bond-no-9-perfumista-avanue_2ef8a1e3e5f54e168f72419a1c53c264_large.jpg"
-                                            alt="Product"
-                                            class="product-img rounded w-100"
-                                        />
-                                    </div>
-                                    <div class="col-6">
-                                        <p class="mb-1">Nước Hoa Amouage Interlude Black Iris Man EDP</p>
-                                        <small>Phân loại: 10ml</small>
-                                    </div>
-                                    <div class="col-2 text-center">
-                                        <input type="number" class="form-control text-center" value="1" min="1" />
-                                    </div>
-                                    <div class="col-2 text-center">
-                                        <span>2.550.000₫</span>
-                                    </div>
-                                </div>
+                                <div class="cart-item row mb-2 mt-2 align-items-center" id="cart-items-container"></div>
                             </div>
                             <hr />
                             <!-- Voucher -->
@@ -339,7 +284,7 @@
                             <!-- Pricing Summary -->
                             <div class="row mb-2">
                                 <div class="col-8">Tổng tiền (4 sản phẩm):</div>
-                                <div class="col-4 text-end">25.550.000₫</div>
+                                <div class="col-4 text-end cart-total">25.550.000₫</div>
                             </div>
                             <div class="row mb-2">
                                 <div class="col-8">Giảm giá:</div>
@@ -363,7 +308,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-8 total-price">Tổng thanh toán:</div>
-                                <div class="col-4 total-price text-end">25.500.000₫</div>
+                                <div class="col-4 total-price text-end cart-total">25.500.000₫</div>
                             </div>
                             <a href="./checkout-success.html">
                                 <button class="btn btn-danger w-100 mt-3">Hoàn tất thanh toán</button>
@@ -406,7 +351,7 @@
         </main>
 
         <!-- Footer -->
-        <footer class="footer container-fluid mt-5" style="padding: 50px 50px 0 50px">
+        <footer class="footer container-fluid mt-5" style="padding-top: 50px">
             <div class="container">
                 <div class="row">
                     <!-- Cột 1: Thông tin doanh nghiệp -->
@@ -495,11 +440,11 @@
                     </div>
                 </div>
             </div>
-            <!-- Dòng slogan -->
-            <div class="footer__slogan">
-                <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
-            </div>
         </footer>
+        <!-- Dòng slogan -->
+        <div class="footer__slogan container-fluid">
+            <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
+        </div>
         <!-- Overlay -->
         <div class="overlay"></div>
 
@@ -515,7 +460,9 @@
 
         <!-- SwiperJS Script -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+        <!-- <script src="./assets/js/global.js"></script> -->
+        <script src="./assets/js/home.js"></script>
+        <script src="./assets/js/add-cart.js"></script>
         <script>
             // const comment_swiper = new Swiper('.comment-swiper', {
             //     slidesPerView: 3,
@@ -533,8 +480,70 @@
             //         clickable: true,
             //     },
             // });
+
+            // Khi người dùng vào trang checkout, kiểm tra xem họ đã đăng nhập chưa
+            function checkLoginStatus() {
+                let user = localStorage.getItem('user'); // Lấy thông tin người dùng từ localStorage
+
+                if (user) {
+                    // Nếu người dùng đã đăng nhập, chuyển sang trang checkout
+                    user = JSON.parse(user); // Chuyển đổi chuỗi JSON thành đối tượng
+                    console.log('User đã đăng nhập:', user.username);
+                    // Tiến hành hiển thị thông tin người dùng trong giao diện checkout
+                } else {
+                    // Nếu không có người dùng trong localStorage, yêu cầu đăng nhập
+                    alert('Vui lòng đăng nhập để tiếp tục!');
+                    // Chuyển hướng tới trang đăng nhập
+                    window.location.href = 'http://127.0.0.1:5500/register-customer.html'; // Đường dẫn trang đăng nhập
+                }
+            }
+
+            checkLoginStatus();
+
+            function renderCartItems() {
+                const cartItemsContainer = document.getElementById('cart-items-container');
+                cartItemsContainer.innerHTML = ''; // Clear trước khi render lại
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                // Lặp qua danh sách sản phẩm trong giỏ hàng và tạo HTML cho mỗi sản phẩm
+                cart.forEach((item) => {
+                    const cartItemHTML = `
+                        <div class="cart-item row mb-2 mt-2 align-items-center">
+                            <div class="col-2">
+                                <img src="${item.image}" alt="Product" class="product-img rounded w-100" />
+                            </div>
+                            <div class="col-6">
+                                <p class="mb-1">${item.name}</p>
+                                <small>10ml</small>
+                            </div>
+                            <div class="col-2 text-center">
+                                <input type="number" readonly class="form-control text-center" value="${
+                                    item.quantity
+                                }" min="1" />
+                            </div>
+                            <div class="col-2 text-center">
+                                <span>${item.price.toLocaleString()}₫</span>
+                            </div>
+                        </div>
+                 `;
+
+                    // Thêm sản phẩm vào container
+                    cartItemsContainer.innerHTML += cartItemHTML;
+                });
+            }
+
+            // Gọi hàm để render sản phẩm
+            renderCartItems();
+
+            $(document).ready(function () {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                let total_cart = 0;
+                cart.forEach((item) => {
+                    total_cart += parseInt(item.price.replace(/\./g, '')) * parseInt(item.quantity);
+                    let vl = total_cart.toLocaleString() + 'đ';
+
+                    $('.cart-total').text(vl);
+                });
+            });
         </script>
-        <!-- <script src="./assets/js/global.js"></script> -->
-        <script src="./assets/js/home.js"></script>
     </body>
 </html>

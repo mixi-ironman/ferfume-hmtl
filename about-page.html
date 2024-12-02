@@ -40,7 +40,11 @@
             <div class="container">
                 <div class="header-wrap row">
                     <div class="header__logo col-xl-3">
-                        <img class="header__logo-img" src="./assets/img/logo_header.png" alt="Logo" />
+                        <img
+                            class="header__logo-img"
+                            src="./assets/img/c77631c9-9a27-4838-876d-8ba101976d74.jpg"
+                            alt="Logo"
+                        />
                     </div>
                     <div
                         class="header__title col-xl-6 text-center d-flex justify-content-center align-items-center flex-column"
@@ -57,13 +61,13 @@
                                 <span>Hotline bán hàng</span>
                             </div>
                             <a href="tel:0931012321">
-                                <img class="header__phone-icon" src="./assets/img/icon_phone_header.png" alt="" />
+                                <img class="header__phone-icon" src="./assets/img/logo__1.jpg" alt="" />
                             </a>
 
                             <div class="header__cart-wrapper">
                                 <a href="./cart-index.html">
-                                    <img class="header__cart-icon" src="./assets/img/🦆 icon _cart_.png" alt="" />
-                                    <span class="header__cart-count">3</span>
+                                    <img class="header__cart-icon" src="./assets/img/logo__2.jpg" alt="" />
+                                    <span class="header__cart-count">0</span>
                                 </a>
 
                                 <!-- Submenu -->
@@ -71,7 +75,7 @@
                                     <ul class="cart-items list-unstyled mb-2">
                                         <li class="cart-item d-flex align-items-center mb-2">
                                             <img
-                                                src="https://product.hstatic.net/1000339918/product/armaf-club-de-nuit-white-imperiale-edp_fa0cceaeb2b04ad3ad5d766c4b984050_large.jpg"
+                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
                                                 alt="Product"
                                                 class="cart-item-img"
                                                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px"
@@ -81,7 +85,7 @@
                                                 <p class="cart-item-price mb-0">200.000 VND x 2</p>
                                             </div>
                                         </li>
-                                        <li class="cart-item d-flex align-items-center mb-2">
+                                        <li class="cart-item d-flex align-items-center mb-2 d-none">
                                             <img
                                                 src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_large.jpg"
                                                 alt="Product"
@@ -101,12 +105,12 @@
                             </div>
                             <div class="header__account-wrapper">
                                 <a class="d-flex align-items-center">
-                                    <img class="header__account-icon" src="./assets/img/Frame 993.png" alt="" />
+                                    <img class="header__account-icon" src="./assets/img/logo__3.jpg" alt="" />
                                 </a>
                                 <!-- Submenu -->
                                 <div class="account-submenu position-absolute bg-white shadow-sm">
                                     <ul class="list-unstyled mb-0">
-                                        <li class="submenu-item mb-2">
+                                        <li class="submenu-item mb-2" id="account-link">
                                             <a
                                                 href="./account.html"
                                                 class="submenu-link text-decoration-none text-dark d-flex align-items-center"
@@ -114,12 +118,28 @@
                                                 <i class="fa-solid fa-user me-2"></i> Tài khoản
                                             </a>
                                         </li>
-                                        <li class="submenu-item">
+                                        <li class="submenu-item" id="logout-link">
                                             <a
-                                                href="./index.html"
+                                                id="logout-btn"
                                                 class="submenu-link text-decoration-none text-dark d-flex align-items-center"
                                             >
                                                 <i class="fa-solid fa-sign-out-alt me-2"></i> Đăng xuất
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item" id="login-link">
+                                            <a
+                                                href="./register-customer.html"
+                                                class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                            >
+                                                <i class="fa-solid fa-sign-in-alt me-2"></i> Đăng nhập
+                                            </a>
+                                        </li>
+                                        <li class="submenu-item" id="register-link">
+                                            <a
+                                                href=".//register-customer.html"
+                                                class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                            >
+                                                <i class="fa-solid fa-user-plus me-2"></i> Đăng ký
                                             </a>
                                         </li>
                                     </ul>
@@ -137,7 +157,7 @@
         <!-- Menu -->
         <div class="menu-wrap container-fluid">
             <ul class="menu-list w-100 d-flex justify-content-evenly align-items-center">
-                <li class="menu-item"><a class="menu-item_link" href="/index.html">Trang chủ</a></li>
+                <li class="menu-item"><a class="menu-item_link" href="./index.html">Trang chủ</a></li>
                 <li class="menu-item menu-item_more position-relative">
                     <a class="menu-item_link" href="./product-collection.html">
                         Sản phẩm
@@ -178,13 +198,11 @@
             <nav style="--bs-breadcrumb-divider: '>>'" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item fw-bold"><a href="#">Trang chủ</a></li>
-                    <li class="breadcrumb-item fw-bold active" style="color: #ff0000" aria-current="page">
-                        Giới thiệu
-                    </li>
+                    <li class="breadcrumb-item fw-bold active text-danger" aria-current="page">Giới thiệu</li>
                 </ol>
             </nav>
 
-            <h3 class="text-center" style="color: #ff0000; margin-bottom: 5px">Giới Thiệu</h3>
+            <h3 class="text-center text-danger" style="margin-bottom: 5px">Giới Thiệu</h3>
             <div class="" style="text-align: justify">
                 <p>Địa chỉ uy tín bán nước hoa chính hãng - Vperfume</p>
 
@@ -221,7 +239,7 @@
                     300VNĐ trở lên, hay nước hoa tester.....để ai cũng có cơ hội sở hữu những mùi hương mới nhất, đa
                     dạng nhất với giá thành phù hợp nhất.
                 </p>
-                <h6 style="color: #ff0000; margin-bottom: 5px">
+                <h6 class="text-danger" style="margin-bottom: 5px">
                     Với 5 tiêu chí thật Vperfume luôn làm bạn khác biệt theo cách riêng của mình
                 </h6>
                 <ol style="list-style-type: decimal; margin-left: 30px">
@@ -235,7 +253,7 @@
         </main>
 
         <!-- Footer -->
-        <footer class="footer container-fluid mt-5" style="padding: 50px 50px 0 50px">
+        <footer class="footer container-fluid mt-5" style="padding-top: 50px">
             <div class="container">
                 <div class="row">
                     <!-- Cột 1: Thông tin doanh nghiệp -->
@@ -324,11 +342,11 @@
                     </div>
                 </div>
             </div>
-            <!-- Dòng slogan -->
-            <div class="footer__slogan">
-                <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
-            </div>
         </footer>
+        <!-- Dòng slogan -->
+        <div class="footer__slogan container-fluid">
+            <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
+        </div>
         <!-- Overlay -->
         <div class="overlay"></div>
 
@@ -365,5 +383,6 @@
         </script>
         <!-- <script src="./assets/js/global.js"></script> -->
         <script src="./assets/js/home.js"></script>
+        <script src="./assets/js/add-cart.js"></script>
     </body>
 </html>

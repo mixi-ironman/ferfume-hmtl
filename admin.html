@@ -80,7 +80,7 @@
                 justify-content: space-around;
                 background-color: #fff;
                 padding: 20px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 0px 6px 0px rgba(50, 50, 93, 0.1), 1px 1px 5px rgba(0, 0, 0, 0.02);
                 margin-bottom: 50px;
             }
 
@@ -101,18 +101,21 @@
 
             .chart-container {
                 background-color: #fff;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 0px 6px 0px rgba(50, 50, 93, 0.1), 1px 1px 5px rgba(0, 0, 0, 0.02);
+                padding: 20px;
             }
 
             .info-count{
                 border-radius: 100%;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 0px 6px 0px rgba(50, 50, 93, 0.1), 1px 1px 5px rgba(0, 0, 0, 0.02);
                 padding: 40px;
                 transition: all 0.3s ease;
+                box-sizing: border-box;
             }
 
             .info-count:hover{
-                background-color: rgb(255, 219, 0);
+                /* background-color: rgb(215, 188, 12); */
+                border: 3px dashed red
             }
         </style>
     </head>
@@ -120,19 +123,23 @@
         <div class="container-fluid" style="border-bottom: 1px solid #ddd; padding: 0px 30px">
             <!-- Header -->
             <div class="header d-flex justify-content-between align-items-center">
-                <img src="./assets/img/Frame 911.png" alt="" style="width: 250px; height: 80px; object-fit: contain" />
+                <img
+                    src="./assets/img/c77631c9-9a27-4838-876d-8ba101976d74.jpg"
+                    alt=""
+                    style="width: 250px; height: 80px; object-fit: contain"
+                />
                 <div class="text-center">
-                    <h5 style="color: #ff0000; font-size: 30px">NƯỚC HOA CHÍNH HÃNG</h5>
+                    <h5 style="color: #a71818; font-size: 30px">NƯỚC HOA CHÍNH HÃNG</h5>
                     <p class="mb-0" style="font-size: 20px">Chất lượng tạo niềm tin - Uy tín làm thương hiệu</p>
                 </div>
                 <div class="d-flex">
                     <img
-                        src="https://scontent.fhan15-1.fna.fbcdn.net/v/t51.75761-15/466509278_18340745755177613_2474957748926128500_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=gLOUVWBf6QUQ7kNvgGHBFm_&_nc_zt=23&_nc_ht=scontent.fhan15-1.fna&_nc_gid=Arb90ekThFGovZVkDOnFZXP&oh=00_AYCaRpq_AVJzguaZtlBfhAeq0ttQMWmqhYblvcYvBpASMg&oe=6751F968"
+                        src="https://scontent.fhan15-1.fna.fbcdn.net/v/t39.30808-6/352542734_782626490160148_3770748414681678149_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=nrRe4TDBoAwQ7kNvgHKq0Li&_nc_zt=23&_nc_ht=scontent.fhan15-1.fna&_nc_gid=Aoi0i_S87nqkMPt4NT4NsiZ&oh=00_AYC575LTJ91rRJqVRjfekxP2AUNZ9kpEov1sDF4m0xFI4g&oe=6753FBD9"
                         alt=""
                         style="width: 50px; height: 50px; object-fit: cover; border-radius: 999px"
                     />
                     <div class="info ms-3">
-                        <strong style="color: #ff0000">ADMIN</strong>
+                        <strong style="color: #a71818">ADMIN</strong>
                         <p>Đỗ Thị Thu Hằng</p>
                     </div>
                 </div>
@@ -145,22 +152,22 @@
                     <h5 class="d-none">Vperfume</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link tab-link active" href="#" data-tab="tab1">Thống kê</a>
+                            <a onclick="setActiveMenu('statistics')" class="nav-link tab-link active" href="#" data-tab="tab1">Thống kê</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tab-link" href="#" data-tab="tab2">Sản phẩm</a>
+                            <a onclick="setActiveMenu('products')" class="nav-link tab-link" href="#" data-tab="tab2">Sản phẩm</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tab-link" href="#" data-tab="tab3">Tin tức</a>
+                            <a onclick="setActiveMenu('news')" class="nav-link tab-link" href="#" data-tab="tab3">Tin tức</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tab-link" href="#" data-tab="tab4">Khách hàng</a>
+                            <a onclick="setActiveMenu('customers')" class="nav-link tab-link" href="#" data-tab="tab4">Khách hàng</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tab-link" href="#" data-tab="tab5">Đơn hàng</a>
+                            <a onclick="setActiveMenu('orders')" class="nav-link tab-link" href="#" data-tab="tab5">Đơn hàng</a>
                         </li>
                         <li class="nav-item">
-                            <a target="_blank" class="nav-link tab-link_" href="./login-admin.html" data-tab="tab6">Đăng xuất</a>
+                            <a onclick="setActiveMenu('statistics')" target="_blank" class="nav-link tab-link_" href="./login-admin.html" data-tab="tab6">Đăng xuất</a>
                         </li>
                     </ul>
                 </div>
@@ -219,7 +226,7 @@
                                                 target="_blank"
                                                 >Xem</a
                                             >
-                                            <a href="./edit-product.html" target="_blank" class="btn btn-warning btn-sm">In đơn</a>
+                                            <a href="./print-order.html" target="_blank" class="btn btn-warning btn-sm">In đơn</a>
                                             <a href="#" class="btn btn-danger btn-sm">Xóa</a>
                                         </td>
                                     </tr>
@@ -231,7 +238,7 @@
                                         <td><span class="badge bg-warning">Đang Xử Lý</span></td>
                                         <td style ="text-align: center; vertical-align: middle;">
                                             <a target="_blank" href="./confirm-order.html" class="btn btn-info btn-sm">Xem</a>
-                                            <a href="./edit-product.html" target="_blank" class="btn btn-warning btn-sm">In đơn</a>
+                                            <a href="./print-order.html" target="_blank" class="btn btn-warning btn-sm">In đơn</a>
                                             <a href="#" class="btn btn-danger btn-sm">Xóa</a>
                                         </td>
                                     </tr>
@@ -243,12 +250,34 @@
                                         <td><span class="badge bg-danger">Đã hủy</span></td>
                                         <td style ="text-align: center; vertical-align: middle;">
                                             <a target="_blank" href="./cancel-order.html" class="btn btn-info btn-sm">Xem</a>
-                                            <a href="" target="_blank" class="btn btn-warning btn-sm">In đơn</a>
+                                            <a href="./print-order.html" target="_blank" class="btn btn-warning btn-sm">In đơn</a>
                                             <a href="#" class="btn btn-danger btn-sm">Xóa</a>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="pagination-container">
+                                <!-- Phân trang -->
+                                <div class="col-12 col-md-12">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination justify-content-end">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">«</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">»</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </div>
 
                         <div id="tab2" class="tab-content d-none">
@@ -427,6 +456,28 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="pagination-container">
+                                <!-- Phân trang -->
+                                <div class="col-12 col-md-12">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination justify-content-end">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">«</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">»</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </div>
                         <div id="tab3" class="tab-content d-none">
                             <h2 class="mb-4">Danh Sách Tin Tức</h2>
@@ -514,6 +565,28 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="pagination-container">
+                                <!-- Phân trang -->
+                                <div class="col-12 col-md-12">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination justify-content-end">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">«</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">»</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </div>
                         <div id="tab4" class="tab-content d-none">
                             <h3 class="mb-4">Danh sách khách hàng</h3>
@@ -540,8 +613,8 @@
                                       <td><span class="badge bg-success">Hoạt động</span></td>
                                       <td>2024-12-01</td>
                                       <td>
-                                        <button class="btn btn-info btn-sm">Chi tiết</button>
-                                        <button class="btn btn-warning btn-sm">Chỉnh sửa</button>
+                                        <!-- <button class="btn btn-info btn-sm">Chi tiết</button>
+                                        <button class="btn btn-warning btn-sm">Chỉnh sửa</button> -->
                                         <button class="btn btn-danger btn-sm">Xóa</button>
                                       </td>
                                     </tr>
@@ -551,11 +624,11 @@
                                       <td>tranthib@example.com</td>
                                       <td>0988888888</td>
                                       <td>456 Lê Lợi, Đà Nẵng</td>
-                                      <td><span class="badge bg-danger">Bị khóa</span></td>
+                                      <td><span class="badge bg-success">Hoạt động</span></td>
                                       <td>2024-12-01</td>
                                       <td>
-                                        <button class="btn btn-info btn-sm">Chi tiết</button>
-                                        <button class="btn btn-warning btn-sm">Chỉnh sửa</button>
+                                        <!-- <button class="btn btn-info btn-sm">Chi tiết</button>
+                                        <button class="btn btn-warning btn-sm">Chỉnh sửa</button> -->
                                         <button class="btn btn-danger btn-sm">Xóa</button>
                                       </td>
                                     </tr>
@@ -565,17 +638,39 @@
                                       <td>phamminhc@example.com</td>
                                       <td>0977777777</td>
                                       <td>789 Tôn Đức Thắng, Hồ Chí Minh</td>
-                                      <td><span class="badge bg-warning text-dark">Chờ xác minh</span></td>
+                                      <td><span class="badge bg-success">Hoạt động</span></td>
                                       <td>2024-12-01</td>
                                       <td>
-                                        <button class="btn btn-info btn-sm">Chi tiết</button>
-                                        <button class="btn btn-warning btn-sm">Chỉnh sửa</button>
+                                        <!-- <button class="btn btn-info btn-sm">Chi tiết</button>
+                                        <button class="btn btn-warning btn-sm">Chỉnh sửa</button> -->
                                         <button class="btn btn-danger btn-sm">Xóa</button>
                                       </td>
                                     </tr>
                                     <!-- Kết thúc dòng mẫu -->
                                   </tbody>
                             </table>
+                            <div class="pagination-container">
+                                <!-- Phân trang -->
+                                <div class="col-12 col-md-12">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination justify-content-end">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">«</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">»</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </div>
                         <div id="tab1" class="tab-content">
                             <div class="row g-5"> 
@@ -612,13 +707,6 @@
                                         <canvas id="lineChart"></canvas>
                                     </div>
                                 </div>
-
-                                <div class="col-md-6">
-                                    <div class="chart-container">
-                                        <canvas id="pieChart"></canvas>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                         <div id="tab6" class="tab-content d-none">Content 1</div>
@@ -629,8 +717,11 @@
 
         <!-- Bootstrap JS và Popper.js (cần thiết cho Modal) -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Link Jquery -->
+        <script src="./assets/libs/jquery/jquery-3.7.0.min.js"></script>
         <!-- chart.js -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="./assets/js/global_admin.js"></script>
         <script>
              // Dữ liệu dùng chung
             const labels = ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5'];
@@ -671,42 +762,6 @@
                 options: {
                 scales: { y: { beginAtZero: true } },
                 }
-            });
-
-            // Biểu đồ Tròn
-            new Chart(document.getElementById('pieChart').getContext('2d'), {
-                type: 'pie',
-                data: {
-                labels: ['Sản phẩm A', 'Sản phẩm B', 'Sản phẩm C'],
-                datasets: [{
-                    data: [300, 150, 50],
-                    backgroundColor: ['rgba(255, 99, 132, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(255, 206, 86, 0.5)'],
-                    borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)'],
-                    borderWidth: 1
-                }]
-                }
-            });
-        </script>
-        <script>
-            // Lắng nghe sự kiện khi Modal được hiển thị
-            document.addEventListener('DOMContentLoaded', function () {
-                var orderDetailsModal = document.getElementById('orderDetailsModal');
-                orderDetailsModal.addEventListener('show.bs.modal', function (event) {
-                    // Lấy dữ liệu từ nút "Xem" đã được click
-                    var button = event.relatedTarget;
-                    var orderId = button.getAttribute('data-order-id');
-                    var customer = button.getAttribute('data-customer');
-                    var date = button.getAttribute('data-date');
-                    var total = button.getAttribute('data-total');
-                    var status = button.getAttribute('data-status');
-
-                    // Hiển thị thông tin trong Modal
-                    document.getElementById('modalOrderId').textContent = orderId;
-                    document.getElementById('modalCustomer').textContent = customer;
-                    document.getElementById('modalDate').textContent = date;
-                    document.getElementById('modalTotal').textContent = total;
-                    document.getElementById('modalStatus').textContent = status;
-                });
             });
         </script>
 
@@ -787,6 +842,43 @@
                     });
                 });
             });
+        
+            // // Lưu trạng thái menu hiện tại
+            // function setActiveMenu(menuId) {
+            //     localStorage.setItem('activeMenu', menuId);
+            // }
+
+            // // Khôi phục trạng thái menu
+            // function restoreActiveMenu() {
+            //     const activeMenu = localStorage.getItem('activeMenu');
+            //     console.log(activeMenu);
+                
+            //     if (activeMenu) {
+            //         // Xóa tất cả trạng thái active
+            //         document.querySelectorAll('.tab-link').forEach(item => item.classList.remove('active'));
+
+            //         // Đặt trạng thái active cho menu hiện tại
+            //         const activeElement = document.querySelector(`.tab-link[onclick="setActiveMenu('${activeMenu}')"]`);
+            //         if (activeElement) {
+            //             activeElement.classList.add('active');
+            //         }
+            //     }
+            // }
+
+            // // Gọi hàm khi tải trang
+            // document.addEventListener('DOMContentLoaded', restoreActiveMenu);
+
+            // $('.nav-item').on('click', function () {
+            //     restoreActiveMenu();
+            // });
+
+            // $(document).ready(function () {
+            //    let tem_active =  $('.tab-link.active').data('tab');
+            //    $('.tab-content').removeClass('d-none');
+            //    $('.tab-content').addClass('d-none');
+            //    $(`#${tem_active}`).removeClass('d-none');
+            // });
+
         </script>
     </body>
 </html>
