@@ -787,6 +787,11 @@
     height: 30px;
 }
 
+.cart-item-quantity,
+.cart-item-quantity_ {
+    font-size: 12px !important;
+}
+
 /* Bản đồ */
 /* .footer__map iframe {
     border: none;

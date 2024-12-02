@@ -91,7 +91,7 @@
                         <div class="header__cart-wrapper">
                             <a href="./cart-index.html">
                                 <img class="header__cart-icon" src="./assets/img/🦆 icon _cart_.png" alt="" />
-                                <span class="header__cart-count">3</span>
+                                <span class="header__cart-count">1</span>
                             </a>
 
                             <!-- Submenu -->
@@ -99,7 +99,7 @@
                                 <ul class="cart-items list-unstyled mb-2">
                                     <li class="cart-item d-flex align-items-center mb-2">
                                         <img
-                                            src="https://product.hstatic.net/1000339918/product/armaf-club-de-nuit-white-imperiale-edp_fa0cceaeb2b04ad3ad5d766c4b984050_large.jpg"
+                                            src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
                                             alt="Product"
                                             class="cart-item-img"
                                             style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px"
@@ -109,7 +109,7 @@
                                             <p class="cart-item-price mb-0">200.000 VND x 2</p>
                                         </div>
                                     </li>
-                                    <li class="cart-item d-flex align-items-center mb-2">
+                                    <li class="cart-item d-flex align-items-center mb-2 d-none">
                                         <img
                                             src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_large.jpg"
                                             alt="Product"
@@ -134,7 +134,7 @@
                             <!-- Submenu -->
                             <div class="account-submenu position-absolute bg-white shadow-sm">
                                 <ul class="list-unstyled mb-0">
-                                    <li class="submenu-item mb-2">
+                                    <li class="submenu-item mb-2" id="account-link">
                                         <a
                                             href="./account.html"
                                             class="submenu-link text-decoration-none text-dark d-flex align-items-center"
@@ -142,12 +142,28 @@
                                             <i class="fa-solid fa-user me-2"></i> Tài khoản
                                         </a>
                                     </li>
-                                    <li class="submenu-item">
+                                    <li class="submenu-item" id="logout-link">
                                         <a
-                                            href="./index.html"
+                                            id="logout-btn"
                                             class="submenu-link text-decoration-none text-dark d-flex align-items-center"
                                         >
                                             <i class="fa-solid fa-sign-out-alt me-2"></i> Đăng xuất
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item" id="login-link">
+                                        <a
+                                            href="./register-customer.html"
+                                            class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                        >
+                                            <i class="fa-solid fa-sign-in-alt me-2"></i> Đăng nhập
+                                        </a>
+                                    </li>
+                                    <li class="submenu-item" id="register-link">
+                                        <a
+                                            href=".//register-customer.html"
+                                            class="submenu-link text-decoration-none text-dark d-flex align-items-center"
+                                        >
+                                            <i class="fa-solid fa-user-plus me-2"></i> Đăng ký
                                         </a>
                                     </li>
                                 </ul>
@@ -165,7 +181,7 @@
         <!-- Menu -->
         <div class="menu-wrap container-fluid">
             <ul class="menu-list w-100 d-flex justify-content-evenly align-items-center">
-                <li class="menu-item"><a class="menu-item_link" href="/index.html">Trang chủ</a></li>
+                <li class="menu-item"><a class="menu-item_link" href="./index.html">Trang chủ</a></li>
                 <li class="menu-item menu-item_more position-relative">
                     <a class="menu-item_link" href="./product-collection.html">
                         Sản phẩm
@@ -233,14 +249,14 @@
                                 <th>Thao tác</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr class="cart-item">
+                        <tbody id = "cart-table-body">
+                            <!-- <tr class="cart-item">
                                 <td style="vertical-align: middle; text-align: center">
                                     <div class="d-flex align-items-center">
                                         <input type="radio" name="select-product" class="me-3" />
-                                        <img src="./assets/img/cart1.png" alt="Sản phẩm 1" />
+                                        <img src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="Sản phẩm 1" />
                                         <div class="ms-2">
-                                            <h6>Nước Hoa Amouage Lyric Woman EDP</h6>
+                                            <h6>Nước Hoa Afnan 9pm EDP</h6>
                                             <span>Phân loại: 100ml</span>
                                         </div>
                                     </div>
@@ -267,41 +283,7 @@
                                             onclick="if(confirm('Bạn có chắc chắn muốn xóa?')) { alert('Đã xóa thành công!'); } else { alert('Hành động xóa đã bị hủy.'); }"
                                     /></span>
                                 </td>
-                            </tr>
-                            <tr class="cart-item">
-                                <td style="vertical-align: middle; text-align: center">
-                                    <div class="d-flex align-items-center">
-                                        <input type="radio" name="select-product_" class="me-3" />
-                                        <img src="./assets/img/cảt2.png" alt="Sản phẩm 2" />
-                                        <div class="ms-2">
-                                            <h6>Nước Hoa Armaf Club De Nuit Woman EDP</h6>
-                                            <span>Phân loại: 100ml</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td style="vertical-align: middle; text-align: center">550.000đ</td>
-                                <td class="cart-item-actions" style="vertical-align: middle; text-align: center">
-                                    <button class="btn btn-outline-secondary">-</button>
-                                    <input
-                                        type="text"
-                                        value="1"
-                                        class="form-control d-inline-block text-center"
-                                        style="width: 50px; height: 36px; transform: translateY(1px)"
-                                    />
-                                    <button class="btn btn-outline-secondary">+</button>
-                                </td>
-                                <td style="vertical-align: middle; text-align: center">550.000đ</td>
-                                <td style="vertical-align: middle; text-align: center">
-                                    <span class="delete-btn"
-                                        ><img
-                                            src="./assets/img/🦆 icon _trash_.png"
-                                            style="width: 20px; height: 20px"
-                                            alt=""
-                                            srcset=""
-                                            onclick="if(confirm('Bạn có chắc chắn muốn xóa?')) { alert('Đã xóa thành công!'); } else { alert('Hành động xóa đã bị hủy.'); }"
-                                    /></span>
-                                </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
@@ -333,10 +315,10 @@
                                 <div class="swiper-slide">
                                   <div class="product-item border-custom-primary translate--y">
                                     <div class="product-item__wrap-img">
-                                      <a class="d-block product-item__img-link">
+                                      <a class="d-block product-item__img-link" href="./product-detail.html">
                                         <img
                                           class="product-item__img"
-                                          src="./assets/img/sp6.png"
+                                          src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
                                           alt=""
                                         />
                                         <img
@@ -371,7 +353,7 @@
                                             class="form-control prd_quantity border rounded mb-2"
                                           />
                                           <a
-                                            href="https://mixibike.ommani.net/product/detail/pedal-xe-dap-mtb-crankbrothers-stamp"
+                                        
                                             class="action-bar_icon"
                                           >
                                             <img
@@ -384,7 +366,7 @@
                                     </div>
                                     <div class="product-item__info">
                                       <a
-                                        href="https://mixibike.ommani.net/product/detail/pedal-xe-dap-mtb-crankbrothers-stamp"
+                                        
                                         class="d-block"
                                       >
                                         <p class="product-info__vendor">Naughty</p>
@@ -444,8 +426,8 @@
                                 <div class="swiper-slide">
                                     <div class="product-item border-custom-primary translate--y">
                                         <div class="product-item__wrap-img">
-                                            <a class="d-block product-item__img-link">
-                                                <img class="product-item__img" src="./assets/img/sp7.png" alt="" />
+                                            <a href="./product-detail.html" class="d-block product-item__img-link">
+                                                <img class="product-item__img" src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="" />
                                                 <img
                                                     class="product-item__img-thumnail d-none"
                                                     src="./assets/img/sp7.png"
@@ -478,7 +460,7 @@
                                                         class="form-control prd_quantity border rounded mb-2"
                                                     />
                                                     <a
-                                                        href="https://mixibike.ommani.net/product/detail/bo-group-xe-dap-sram-sx-eagle-12sp-ban-2021"
+                                                       
                                                         class="action-bar_icon"
                                                     >
                                                         <img
@@ -499,7 +481,7 @@
                                         </div>
                                         <div class="product-item__info">
                                             <a
-                                                href="https://mixibike.ommani.net/product/detail/bo-group-xe-dap-sram-sx-eagle-12sp-ban-2021"
+                                               
                                                 class="d-block"
                                             >
                                                 <p class="product-info__vendor">Eagle</p>
@@ -567,8 +549,8 @@
                                 <div class="swiper-slide">
                                     <div class="product-item border-custom-primary translate--y">
                                         <div class="product-item__wrap-img">
-                                            <a class="d-block product-item__img-link">
-                                                <img class="product-item__img" src="./assets/img/sp7.png" alt="" />
+                                            <a href="./product-detail.html" class="d-block product-item__img-link">
+                                                <img class="product-item__img" src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="" />
                                                 <img
                                                     class="product-item__img-thumnail d-none"
                                                     src="./assets/img/sp7.png"
@@ -601,7 +583,7 @@
                                                         class="form-control prd_quantity border rounded mb-2"
                                                     />
                                                     <a
-                                                        href="https://mixibike.ommani.net/product/detail/tui-kho-xtouring-xam-sat-to-ong-tui-kho-xtouring"
+                                                       
                                                         class="action-bar_icon"
                                                     >
                                                         <img
@@ -622,7 +604,7 @@
                                         </div>
                                         <div class="product-item__info">
                                             <a
-                                                href="https://mixibike.ommani.net/product/detail/tui-kho-xtouring-xam-sat-to-ong-tui-kho-xtouring"
+                                               
                                                 class="d-block"
                                             >
                                                 <p class="product-info__vendor">XTOURING</p>
@@ -690,8 +672,8 @@
                                 <div class="swiper-slide">
                                     <div class="product-item border-custom-primary translate--y">
                                         <div class="product-item__wrap-img">
-                                            <a class="d-block product-item__img-link">
-                                                <img class="product-item__img" src="./assets/img/sp8.png" alt="" />
+                                            <a href="./product-detail.html" class="d-block product-item__img-link">
+                                                <img class="product-item__img" src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="" />
                                                 <img
                                                     class="product-item__img-thumnail d-none"
                                                     src="./assets/img/sp8.png"
@@ -745,7 +727,7 @@
                                         </div>
                                         <div class="product-item__info">
                                             <a
-                                                href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                              
                                                 class="d-block"
                                             >
                                                 <p class="product-info__vendor">Rondo</p>
@@ -813,8 +795,8 @@
                                 <div class="swiper-slide">
                                     <div class="product-item border-custom-primary translate--y">
                                         <div class="product-item__wrap-img">
-                                            <a class="d-block product-item__img-link">
-                                                <img class="product-item__img" src="./assets/img/sp9.png" alt="" />
+                                            <a href="./product-detail.html" class="d-block product-item__img-link">
+                                                <img class="product-item__img" src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg" alt="" />
                                                 <img
                                                     class="product-item__img-thumnail d-none"
                                                     src="./assets/img/sp9.png"
@@ -847,7 +829,7 @@
                                                         class="form-control prd_quantity border rounded mb-2"
                                                     />
                                                     <a
-                                                        href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                                       
                                                         class="action-bar_icon"
                                                     >
                                                         <img
@@ -868,7 +850,7 @@
                                         </div>
                                         <div class="product-item__info">
                                             <a
-                                                href="https://mixibike.ommani.net/product/detail/xe-dap-duong-truong-danh-cho-nu-ruby-2024"
+                                               
                                                 class="d-block"
                                             >
                                                 <p class="product-info__vendor">Rondo</p>
@@ -936,7 +918,7 @@
                                 <div class="swiper-slide">
                                     <div class="product-item border-custom-primary translate--y">
                                       <div class="product-item__wrap-img">
-                                        <a class="d-block product-item__img-link">
+                                        <a href="./product-detail.html" class="d-block product-item__img-link">
                                           <img
                                             class="product-item__img"
                                             src="./assets/img/sp6.png"
@@ -1056,8 +1038,8 @@
             </div>
         </main>
 
-       <!-- Footer -->
-       <footer class="footer container-fluid mt-5" style="padding: 50px 50px 0 50px">
+      <!-- Footer -->
+      <footer class="footer container-fluid mt-5" style="padding-top: 50px">
         <div class="container">
             <div class="row">
                 <!-- Cột 1: Thông tin doanh nghiệp -->
@@ -1146,11 +1128,11 @@
                 </div>
             </div>
         </div>
-        <!-- Dòng slogan -->
-        <div class="footer__slogan">
-            <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
-        </div>
     </footer>
+    <!-- Dòng slogan -->
+    <div class="footer__slogan container-fluid">
+        <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
+    </div>
         <!-- Overlay -->
         <div class="overlay"></div>
 
@@ -1168,7 +1150,7 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <!-- <script src="./assets/js/global.js"></script> -->
         <script src="./assets/js/home.js"></script>
-
+        <script src="./assets/js/add-cart.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
               new Swiper(".flashsale-swiper", {
@@ -1199,7 +1181,115 @@
                 },
               });
             });
-          </script>
+        // Hàm render giỏ hàng từ localStorage
+        function renderCart() {
+            // Lấy dữ liệu từ localStorage
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Chọn phần tử tbody của bảng giỏ hàng
+            let cartTableBody = document.querySelector("#cart-table-body");
+            cartTableBody.innerHTML = ""; // Xóa nội dung cũ
+
+            // Duyệt qua từng sản phẩm trong giỏ hàng và thêm vào bảng
+            cart.forEach((item) => {
+            // Loại bỏ dấu chấm khỏi giá trị 'price' và chuyển sang kiểu số
+            // let price = parseInt(item.price.replace(/\./g, ''));
+            // let quantity = parseInt(item.quantity);
+                cartTableBody.innerHTML += `
+                    <tr class="cart-item">
+                        <td style="vertical-align: middle; text-align: center">
+                            <div class="d-flex align-items-center">
+                                <input type="radio" name="select-product" class="me-3" />
+                                <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover" />
+                                <div class="ms-2">
+                                    <h6>${item.name}</h6>
+                                    <span>10ml</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="vertical-align: middle; text-align: center">${item.price.toLocaleString()}đ</td>
+                        <td class="cart-item-actions" style="vertical-align: middle; text-align: center">
+                            <button class="btn btn-outline-secondary btn-decrease" data-id="${item.id}">-</button>
+                            <input
+                                type="text"
+                                value="${item.quantity}"
+                                class="form-control d-inline-block text-center"
+                                style="width: 50px; height: 36px; transform: translateY(1px)"
+                                readonly
+                            />
+                            <button class="btn btn-outline-secondary btn-increase" data-id="${item.id}">+</button>
+                        </td>
+                        <td style="vertical-align: middle; text-align: center">${(parseInt(item.price.replace(/\./g, '')) * parseInt(item.quantity)).toLocaleString()}đ</td>
+                        <td style="vertical-align: middle; text-align: center">
+                            <span class="delete-btn" data-id="${item.id}">
+                                <img
+                                    src="./assets/img/🦆 icon _trash_.png"
+                                    style="width: 20px; height: 20px; cursor: pointer"
+                                    alt="Xóa sản phẩm"
+                                />
+                            </span>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            attachEventHandlers(); // Gắn sự kiện cho các nút
+        }
+
+        // Hàm gắn sự kiện cho nút tăng/giảm số lượng và xóa
+        function attachEventHandlers() {
+            document.querySelectorAll(".btn-increase").forEach((button) => {
+                button.addEventListener("click", (e) => {
+                    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                    let productId = parseInt(e.target.dataset.id);
+                    cart = cart.map((item) => {
+                        if (item.id === productId) {
+                            item.quantity++;
+                        }
+                        return item;
+                    });
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    renderCart();
+                });
+            });
+
+            document.querySelectorAll(".btn-decrease").forEach((button) => {
+                button.addEventListener("click", (e) => {
+                    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                    let productId = parseInt(e.target.dataset.id);
+                    cart = cart.map((item) => {
+                        if (item.id === productId && item.quantity > 1) {
+                            item.quantity--;
+                        }
+                        return item;
+                    });
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    renderCart();
+                });
+            });
+
+            document.querySelectorAll(".delete-btn").forEach((button) => {
+                button.addEventListener("click", (e) => {
+                    if (confirm("Bạn có chắc chắn muốn xóa?")) {
+                        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                        let productId = $('.delete-btn').data('id');
+                        let cartCount = cart.length;
+                        $('.cart-total').text(cartCount);
+                        cart = cart.filter((item) => item.id !== productId);
+                        console.log(productId);
+                        console.log(cart);
+                        
+                        localStorage.setItem("cart", JSON.stringify(cart));
+                        renderCart();
+                    }
+                });
+            });
+        }
+
+        // Gọi hàm render khi trang được load
+        document.addEventListener("DOMContentLoaded", renderCart);
+
+        </script>
           
     </body>
 </html>

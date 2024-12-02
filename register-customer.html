@@ -32,7 +32,52 @@
         <link rel="stylesheet" href="./assets/css/global.css" />
         <link rel="stylesheet" href="./assets/css/home.css" />
         <link rel="stylesheet" href="./assets/css/product-collection.css" />
-        <style></style>
+        <style>
+            .register-container {
+                max-width: 1200px;
+                margin: 30px auto;
+                display: flex;
+                align-items: stretch;
+                gap: 20px;
+            }
+            .register-left {
+                flex: 1;
+                border: 1px solid #888;
+                border-radius: 5px;
+                text-align: center;
+                /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+            }
+            .register-left img {
+                max-width: 100%;
+                width: 100%;
+                border-radius: 5px;
+            }
+            .register-right {
+                flex: 1;
+                border-radius: 8px;
+                padding: 20px;
+            }
+            .nav-tabs .nav-link.active {
+                background-color: #ff4d4d;
+                color: #fff;
+            }
+            .btn-register {
+                background-color: #ff4d4d;
+                color: #fff;
+                border: none;
+            }
+            .btn-register:hover {
+                background-color: #cc0000;
+            }
+            .nav-item {
+                width: 50%;
+            }
+
+            .nav-link {
+                width: 100%;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <!-- Header -->
@@ -63,7 +108,7 @@
                             <div class="header__cart-wrapper">
                                 <a href="./cart-index.html">
                                     <img class="header__cart-icon" src="./assets/img/🦆 icon _cart_.png" alt="" />
-                                    <span class="header__cart-count">1</span>
+                                    <span class="header__cart-count">3</span>
                                 </a>
 
                                 <!-- Submenu -->
@@ -71,12 +116,12 @@
                                     <ul class="cart-items list-unstyled mb-2">
                                         <li class="cart-item d-flex align-items-center mb-2">
                                             <img
-                                                src="https://product.hstatic.net/1000339918/product/afnan-9pm_086f706a3a6a4fd38320a40b4470d20a_master.jpg"
+                                                src="https://product.hstatic.net/1000339918/product/armaf-club-de-nuit-white-imperiale-edp_fa0cceaeb2b04ad3ad5d766c4b984050_large.jpg"
                                                 alt="Product"
                                                 class="cart-item-img"
                                                 style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px"
                                             />
-                                            <div class="cart-item-info ms-3 d-none">
+                                            <div class="cart-item-info ms-3">
                                                 <p class="cart-item-name mb-1">Nước Hoa Alaia Paris EDP</p>
                                                 <p class="cart-item-price mb-0">200.000 VND x 2</p>
                                             </div>
@@ -184,7 +229,7 @@
                 </li>
 
                 <li class="menu-item"><a class="menu-item_link" href="./blog.html">Tin tức</a></li>
-                <li class="menu-item"><a class="menu-item_link" href="/contact.html">Liên hệ</a></li>
+                <li class="menu-item"><a class="menu-item_link" href="./contact.html">Liên hệ</a></li>
                 <li class="menu-item"><a class="menu-item_link" href="./about-page.html">Giới thiệu</a></li>
             </ul>
         </div>
@@ -194,64 +239,139 @@
             <nav style="--bs-breadcrumb-divider: '>>'" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item fw-bold"><a href="#">Trang chủ</a></li>
-                    <li class="breadcrumb-item fw-bold active" style="color: #ff0000" aria-current="page">
-                        Giới thiệu
-                    </li>
+                    <li class="breadcrumb-item fw-bold active" style="color: #ff0000" aria-current="page">Đăng ký</li>
                 </ol>
             </nav>
 
-            <h3 class="text-center" style="color: #ff0000; margin-bottom: 5px">Giới Thiệu</h3>
-            <div class="" style="text-align: justify">
-                <p>Địa chỉ uy tín bán nước hoa chính hãng - Vperfume</p>
+            <div class="register-container">
+                <!-- Left side -->
+                <div class="register-left">
+                    <img src="./assets/img/register-img.png" alt="Online Shop Image" />
+                    <div class="mt-4 text-start p-2">
+                        <h5>Quyền lợi thành viên:</h5>
+                        <ol class="" style="list-style: disc; padding-left: 40px">
+                            <li>Mua hàng cực dễ dàng, nhanh chóng</li>
+                            <li>Theo dõi chi tiết đơn hàng, địa chỉ thanh toán dễ dàng</li>
+                            <li>Nhận nhiều ưu đãi hấp dẫn, mã giảm giá khủng</li>
+                        </ol>
+                    </div>
+                </div>
 
-                <p>
-                    Là thương hiệu nước hoa hoạt động theo mô hình bán lẻ từ năm 2016. Vperfume là thương hiệu nước hoa
-                    uy tín số 1 tại Hà Nội đã nhận được nhiều phản hồi của rất nhiều khách hàng và được đánh giá là
-                    website bán nước hoa hàng hiệu chính hãng, uy tín hàng đầu tại Hà Nội. 
-                </p>
+                <!-- Right side -->
+                <div class="register-right">
+                    <ul class="nav nav-tabs mb-4" role="tablist">
+                        <li class="nav-item">
+                            <button
+                                class="nav-link active"
+                                id="login-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#login"
+                                type="button"
+                                role="tab"
+                            >
+                                Đăng nhập
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button
+                                class="nav-link"
+                                id="register-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#register"
+                                type="button"
+                                role="tab"
+                            >
+                                Đăng ký
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <!-- Register form -->
+                        <div class="tab-pane fade show" id="register" role="tabpanel" aria-labelledby="register-tab">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Họ và tên *</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="name"
+                                        placeholder="Nhập họ và tên"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        placeholder="Nhập email"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Mật khẩu *</label>
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="password"
+                                        placeholder="Nhập mật khẩu"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirm-password" class="form-label">Nhập lại mật khẩu *</label>
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="confirm-password"
+                                        placeholder="Nhập lại mật khẩu"
+                                        required
+                                    />
+                                </div>
+                                <button type="submit" class="btn btn-register w-100">Đăng ký</button>
+                            </form>
+                        </div>
 
-                <p>
-                    Với mục đích mang lại những dòng nước hoa cao cấp đến từ các thương hiệu nước hoa nổi tiếng trên thế
-                    giới như Chanel, Christian Dior, Bvlgari, Gucci, Victoria's Secret, Lancôme, Hugo Boss, Narciso
-                    Rodriguez, Tom Ford… Vperfume đã luôn cập nhật những mẫu nước hoa mới nhằm đáp ứng nhu cầu sử
-                    dụng nước hoa ngày càng cao của tất cả các đối tượng khách hàng. 
-                </p>
+                        <!-- Login form -->
+                        <div
+                            class="tab-pane fade show active"
+                            id="register"
+                            role="tabpanel"
+                            aria-labelledby="register-tab"
+                        >
+                            <form id="login-form">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email_login"
+                                        placeholder="Nhập email"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Mật khẩu *</label>
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="password_login"
+                                        placeholder="Nhập mật khẩu"
+                                        required
+                                    />
+                                </div>
 
-                <p>
-                    Chất lượng, uy tín là yếu tố then chốt để Vperfume duy trì và phát triển không ngừng trong những
-                    năm qua. Tất các các dòng sản phẩm như: nước hoa nam, nước hoa nữ, nước hoa unisex, nước hoa
-                    niche..., bán ra tại Vperfume đều là sản phẩm chính hãng. Chúng tôi cam kết hoàn tiền 200% nếu khách
-                    hàng phát hiện hàng giả, hàng kém chất lượng. 
-                </p>
-                <p class="text-center">
-                    <img
-                        class="text-center"
-                        src="https://file.hstatic.net/1000339918/file/dia_chi_ch__4__7484de10bd89498989c347e469a44d03_grande.jpg"
-                        alt=""
-                    />
-                </p>
-                <p>
-                    Dịch vụ luôn là trọng tâm của Vperfume trong việc phát triển thương hiệu. Với mong muốn khách hàng
-                    có nhiều cơ hội trải nghiệm những dòng nước hoa mới, hướng tới đa dạng hóa sản phẩm cho phù hợp với
-                    từng đối tượng khách hàng nên chúng tôi cung cấp những dòng sản phẩm nước hoa chiết có giá thành từ
-                    300VNĐ trở lên, hay nước hoa tester.....để ai cũng có cơ hội sở hữu những mùi hương mới nhất, đa
-                    dạng nhất với giá thành phù hợp nhất.
-                </p>
-                <h6 style="color: #ff0000; margin-bottom: 5px">
-                    Với 5 tiêu chí thật Vperfume luôn làm bạn khác biệt theo cách riêng của mình
-                </h6>
-                <ol style="list-style-type: decimal; margin-left: 30px">
-                    <li>Nước hoa thật - Tất cả hàng nhập từ châu Âu. Bảo hành cạn lọ.</li>
-                    <li>Cửa hàng thật - 229 Đặng Tiến Đông, Đống Đa, Hà Nội</li>
-                    <li>Hotline thật - 096 599 8668 ( imess / zalo / viber.... )</li>
-                    <li>Hình ảnh thật - Toàn bộ hình ảnh được chụp tại Shop</li>
-                    <li>Tư vấn thật - Bạn được tư vấn trực tiếp, không dùng chat bot</li>
-                </ol>
+                                <button type="submit" class="btn btn-register w-100">Đăng nhập</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
 
         <!-- Footer -->
-        <footer class="footer container-fluid mt-5" style="padding-top: 50px">
+        <footer class="footer container-fluid mt-5" style="padding: 50px 50px 0 50px">
             <div class="container">
                 <div class="row">
                     <!-- Cột 1: Thông tin doanh nghiệp -->
@@ -340,11 +460,11 @@
                     </div>
                 </div>
             </div>
+            <!-- Dòng slogan -->
+            <div class="footer__slogan">
+                <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
+            </div>
         </footer>
-        <!-- Dòng slogan -->
-        <div class="footer__slogan container-fluid">
-            <p class="m-0" style="font-size: 30px">HƯƠNG THƠM LAN TỎA - THỎA MÃN ĐAM MÊ</p>
-        </div>
         <!-- Overlay -->
         <div class="overlay"></div>
 
@@ -382,5 +502,39 @@
         <!-- <script src="./assets/js/global.js"></script> -->
         <script src="./assets/js/home.js"></script>
         <script src="./assets/js/add-cart.js"></script>
+
+        <script>
+            // Khi người dùng đăng nhập thành công
+            function loginUser(email, password) {
+                const validEmail = 'hang@gmail.com';
+                const validPassword = '123456';
+
+                if (email === validEmail && password === validPassword) {
+                    // Nếu thông tin hợp lệ, lưu vào localStorage
+                    localStorage.setItem(
+                        'user',
+                        JSON.stringify({
+                            email: email,
+                            password: password, // Lưu mật khẩu hoặc thông tin nào đó cần thiết
+                        }),
+                    );
+                    alert('Đăng nhập thành công!');
+                    // Chuyển hướng người dùng hoặc cập nhật giao diện sau khi đăng nhập thành công
+                    window.location.href = 'http://127.0.0.1:5500/checkout.html'; // Chuyển hướng đến trang checkout (hoặc trang khác bạn muốn)
+                } else {
+                    window.location.href = 'http://127.0.0.1:5500/checkout.html';
+                }
+            }
+
+            // Xử lý sự kiện khi người dùng submit form đăng nhập
+            document.getElementById('login-form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Ngừng reload trang khi submit
+
+                const email = document.getElementById('email_login').value; // Lấy giá trị email
+                const password = document.getElementById('password_login').value; // Lấy giá trị mật khẩu
+
+                loginUser(email, password); // Gọi hàm loginUser để kiểm tra và lưu vào localStorage
+            });
+        </script>
     </body>
 </html>
