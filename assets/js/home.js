@@ -1,7 +1,7 @@
 let slider_wrap = new Swiper('.slider-wrap', {
     loop: true, // Lặp lại vòng quay
     speed: 800, // Thời gian chuyển slide (1000ms)
-    effect: 'fade', // Hiệu ứng chuyển slide mượt mà (có thể là 'fade', 'cube', 'coverflow', 'flip')
+    effect: 'coverflow', // Hiệu ứng chuyển slide mượt mà (có thể là 'fade', 'cube', 'coverflow', 'flip')
     autoplay: {
         delay: 3000, // Thời gian tự động chuyển slide (3 giây)
         disableOnInteraction: false, // Đảm bảo autoplay tiếp tục khi người dùng tương tác
